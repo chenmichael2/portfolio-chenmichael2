@@ -1,4 +1,10 @@
 import Logo from "@/assets/icon/Logo";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+    variable: "--font-montserrat",
+    subsets: ["latin"],
+});
 
 export default function Header() {
 
@@ -8,10 +14,6 @@ export default function Header() {
             <a href="/" className="text-2xl font-bold text-foreground">
                 <Logo />
             </a>
-            <div className="flex pl-2 text-xl ">
-                <div className="">Michael</div>
-                <div className="">Chen</div>
-            </div>
         </div>
         <nav className="flex space-x-4">
             <a href="/about" className="text-lg text-foreground hover:underline">
@@ -24,6 +26,7 @@ export default function Header() {
             Contact
             </a>
         </nav>
+        <div>Contact Me</div>
         </header>
     );
     }
