@@ -1,9 +1,20 @@
-import Image from "next/image";
+'use client'
+import { useEffect } from "react";
+import { outfit } from "../app/fonts";
 
 export default function Hero() {
+  useEffect(() => {
+    console.log(document.querySelector("header"));
+  }, [])
+  
   return (
-    <section className="flex flex-col items-center justify-center w-full h-screen bg-background h-screen">
-      <div> This is the hero</div>
+    <section className="flex text-2xl w-full h-screen bg-background h-screen">
+      <div className={`${outfit.className} flex items-center justify-center h-full flex-col pl-20`}>
+        <div className={`${outfit.className}` }>Hello, my name is </div>
+        <h1>Michael Chen</h1>
+        <p>I am a software engineer</p>
+      </div>
+
     </section>
   );
 }
