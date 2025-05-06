@@ -16,7 +16,7 @@ export default function Header() {
                 />
             </a>
         </div>
-        <nav className={`${outfit.className} flex space-x-4 font-normal`}>
+        <nav className={`${outfit.className} flex w-125 justify-around font-normal`}>
             <a href="#about" className={`text-2xl scroll-smooth hover:underline`}>
             About Me
             </a>
