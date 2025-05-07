@@ -10,22 +10,23 @@ export default function Header() {
                 <div className="flex items-center p-3">
                     <a href="#" className="text-2xl font-bold text-foreground animate__bounceIn animate__animated">
                         <Image 
+                            className="w-20 h-20 hover:scale-120 transition-all duration-300"
                             src="/logo.svg"
                             alt="Logo"
-                            width={100}
-                            height={100}
+                            width={50}
+                            height={50}
                             priority
                         />
                     </a>
                 </div>
                 <nav className={`${outfit.className} flex w-125 justify-around font-normal animate__bounceIn animate__animated`}>
-                    <a href="#about" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-300`}>
+                    <a href="#about" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
                     About Me
                     </a>
-                    <a href="/projects" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-300`}>
+                    <a href="/projects" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
                     Projects
                     </a>
-                    <a href="/contact" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-300`}>
+                    <a href="/contact" className={`text-2xl scroll-smooth rounded-xl p-2 border-2 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
                     Contact
                     </a>
                 </nav>
