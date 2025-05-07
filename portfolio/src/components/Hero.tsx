@@ -1,6 +1,6 @@
 'use client'
 import { useEffect } from "react";
-import { outfit } from "../app/fonts";
+import { outfit, inter } from "../app/fonts";
 
 export default function Hero() {
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Hero() {
       <div className={`${outfit.className} flex items-center justify-center h-full flex-col pl-20`}>
         <div className={`${outfit.className}` }>Hello, my name is </div>
         <h1>Michael Chen</h1>
-        <p>I am a software engineer</p>
+        <p>Software Engineer</p>
       </div>
 
     </section>
