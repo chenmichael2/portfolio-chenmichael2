@@ -31,7 +31,6 @@ export default function Header() {
                     </a>
                 </nav>
                 <button className={`${outfit.className} text-2xl border-3 border-black p-2 rounded-xl animate__bounceIn animate__animated hover:p-3 transition-p duration-150`}>Contact Me</button>
-        
             </div>
         </header>
     );
