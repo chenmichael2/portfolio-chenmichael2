@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { outfit } from "../app/fonts";
+import '@/app/globals.css'
 import 'animate.css'
 
 export default function Header() {
 
     return (
-        <header className="sticky fixed top-0 z-50 w-full h-25 bg-neutral-50">
+        <header className="sticky fixed top-0 z-50 w-full h-25 backdrop-blur-sm">
             <div className="flex items-center justify-between w-full h-full px-10">
                 <div className="flex items-center p-3">
                     <a href="#" className="text-2xl font-bold text-foreground animate__bounceIn animate__animated">
@@ -30,7 +31,12 @@ export default function Header() {
                     Contact
                     </a>
                 </nav>
-                <button className={`${outfit.className} text-2xl border-3 border-black p-2 rounded-xl animate__bounceIn animate__animated hover:p-3 transition-p duration-150`}>Contact Me</button>
+                <div className="flex">
+                    <a><Image src="/github.svg" width={20} height={20} alt="Github Link"/></a>
+                    <a>linkedin</a>
+                    <a>email</a>
+                    <a>resume</a>
+                </div>
             </div>
         </header>
     );

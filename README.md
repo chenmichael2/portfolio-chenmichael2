@@ -2,7 +2,7 @@
 
 # Tech Stack
 - Next.js
-- TailwindCSS
+- Tailwind
 - Animate.css
 
 # Some resources to make this happen
