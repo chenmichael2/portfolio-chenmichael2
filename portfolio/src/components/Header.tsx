@@ -4,6 +4,12 @@ import '@/app/globals.css'
 import 'animate.css'
 
 export default function Header() {
+    const icon_list = [
+        { name: "github", href: "https://github.com/chenmichael2" },
+        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/"},
+        { name: "email", href: "/"},
+        { name: "resume", href: "/"},
+    ];
 
     return (
         <header className="sticky fixed top-0 z-50 w-full h-25 backdrop-blur-sm">
@@ -32,10 +38,11 @@ export default function Header() {
                     </a>
                 </nav>
                 <div className="flex">
-                    <a><Image src="/github.svg" width={20} height={20} alt="Github Link"/></a>
-                    <a>linkedin</a>
-                    <a>email</a>
-                    <a>resume</a>
+                    {icon_list.map((icon) => (
+                        <a key={icon.name} href={icon.href} className="flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300">
+                            <Image src={`/${icon.name}.svg`} width={20} height={20} alt={`${icon.name} Link`}/>
+                        </a>
+                    ))}
                 </div>
             </div>
         </header>
