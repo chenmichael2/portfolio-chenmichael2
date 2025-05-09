@@ -32,7 +32,7 @@ export default function Header() {
                         />
                     </a>
                 </div>
-                <nav className={`${poppins.className} font-light flex justify-around animate__bounceIn animate__animated`}>
+                <nav className={`${poppins.className} ml-20 font-light animate__bounceIn animate__animated`}>
                     {nav_list.map((item) => (
                         <a key={item.name} href={item.href} className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl hover:font-normal transition-text transition-border duration-150`}>{item.name}</a>
                     ))}
@@ -40,7 +40,12 @@ export default function Header() {
                 <div className="flex">
                     {icon_list.map((icon) => (
                         <a key={icon.name} href={icon.href} target="_blank" className="flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300">
-                            <Image src={`/${icon.name}.svg`} width={20} height={20} alt={`${icon.name} Link`} />
+                            <Image 
+                                className="hover:scale-120 transition-all duration-300"
+                                src={`/${icon.name}.svg`} 
+                                width={20} 
+                                height={20} 
+                                alt={`${icon.name} Link`} />
                         </a>
                     ))}
                 </div>
