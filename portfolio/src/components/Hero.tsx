@@ -10,17 +10,28 @@ export default function Hero() {
   }, [])
   
   return (
-    <section className="w-full h-[calc(100vh-100px)] bg-gray-50">
-      <div className={`${poppins.className} flex items-center justify-center leading-none w-full`}>
-        <div className="profile-picture-container inline-block relative overflow-hidden w-120 h-120 rounded-full">
+    <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
+      <div className={`${poppins.className} flex items-center justify-around leading-none w-full`}>
+        <div className="profile-picture-container inline-block relative overflow-hidden w-110 h-110 rounded-full">
           <img className="profile-picture w-auto h-full transform scale-400 mx-8 my-110" src="/images/profile1.jpeg" alt="Michael Chen Picture"/>
         </div>
-        <div>
-          <h1 className="font-extrabold text-[150px] text-primary">Michael</h1>
-          <h1 className="font-extrabold text-[150px] text-secondary">Chen</h1>
-          <p>Software Engineer</p>
+        <div className="flex flex-col">
+          <h1 className="font-extrabold pr-25 text-[70px] text-primary">Michael</h1>
+          <h1 className="self-end font-extrabold text-[70px] text-secondary">Chen</h1>
+          <p className="relative bottom-14">
+            <span className="flex items-center text-xl">
+            <Image 
+              className="rotate-340"
+              src="/pin.svg"
+              width={40}
+              height={40}
+              alt="Pin"
+            />Torrance, CA
+            </span>
+          </p>
         </div>
       </div>
+      <div>socials</div>
     </section>
   );
 }
