@@ -10,9 +10,15 @@ export default function Header() {
         { name: "email", href: "/"},
         { name: "resume", href: "/"},
     ];
+    
+    const nav_list = [
+        { name: "About Me", href: "#about" },
+        { name: "Projects", href: "/projects" },
+        { name: "Contact", href: "/contact" },
+    ]
 
     return (
-        <header className="sticky fixed top-0 z-50 w-full h-25 backdrop-blur-sm">
+        <header className="sticky top-0 z-50 w-full h-25 backdrop-blur-sm">
             <div className="flex items-center justify-between w-full h-full px-10">
                 <div className="flex items-center p-3">
                     <a href="#" className="text-2xl font-bold text-foreground animate__bounceIn animate__animated">
@@ -27,20 +33,14 @@ export default function Header() {
                     </a>
                 </div>
                 <nav className={`${outfit.className} flex w-125 justify-around font-normal animate__bounceIn animate__animated`}>
-                    <a href="#about" className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
-                    About Me
-                    </a>
-                    <a href="/projects" className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
-                    Projects
-                    </a>
-                    <a href="/contact" className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>
-                    Contact
-                    </a>
+                    {nav_list.map((item) => (
+                        <a key={item.name} href={item.href} className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>{item.name}</a>
+                    ))}
                 </nav>
                 <div className="flex">
                     {icon_list.map((icon) => (
-                        <a key={icon.name} href={icon.href} className="flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300">
-                            <Image src={`/${icon.name}.svg`} width={20} height={20} alt={`${icon.name} Link`}/>
+                        <a key={icon.name} href={icon.href} target="_blank" className="flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300">
+                            <Image src={`/${icon.name}.svg`} width={20} height={20} alt={`${icon.name} Link`} />
                         </a>
                     ))}
                 </div>
