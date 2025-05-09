@@ -18,21 +18,21 @@ export default function Header() {
     ]
 
     return (
-        <header className="sticky top-0 z-50 w-full h-25 backdrop-blur-sm">
+        <header className="sticky z-50 w-full h-25 backdrop-blur-sm">
             <div className="flex items-center justify-between w-full h-full px-10">
-                <div className="flex items-center p-3">
-                    <a href="#" className="text-2xl font-bold text-foreground animate__bounceIn animate__animated">
+                <div className="">
+                    <a href="#" className="text-2xl animate__bounceIn animate__animated">
                         <Image 
-                            className="w-20 h-20 hover:scale-120 transition-all duration-300"
+                            className="w-25 h-25 hover:scale-120 transition-all duration-300"
                             src="/logo.svg"
                             alt="Logo"
-                            width={50}
-                            height={50}
+                            width={10}
+                            height={10}
                             priority
                         />
                     </a>
                 </div>
-                <nav className={`${poppins.className} font-light flex w-125 justify-around animate__bounceIn animate__animated`}>
+                <nav className={`${poppins.className} font-light flex justify-around animate__bounceIn animate__animated`}>
                     {nav_list.map((item) => (
                         <a key={item.name} href={item.href} className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl hover:font-normal transition-text transition-border duration-150`}>{item.name}</a>
                     ))}
