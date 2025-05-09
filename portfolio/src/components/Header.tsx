@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { outfit } from "../app/fonts";
+import { poppins } from "../app/fonts";
 import '@/app/globals.css'
 import 'animate.css'
 
@@ -32,9 +32,9 @@ export default function Header() {
                         />
                     </a>
                 </div>
-                <nav className={`${outfit.className} flex w-125 justify-around font-normal animate__bounceIn animate__animated`}>
+                <nav className={`${poppins.className} font-light flex w-125 justify-around animate__bounceIn animate__animated`}>
                     {nav_list.map((item) => (
-                        <a key={item.name} href={item.href} className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl transition-text transition-border duration-150`}>{item.name}</a>
+                        <a key={item.name} href={item.href} className={`text-2xl scroll-smooth rounded-xl p-2 border-3 border-transparent hover:border-black hover:text-3xl hover:font-normal transition-text transition-border duration-150`}>{item.name}</a>
                     ))}
                 </nav>
                 <div className="flex">

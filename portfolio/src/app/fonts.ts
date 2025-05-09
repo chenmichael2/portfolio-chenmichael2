@@ -13,11 +13,10 @@ export const geistMono = Geist_Mono({
 export const outfit = Outfit({
     subsets: ['latin'],
     display: 'swap',
-    weight: ['400', '500', '600', '700'],
   });
 
   export const poppins = Poppins({
     subsets: ['latin'],
     display: 'swap',
-    weight: ['400', '500', '600', '700'],
+    weight: ['300', '400', '800'],
   });
