@@ -16,10 +16,10 @@ export default function Hero() {
           <img className="profile-picture w-auto h-full transform scale-400 mx-8 my-110" src="/images/profile1.jpeg" alt="Michael Chen Picture"/>
         </div>
         <div className="flex flex-col">
-          <h1 className="font-extrabold pr-25 text-[70px] text-primary">Michael</h1>
-          <h1 className="self-end font-extrabold text-[70px] text-secondary">Chen</h1>
-          <p className="relative bottom-14">
-            <span className="flex items-center text-xl">
+          <h1 className="font-extrabold pr-25 text-[100px] text-primary">Michael</h1>
+          <h1 className="self-end font-extrabold text-[100px] text-secondary">Chen</h1>
+          <p className="relative bottom-17">
+            <span className="flex items-center text-2xl">
             <Image 
               className="rotate-340"
               src="/pin.svg"
@@ -28,7 +28,9 @@ export default function Hero() {
               alt="Pin"
             />Torrance, CA
             </span>
+            <p className="text-3xl mt-9">Software Engineer</p>
           </p>
+          
         </div>
       </div>
       <div>socials</div>
