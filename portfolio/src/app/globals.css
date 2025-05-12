@@ -8,12 +8,9 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
 a {
   font-family: var(--font-roboto);
-  }
-
-  .profile-picture-container {
-    
   }

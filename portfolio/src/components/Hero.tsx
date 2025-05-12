@@ -19,7 +19,7 @@ export default function Hero() {
             <span className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium">
               <Image 
                 className="rotate-340"
-                src="/pin.svg"
+                src="icons/pin.svg"
                 width={40}
                 height={40}
                 alt="Pin"
