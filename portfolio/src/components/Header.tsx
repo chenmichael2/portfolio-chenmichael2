@@ -48,7 +48,7 @@ export default function Header() {
                             key={icon.name} 
                             href={icon.href} 
                             target="_blank" 
-                            className={`flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300`}
+                            className={`flex items-center justify-center w-[40px] h-[40px] p-2 m-2 rounded-full hover:border-1 hover:scale-110 transition-all duration-300`}
                         >
                             {icon.import(icon)}
                         </a>
