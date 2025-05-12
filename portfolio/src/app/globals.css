@@ -14,3 +14,7 @@ html {
 a {
   font-family: var(--font-roboto);
   }
+
+  svg path {
+    transition: fill 0.3s ease;
+  }

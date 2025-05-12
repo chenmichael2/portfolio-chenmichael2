@@ -4,7 +4,6 @@ import type { IconProps } from '../../type/icon';
 
 export default function GithubIcon({ icon }: IconProps) {
     const [hover, setHover] = useState(false);
-    console.log(icon)
     const iconColor = hover ? icon.color : "transparent";
 
     return (
