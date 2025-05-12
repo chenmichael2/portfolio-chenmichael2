@@ -1,3 +1,5 @@
+'use client'
+import { useState } from "react";
 import Image from "next/image";
 import { poppins } from "../app/fonts";
 import '@/app/globals.css'
@@ -9,11 +11,13 @@ import ResumeIcon from "../../public/icons/resume";
 
 export default function Header() {
 
-    const icon_list = [
-        { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon },
-        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#0a66c2", import: LinkedinIcon },
-        { name: "email", href: "/", color:"#e7a33e", import: EmailIcon },
-        { name: "resume", href: "/", color:"#6c3baa", import: ResumeIcon },
+    const [hovered, setHovered] = useState(false);
+
+    var icon_list = [
+        { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
+        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#0a66c2", import: LinkedinIcon},
+        { name: "email", href: "/", color:"#e7a33e", import: EmailIcon},
+        { name: "resume", href: "/", color:"#6c3baa", import: ResumeIcon},
     ];
     
     const nav_list = [
@@ -44,14 +48,9 @@ export default function Header() {
                 </nav>
                 <div className="flex">
                     {icon_list.map((icon) => (
-                        <a 
-                            key={icon.name} 
-                            href={icon.href} 
-                            target="_blank" 
-                            className={`flex items-center justify-center w-[40px] h-[40px] p-2 m-2 rounded-full hover:border-1 hover:scale-110 transition-all duration-300`}
-                        >
-                            {icon.import(icon)}
-                        </a>
+                        <div key={icon.name}>
+                            {icon.import({ icon })}
+                        </div>
                     ))}
                 </div>
             </div>

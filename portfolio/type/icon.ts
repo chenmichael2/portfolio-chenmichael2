@@ -1,3 +1,8 @@
 export type IconProps = {
-    color?: string;
+    icon: {
+        name: string;
+        color: string;
+        href: string;
+        import: React.FC<IconProps>;
+    }
   };
