@@ -2,14 +2,18 @@ import Image from "next/image";
 import { poppins } from "../app/fonts";
 import '@/app/globals.css'
 import 'animate.css'
+import EmailIcon from "../../public/icons/email";
+import GithubIcon from "../../public/icons/github";
+import LinkedinIcon from "../../public/icons/linkedin";
+import ResumeIcon from "../../public/icons/resume";
 
 export default function Header() {
 
     const icon_list = [
-        { name: "github", href: "https://github.com/chenmichael2", color: "#555" },
-        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#0a66c2"},
-        { name: "email", href: "/", color:"#e7a33e"},
-        { name: "resume", href: "/", color:"#6c3baa"},
+        { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon },
+        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#0a66c2", import: LinkedinIcon },
+        { name: "email", href: "/", color:"#e7a33e", import: EmailIcon },
+        { name: "resume", href: "/", color:"#6c3baa", import: ResumeIcon },
     ];
     
     const nav_list = [
@@ -46,12 +50,7 @@ export default function Header() {
                             target="_blank" 
                             className={`flex items-center justify-center p-2 m-2 rounded-full transition-all duration-300`}
                         >
-                            <Image 
-                                className="hover:scale-120 transition-all duration-300"
-                                src={`icons/${icon.name}.svg`} 
-                                width={20} 
-                                height={20} 
-                                alt={`${icon.name} Link`} />
+                            {icon.import(icon)}
                         </a>
                     ))}
                 </div>
