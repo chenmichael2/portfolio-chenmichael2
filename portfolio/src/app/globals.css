@@ -8,13 +8,12 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 a {
   font-family: var(--font-roboto);
-  }
+}
 
-  svg path {
-    transition: fill 0.3s ease;
-  }
+svg path {
+  transition: fill 0.3s ease;
+}
