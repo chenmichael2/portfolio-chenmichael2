@@ -8,6 +8,7 @@ export default function EmailIcon({ icon }: IconProps) {
     
     return (
         <a 
+        href={icon.href}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)} 
         target="_blank" 
