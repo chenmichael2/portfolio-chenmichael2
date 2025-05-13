@@ -15,8 +15,8 @@ export default function Header() {
 
     var icon_list = [
         { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
-        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#0a66c2", import: LinkedinIcon},
-        { name: "email", href: "/", color:"#e7a33e", import: EmailIcon},
+        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#1464c0", import: LinkedinIcon},
+        { name: "email", href: "/", color:"#fccf55", import: EmailIcon},
         { name: "resume", href: "/", color:"#6c3baa", import: ResumeIcon},
     ];
     
