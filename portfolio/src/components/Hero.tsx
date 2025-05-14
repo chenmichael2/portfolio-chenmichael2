@@ -16,7 +16,9 @@ export default function Hero() {
           <h1 className="font-extrabold pr-25 text-[8vw] text-primary">Michael</h1>
           <div className="flex items-end">
             <h1 className="font-extrabold text-[8vw] text-secondary">Chen</h1>
-            <span className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium">
+          </div>
+          <div className="">
+            <div className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium">
               <Image 
                 className="rotate-340"
                 src="icons/pin.svg"
@@ -25,14 +27,12 @@ export default function Hero() {
                 alt="Pin"
               />
               <p>Torrance, CA</p>
-            </span>
-          </div>
-          <div className="">
+              </div>
             <p className="text-3xl mt-9">Software Engineer</p>
           </div>
         </div>
-        <div className="inline-block relative overflow-hidden w-125 h-125 rounded-full hover:scale-110 transition-all duration-300 ease-in-out">
-          <img className="w-auto h-full origin-center hover:scale-105 transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
+        <div className="inline-block relative overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+          <img className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
 
       </div>
