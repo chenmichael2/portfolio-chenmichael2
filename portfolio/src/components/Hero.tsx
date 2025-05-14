@@ -31,8 +31,8 @@ export default function Hero() {
             <p className="text-3xl mt-9">Software Engineer</p>
           </div>
         </div>
-        <div className="inline-block relative overflow-hidden w-150 h-150 rounded-full">
-          <img className="w-auto h-full scale-400 mx-7 my-150" src="/images/profile1.jpeg" alt="Michael Chen Picture"/>
+        <div className="inline-block relative overflow-hidden w-125 h-125 rounded-full hover:scale-110 transition-all duration-300 ease-in-out">
+          <img className="w-auto h-full origin-center hover:scale-105 transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
 
       </div>
