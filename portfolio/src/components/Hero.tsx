@@ -10,11 +10,11 @@ export default function Hero() {
       color: "#66B2D6",
     },
     {
-      title: "Full Stack Developer",
+      title: "Web Developer",
       color: "#fccf55",
     },
     {
-      title: "Machine Learning",
+      title: "Marine Reservist",
       color: "#dfc5fe",
     }
   ]
