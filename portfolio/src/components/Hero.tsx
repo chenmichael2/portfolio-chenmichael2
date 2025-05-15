@@ -3,9 +3,10 @@ import gsap from "gsap"
 import Image from "next/image";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ReactLenis } from "lenis/react";
 import { useEffect, useState } from "react";
 import { poppins } from "../app/fonts";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const tagData = [ 
@@ -23,7 +24,20 @@ export default function Hero() {
     }
   ]
 
-  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".picture",
+        start: "top 15%",
+        end: "bottom 150%",
+        markers: true,
+        scrub: true,
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    tl.to(".picture", { y: 500, duration: 1 });
+  }, []);
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
@@ -53,7 +67,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative inline-block overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+        <div className="picture relative inline-block z-50 overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
           <img className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
