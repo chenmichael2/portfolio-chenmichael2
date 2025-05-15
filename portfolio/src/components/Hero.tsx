@@ -1,6 +1,10 @@
 'use client'
+import gsap from "gsap"
 import Image from "next/image";
-import { useEffect } from "react";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ReactLenis } from "lenis/react";
+import { useEffect, useState } from "react";
 import { poppins } from "../app/fonts";
 
 export default function Hero() {
@@ -19,10 +23,8 @@ export default function Hero() {
     }
   ]
 
-  useEffect(() => {
-    console.log(document.querySelector("header"));
-  }, [])
-  
+  gsap.registerPlugin(ScrollTrigger);
+
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
       <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
@@ -51,7 +53,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="inline-block relative overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+        <div className="relative inline-block overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
           <img className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
