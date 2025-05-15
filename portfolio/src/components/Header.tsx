@@ -8,19 +8,11 @@ import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
 import LinkedinIcon from "../../public/icons/linkedin";
 import ResumeIcon from "../../public/icons/resume";
+import { clear } from "console";
 
 export default function Header() {
 
     const [hovered, setHovered] = useState(false);
-
-    const floating = document.getElementById('floating');
-    document.addEventListener('mousemove', (e) => {
-        if (floating) {
-            floating.style.left = `${e.clientX + 10}px`;
-            floating.style.top = `${e.clientY + 10}px`;
-            floating.classList.remove('hidden');
-        }
-    });
 
     var icon_list = [
         { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
@@ -61,9 +53,6 @@ export default function Header() {
                             {icon.import({ icon })}
                         </div>
                     ))}
-                </div>
-                <div id="floating" className="pointer-events-none fixed z-50 bg-black text-white p-2 rounded hidden">
-                    I'm following your mouse!
                 </div>
             </div>
         </header>
