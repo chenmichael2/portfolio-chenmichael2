@@ -1,12 +1,5 @@
-'use client'
-import gsap from "gsap"
 import Image from "next/image";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useState } from "react";
 import { poppins } from "../app/fonts";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const tagData = [ 
@@ -23,21 +16,6 @@ export default function Hero() {
       color: "#dfc5fe",
     }
   ]
-
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".picture",
-        start: "top 15%",
-        end: "bottom 150%",
-        markers: true,
-        scrub: true,
-        toggleActions: "play reverse play reverse",
-      },
-    });
-
-    tl.to(".picture", { y: 500, duration: 1 });
-  }, []);
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
