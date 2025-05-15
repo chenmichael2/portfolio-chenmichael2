@@ -4,6 +4,20 @@ import { useEffect } from "react";
 import { poppins } from "../app/fonts";
 
 export default function Hero() {
+  const tagData = [ 
+    {
+      title: "Software Engineer", 
+      color: "#66B2D6",
+    },
+    {
+      title: "Full Stack Developer",
+      color: "#fccf55",
+    },
+    {
+      title: "Machine Learning",
+      color: "#dfc5fe",
+    }
+  ]
 
   useEffect(() => {
     console.log(document.querySelector("header"));
@@ -13,12 +27,12 @@ export default function Hero() {
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
       <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">
-          <h1 className="font-extrabold pr-25 text-[8vw] text-primary">Michael</h1>
+          <h1 className="font-extrabold pr-25 text-[8vw] text-primary animate__animated animate__slideInDown">Michael</h1>
           <div className="flex items-end">
-            <h1 className="font-extrabold text-[8vw] text-secondary">Chen</h1>
+            <h1 className="font-extrabold text-[8vw] text-secondary animate__animated animate__slideInDown">Chen</h1>
           </div>
           <div className="">
-            <div className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium">
+            <div className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium animate__animated animate__slideInDown">
               <Image 
                 className="rotate-340"
                 src="icons/pin.svg"
@@ -27,14 +41,19 @@ export default function Hero() {
                 alt="Pin"
               />
               <p>Torrance, CA</p>
-              </div>
-            <p className="text-3xl mt-9">Software Engineer</p>
+            </div>
+            <div>
+              {tagData.map((tag) => (
+                <div key={tag.title} className={`inline-block px-4 py-2 mr-2 text-sm font-medium text-gray-700 rounded-full animate__animated animate__slideInDown`} style={{ backgroundColor: tag.color }}>
+                  {tag.title}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="inline-block relative overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
           <img className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
-
       </div>
       <div>socials</div>
     </section>
