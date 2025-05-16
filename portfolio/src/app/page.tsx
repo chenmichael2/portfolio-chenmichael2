@@ -19,7 +19,6 @@ export default function Home() {
           end: "bottom 50%",
           markers: true,
           scrub: true,
-          toggleActions: "play reverse play reverse",
         },
     });
   
