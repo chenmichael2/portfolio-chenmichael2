@@ -28,7 +28,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="sticky top-0 z-50 w-full h-20 backdrop-blur-xl">
+        <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
             <div className="flex items-center justify-between w-full h-full px-10">
                 <div className="">
                     <a href="#" className="text-2xl animate__bounceIn animate__animated">

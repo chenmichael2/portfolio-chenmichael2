@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="flex items-end">
             <h1 className="font-extrabold text-[8vw] text-secondary animate__animated animate__slideInDown">Chen</h1>
           </div>
-          <div className="">
+          <div>
             <div className="flex flex-row items-center mb-4 text-black text-[1.5vw] font-medium animate__animated animate__slideInDown">
               <Image 
                 className="rotate-340"
@@ -45,8 +45,8 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="picture relative inline-block z-50 overflow-hidden w-125 h-125 border-2 rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
-          <img className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
+        <div className="relative inline-block z-50 overflow-hidden w-125 h-125 border-1 border-neutral-300 shadow-2xl rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+          <Image width={100000} height={100000} className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
       <div>socials</div>
