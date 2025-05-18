@@ -1,5 +1,7 @@
+'use client';
 import Image from "next/image";
 import { poppins } from "../app/fonts";
+import { useEffect } from "react";
 
 export default function Hero() {
   const tagData = [ 
@@ -16,6 +18,14 @@ export default function Hero() {
       color: "#dfc5fe",
     }
   ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 0) {
+
+      }
+  }})
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
