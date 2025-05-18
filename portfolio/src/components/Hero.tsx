@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import { poppins } from "../app/fonts";
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 
 export default function Hero() {
   const tagData = [ 
@@ -18,14 +18,6 @@ export default function Hero() {
       color: "#dfc5fe",
     }
   ]
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 0) {
-
-      }
-  }})
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-50">
@@ -55,7 +47,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative inline-block z-50 overflow-hidden w-100 h-100 border-1 border-neutral-300 shadow-2xl rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+        <div style={{top: scrollY}} className="relative inline-block z-50 overflow-hidden w-100 h-100 border-1 border-neutral-300 shadow-2xl rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
           <Image width={100000} height={100000} className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
