@@ -8,7 +8,7 @@ import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
 import LinkedinIcon from "../../public/icons/linkedin";
 import ResumeIcon from "../../public/icons/resume";
-import { clear } from "console";
+import BurgerIcon from "../../public/icons/burger";
 
 export default function Header() {
 
@@ -48,6 +48,7 @@ export default function Header() {
                     ))}
                 </nav>
                 <div className="flex">
+                    <BurgerIcon/>
                     {icon_list.map((icon) => (
                         <div key={icon.name}>
                             {icon.import({ icon })}
