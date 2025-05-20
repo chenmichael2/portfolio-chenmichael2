@@ -42,13 +42,13 @@ export default function Header() {
                         />
                     </a>
                 </div>
+                <BurgerIcon/>
                 <nav className={`${poppins.className} ml-20 font-light animate__bounceIn animate__animated`}>
                     {nav_list.map((item) => (
                         <a key={item.name} href={item.href} className={`text-xl scroll-smooth rounded-xl p-2 mx-3 border-3 border-transparent hover:border-black hover:text-3xl hover:font-normal transition-text transition-border duration-150`}>{item.name}</a>
                     ))}
                 </nav>
                 <div className="flex">
-                    <BurgerIcon/>
                     {icon_list.map((icon) => (
                         <div key={icon.name}>
                             {icon.import({ icon })}

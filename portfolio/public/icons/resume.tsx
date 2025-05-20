@@ -14,7 +14,7 @@ export default function ResumeIcon({ icon }: IconProps) {
         target="_blank" 
         className={`flex items-center justify-center w-[40px] h-[40px] p-2 m-2 border border-transparent rounded-full hover:border-black hover:border-1 hover:scale-120 transition-all duration-300`}
         >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="navIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V7L15 2Z" fill={`${iconColor}`} stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M12 15C13.1046 15 14 14.1046 14 13C14 11.8954 13.1046 11 12 11C10.8954 11 10 11.8954 10 13C10 14.1046 10.8954 15 12 15Z" fill={`${iconColor}`}stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M15 18C15 17.2044 14.6839 16.4413 14.1213 15.8787C13.5587 15.3161 12.7956 15 12 15C11.2044 15 10.4413 15.3161 9.87868 15.8787C9.31607 16.4413 9 17.2044 9 18" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
