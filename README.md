@@ -6,6 +6,7 @@
 - Animate.css
 
 # Some resources to make this happen
+<a href="https://motion.dev/">Motion from Framer</a>
 <a href="https://lucide.dev/">Lucide Dev</a>
 - Helps create Icons
 <a href="https://animate.style/">Animate.css</a>
