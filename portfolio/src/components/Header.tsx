@@ -39,6 +39,8 @@ export default function Header() {
                     priority
                 />
             </a>
+            <div><BurgerIcon/></div>
+            
         </header>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
         //     <div className="flex items-center justify-between w-full h-full px-10">
