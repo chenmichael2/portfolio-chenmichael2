@@ -14,7 +14,7 @@ export default function Header() {
     const lenis = useLenis();
 
     const scrollToTop = () => {
-        lenis?.scrollTo(0, { duration: 1 });
+        lenis?.scrollTo("top", { duration: 1, force: true });
     }
 
     const [hovered, setHovered] = useState(false);
@@ -33,7 +33,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
+        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-16 backdrop-blur-xl">
             <button onClick={scrollToTop}>
                 <Image 
                     className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
