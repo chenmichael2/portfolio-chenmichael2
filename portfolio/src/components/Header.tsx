@@ -1,10 +1,9 @@
 'use client'
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { poppins } from "../app/fonts";
+import { useState, useRef, useEffect } from "react";
+import { useLenis } from "lenis/react";
 import '@/app/globals.css'
 import 'animate.css'
+import Image from "next/image";
 import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
 import LinkedinIcon from "../../public/icons/linkedin";
@@ -12,6 +11,11 @@ import ResumeIcon from "../../public/icons/resume";
 import BurgerIcon from "../../public/icons/burger";
 
 export default function Header() {
+    const lenis = useLenis();
+
+    const scrollToTop = () => {
+        lenis?.scrollTo(0, { duration: 1 });
+    }
 
     const [hovered, setHovered] = useState(false);
 
@@ -26,11 +30,11 @@ export default function Header() {
         { name: "About Me", href: "#about" },
         { name: "Projects", href: "/projects" },
         { name: "Contact", href: "/contact" },
-    ]
+    ];
 
     return (
         <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <button onClick={scrollToTop}>
                 <Image 
                     className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
                     src="/logo.svg"

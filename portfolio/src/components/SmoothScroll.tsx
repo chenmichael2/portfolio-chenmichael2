@@ -1,14 +1,15 @@
-'use client';
 import { ReactLenis, useLenis } from 'lenis/react'
 
-export default function SmoothScroll({children}: {children: React.ReactNode}) {
-  const lenis = useLenis(({ scroll }) => {
+function App() {
+  const lenis = useLenis((lenis) => {
     // called every scroll
-  });
+    console.log(lenis)
+  })
 
   return (
-    <ReactLenis root options= {{ lerp: 1 , duration: 1.5 }} >
-      {children}
-    </ReactLenis>
+    <>
+      <ReactLenis root />
+      { /* content */ }
+    </>
   )
 }

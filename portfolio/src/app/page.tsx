@@ -1,6 +1,7 @@
 'use client';
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect } from "react";
 
 import Image from "next/image";
@@ -11,6 +12,9 @@ import About from "@/components/About";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const lenis = useLenis((lenis) => {
+    // called every scroll
+  })
     
   // useEffect(() => {
   //     const tl = gsap.timeline({
@@ -26,9 +30,10 @@ export default function Home() {
   //   tl.to(".picture", { y: 700, duration: 1 });
   // }, []);
   return (
-    <div>
+    <>
+      <ReactLenis root />
       <Hero />
       <About />
-    </div>
+    </>
   );
 }
