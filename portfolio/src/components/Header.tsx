@@ -1,5 +1,6 @@
 'use client'
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { poppins } from "../app/fonts";
 import '@/app/globals.css'
@@ -28,18 +29,18 @@ export default function Header() {
     ]
 
     return (
-        <header className="border-1 border-red-800 flex items-center sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
-            <a>
+        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
+            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <Image 
-                    className="w-15 h-15 ml-3 hover:scale-120 transition-all duration-300"
+                    className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
                     src="/logo.svg"
                     alt="Logo"
                     width={10}
                     height={10}
                     priority
                 />
-            </a>
-            <div><BurgerIcon/></div>
+            </button>
+            <div className="mr-5"><BurgerIcon/></div>
             
         </header>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">

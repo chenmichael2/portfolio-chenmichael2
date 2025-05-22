@@ -21,10 +21,10 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={`bg-gray-50 antialiased`}>
-        <SmoothScroll>
+        {/* <SmoothScroll> */}
           <Header />
           {children}
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
       </body>
     </html>
   );
