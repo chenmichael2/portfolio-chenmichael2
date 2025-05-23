@@ -33,7 +33,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-16 backdrop-blur-xl">
+        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-16 bg-gray-50">
             <button onClick={scrollToTop}>
                 <Image 
                     className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
