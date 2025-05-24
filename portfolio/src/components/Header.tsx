@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { useLenis } from "lenis/react";
 import '@/app/globals.css'
 import 'animate.css'
+import { poppins } from "@/app/fonts";
 import Image from "next/image";
 import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
@@ -12,13 +13,6 @@ import BurgerIcon from "../../public/icons/burger";
 
 export default function Header() {
     const lenis = useLenis();
-
-    const scrollToTop = () => {
-        lenis?.scrollTo("top", { duration: 1, force: true });
-    }
-
-    const [hovered, setHovered] = useState(false);
-
     var icon_list = [
         { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
         { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#66B2D6", import: LinkedinIcon},
@@ -32,8 +26,19 @@ export default function Header() {
         { name: "Contact", href: "/contact" },
     ];
 
+    const [navIsOpen, setIsOpen] = useState(false);
+    const [hovered, setHovered] = useState(false);
+
+    const scrollToTop = () => {
+        lenis?.scrollTo("top", { duration: 1, force: true });
+    }
+
+    const handleNavOpen = () => {
+
+    };
+
     return (
-        <header className="border-1 border-red-800 flex items-center justify-between sticky top-0 z-100 w-full h-16 bg-gray-50">
+        <header className="border-1 border-red-800 flex items-center justify-between fixed top-0 z-50 w-full h-16 bg-gray-50">
             <button onClick={scrollToTop}>
                 <Image 
                     className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
@@ -44,8 +49,14 @@ export default function Header() {
                     priority
                 />
             </button>
-            <div className="mr-5"><BurgerIcon/></div>
-            
+            <nav className={`${poppins.className} fixed w-full h-full bg-amber-300 z-40 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
+                <ul>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <button onClick={handleNavOpen} className="mr-5"><BurgerIcon/></button>
         </header>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
         //     <div className="flex items-center justify-between w-full h-full px-10">

@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative inline-block z-50 overflow-hidden w-100 h-100 border-1 border-neutral-300 shadow-2xl rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
+        <div className="relative inline-block z-40 overflow-hidden w-100 h-100 border-1 border-neutral-300 shadow-2xl rounded-full hover:scale-105 transition-all duration-300 ease-in-out">
           <Image width={100000} height={100000} className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
