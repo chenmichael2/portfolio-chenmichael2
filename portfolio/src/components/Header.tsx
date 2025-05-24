@@ -34,6 +34,8 @@ export default function Header() {
     }
 
     const handleNav = () => {
+        console.log(window.innerWidth);
+        if (window.innerWidth > 767) return;
         if (navIsOpen) {
             document.querySelector(".mobile-dropdown")?.classList.add("-translate-y-400");
             document.querySelector(".mobile-dropdown")?.classList.remove("translate-y-16");
@@ -69,7 +71,7 @@ export default function Header() {
                 <button onClick={handleNav} className="mr-5"><BurgerIcon/></button>
             </header>
                 <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
-                    <ul className="flex flex-col items-end justify-end h-full">
+                    <ul className="flex flex-col items-end justify-end h-full mr-10">
                         <li>About Me</li>
                         <li>Projects</li>
                         <li>Contact</li>
