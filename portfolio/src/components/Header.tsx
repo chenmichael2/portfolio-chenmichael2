@@ -33,31 +33,41 @@ export default function Header() {
         lenis?.scrollTo("top", { duration: 1, force: true });
     }
 
-    const handleNavOpen = () => {
-
+    const handleNav = () => {
+        if (navIsOpen) {
+            document.querySelector("nav")?.classList.add("-translate-y-400");
+            setIsOpen(false);
+        }
+        else {
+            document.querySelector("nav")?.classList.remove("-translate-y-400");
+            setIsOpen(true);
+        }
     };
 
     return (
-        <header className="border-1 border-red-800 flex items-center justify-between fixed top-0 z-50 w-full h-16 bg-gray-50">
-            <button onClick={scrollToTop}>
-                <Image 
-                    className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
-                    src="/logo.svg"
-                    alt="Logo"
-                    width={10}
-                    height={10}
-                    priority
-                />
-            </button>
-            <nav className={`${poppins.className} fixed w-full h-full bg-amber-300 z-40 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
-                <ul>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-            <button onClick={handleNavOpen} className="mr-5"><BurgerIcon/></button>
-        </header>
+        <div>
+            <header className=" flex items-center justify-between fixed top-0 z-50 w-full h-16 bg-gray-50">
+                <button onClick={scrollToTop}>
+                    <Image 
+                        className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300"
+                        src="/logo.svg"
+                        alt="Logo"
+                        width={10}
+                        height={10}
+                        priority
+                    />
+                </button>
+                <nav className={`${poppins.className} fixed w-full h-full bg-gray-50 z-49 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
+                    <ul>
+                        <li>About Me</li>
+                        <li>Projects</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+                <button onClick={handleNav} className="mr-5"><BurgerIcon/></button>
+            </header>
+
+        </div>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
         //     <div className="flex items-center justify-between w-full h-full px-10">
         //         <div className="">
