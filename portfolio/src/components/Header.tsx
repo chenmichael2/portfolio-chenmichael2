@@ -71,10 +71,10 @@ export default function Header() {
                 <button onClick={handleNav} className="mr-5"><BurgerIcon/></button>
             </header>
                 <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
-                    <ul className="flex flex-col items-end justify-end h-full mr-10">
-                        <li>About Me</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
+                    <ul className="flex flex-col items-end justify-end h-full mr-5 pb-10">
+                        <li className="text-4xl p-6">About Me</li>
+                        <li className="text-4xl p-6">Projects</li>
+                        <li className="text-4xl p-6">Contact</li>
                     </ul>
                 </nav>
         </div>
