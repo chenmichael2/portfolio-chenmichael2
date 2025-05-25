@@ -72,10 +72,16 @@ export default function Header() {
             </header>
                 <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
                     <ul className="flex flex-col items-start justify-end h-full ml-5 pb-20">
-                        <li className="text-4xl p-6"><button>About Me</button></li>
-                        <li className="text-4xl p-6">Projects</li>
-                        <li className="text-4xl p-6">Contact</li>
+                        {nav_list.map((item) => (
+                            <li key={item.name} className="text-4xl p-6"><button>{item.name}</button></li>
+                        ))}
+                        <li className="flex flex-row">
+                        {icon_list.map((icon) => (
+                            <div key={icon.name} className="">{icon.import({ icon })}</div>
+                        ))}
+                        </li>
                     </ul>
+                    
                 </nav>
         </div>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
