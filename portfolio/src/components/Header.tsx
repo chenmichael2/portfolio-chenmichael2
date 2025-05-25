@@ -50,7 +50,7 @@ export default function Header() {
 
     return (
         <div>
-            <header className="flex items-center justify-between fixed top-0 z-50 w-full h-16 bg-gray-50">
+            <header className="flex items-center justify-between fixed -top-2 z-50 w-full h-18 bg-gray-50">
                 <button onClick={scrollToTop}>
                     <Image 
                         className="w-15 h-15 ml-5 hover:scale-120 transition-all duration-300 z-51"
@@ -71,8 +71,8 @@ export default function Header() {
                 <button onClick={handleNav} className="mr-5"><BurgerIcon/></button>
             </header>
                 <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
-                    <ul className="flex flex-col items-end justify-end h-full mr-5 pb-10">
-                        <li className="text-4xl p-6">About Me</li>
+                    <ul className="flex flex-col items-start justify-end h-full ml-5 pb-20">
+                        <li className="text-4xl p-6"><button>About Me</button></li>
                         <li className="text-4xl p-6">Projects</li>
                         <li className="text-4xl p-6">Contact</li>
                     </ul>
