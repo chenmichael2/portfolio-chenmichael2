@@ -77,8 +77,7 @@ export default function Header() {
                     {nav_list.map((item) => (
                         <li key={item.name} className="text-4xl py-6 pl-2 md:z-50 md:text-sm md:p-0"><button>{item.name}</button></li>
                     ))}
-                    <li className="flex flex-row justify-center
-                    md:hidden">
+                    <li className="flex flex-row justify-center md:hidden">
                     {icon_list.map((icon) => (
                         <div key={icon.name} className="pr-2">{icon.import({ icon })}</div>
                     ))}
