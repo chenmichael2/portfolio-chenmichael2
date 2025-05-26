@@ -12,7 +12,7 @@ export default function ResumeIcon({ icon }: IconProps) {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)} 
         target="_blank" 
-        className={`flex items-center justify-center w-[40px] h-[40px] p-2 m-2 border border-transparent rounded-full hover:border-black hover:border-1 hover:scale-120 transition-all duration-300`}
+        className={`flex items-center justify-center w-[40px] h-[40px] border border-transparent rounded-full hover:border-black hover:border-1 hover:scale-120 transition-all duration-300`}
         >
             <svg className="navIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V7L15 2Z" fill={`${iconColor}`} stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

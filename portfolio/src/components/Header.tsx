@@ -61,27 +61,34 @@ export default function Header() {
                         priority
                     />
                 </button>
-                <nav className={`${poppins.className} hidden`}>
+                <nav className={`${poppins.className} hidden 
+                    md:inline`}>
                     <ul className="flex flex-col items-end justify-end h-full">
                         <li>About Me</li>
                         <li>Projects</li>
                         <li>Contact</li>
                     </ul>
                 </nav>
-                <button onClick={handleNav} className="mr-5"><BurgerIcon/></button>
+                <div className="hidden md:flex">
+                    {icon_list.map((icon) => (
+                        <div key={icon.name} className="pr-2">
+                            {icon.import({ icon })}
+                        </div>
+                    ))}
+                 </div>
+                <button onClick={handleNav} className="mr-5 md:hidden"><BurgerIcon/></button>
             </header>
                 <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
                     <ul className="flex flex-col items-start justify-end h-full ml-5 pb-20">
                         {nav_list.map((item) => (
-                            <li key={item.name} className="text-4xl p-6"><button>{item.name}</button></li>
+                            <li key={item.name} className="text-4xl py-6 pl-2"><button>{item.name}</button></li>
                         ))}
-                        <li className="flex flex-row">
+                        <li className="flex flex-row justify-center">
                         {icon_list.map((icon) => (
-                            <div key={icon.name} className="">{icon.import({ icon })}</div>
+                            <div key={icon.name} className="pr-2">{icon.import({ icon })}</div>
                         ))}
                         </li>
                     </ul>
-                    
                 </nav>
         </div>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
