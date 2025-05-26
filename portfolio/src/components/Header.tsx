@@ -61,14 +61,6 @@ export default function Header() {
                         priority
                     />
                 </button>
-                <nav className={`${poppins.className} hidden 
-                    md:inline`}>
-                    <ul className="flex flex-col items-end justify-end h-full">
-                        <li>About Me</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav>
                 <div className="hidden md:flex">
                     {icon_list.map((icon) => (
                         <div key={icon.name} className="pr-2">
@@ -78,18 +70,21 @@ export default function Header() {
                  </div>
                 <button onClick={handleNav} className="mr-5 md:hidden"><BurgerIcon/></button>
             </header>
-                <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out`}>
-                    <ul className="flex flex-col items-start justify-end h-full ml-5 pb-20">
-                        {nav_list.map((item) => (
-                            <li key={item.name} className="text-4xl py-6 pl-2"><button>{item.name}</button></li>
-                        ))}
-                        <li className="flex flex-row justify-center">
-                        {icon_list.map((icon) => (
-                            <div key={icon.name} className="pr-2">{icon.import({ icon })}</div>
-                        ))}
-                        </li>
-                    </ul>
-                </nav>
+            <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out
+            md:flex md:translate-y-0 md:h-16 md:bg-transparent md:z-50 md:justify-center`}>
+                <ul className="flex flex-col items-start justify-end h-full ml-5 pb-20 
+                md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
+                    {nav_list.map((item) => (
+                        <li key={item.name} className="text-4xl py-6 pl-2 md:z-50 md:text-sm md:p-0"><button>{item.name}</button></li>
+                    ))}
+                    <li className="flex flex-row justify-center
+                    md:hidden">
+                    {icon_list.map((icon) => (
+                        <div key={icon.name} className="pr-2">{icon.import({ icon })}</div>
+                    ))}
+                    </li>
+                </ul>
+            </nav>
         </div>
         // <header className="sticky top-0 z-100 w-full h-20 backdrop-blur-xl">
         //     <div className="flex items-center justify-between w-full h-full px-10">
