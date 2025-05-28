@@ -71,8 +71,8 @@ export default function Header() {
                  </div>
                 <button onClick={handleNav} className="mr-5 md:hidden"><BurgerIcon/></button>
             </header>
-            <nav className={`mobile-dropdown ${poppins.className} fixed w-[calc(100vw-26rem)] h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out
-            md:flex md:translate-y-0 md:h-16 md:bg-transparent md:z-50 md:justify-center md:mx-52`}>
+            <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out
+            md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:bg-transparent md:z-50 md:justify-center md:mx-52`}>
                 <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
                     {nav_list.map((item) => (
