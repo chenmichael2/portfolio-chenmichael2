@@ -69,7 +69,7 @@ export default function Header() {
                         </div>
                     ))}
                  </div>
-                <button onClick={handleNav} className="mr-5 md:hidden"><BurgerIcon/></button>
+                <button onClick={handleNav} className="md:hidden"><BurgerIcon/></button>
             </header>
             <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 ease-in-out
             md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:bg-transparent md:z-50 md:justify-center md:mx-52`}>
