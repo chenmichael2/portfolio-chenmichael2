@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-100">
-      <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
+      {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">
           <h1 className="font-extrabold pr-25 text-[8vw] text-primary animate__animated animate__slideInDown">Michael</h1>
           <div className="flex items-end">
@@ -51,7 +51,7 @@ export default function Hero() {
           <Image width={100000} height={100000} className="w-auto h-full origin-center transition-all duration-300 ease-in-out" src="/images/profile.jpeg" alt="Michael Chen Picture"/>
         </div>
       </div>
-      <div>socials</div>
+      <div>socials</div> */}
     </section>
   );
 }
