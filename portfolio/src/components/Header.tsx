@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { useLenis } from "lenis/react";
 import '@/app/globals.css'
 import 'animate.css'
-import { poppins } from "@/app/fonts";
+import { poppins, openSauce } from "@/app/fonts";
 import Image from "next/image";
 import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
@@ -34,7 +34,6 @@ export default function Header() {
     }
 
     const handleNav = () => {
-        console.log(window.innerWidth);
         if (window.innerWidth > 767) return;
         if (navIsOpen) {
             document.querySelector(".mobile-dropdown")?.classList.add("-translate-y-400");
@@ -55,7 +54,7 @@ export default function Header() {
     return (
         <div>
             <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 bg-transparent transition-all duration-100 ease-in
-            md:mx-5 md:w-[calc(100vw-2.5rem)]">
+            md:mx-5 md:w-[calc(100vw-2.5rem)] md:p-0">
                 <button onClick={scrollToTop}>
                     <Image 
                         className="w-15 h-15 hover:scale-120 transition-all duration-300 z-51
@@ -76,8 +75,8 @@ export default function Header() {
                  </div>
                 <button onClick={handleNav} className="md:hidden"><BurgerIcon/></button>
             </header>
-            <nav className={`mobile-dropdown ${poppins.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-100 z-20 top-0 -translate-y-400 transition-transform duration-300
-            md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52`}>
+            <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-100 z-20 top-0 -translate-y-400 transition-transform duration-300
+            md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52 md:bg-transparent`}>
                 <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
                     {nav_list.map((item) => (

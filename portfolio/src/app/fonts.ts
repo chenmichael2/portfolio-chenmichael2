@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono, Outfit, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
 export const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,15 @@ export const outfit = Outfit({
     display: 'swap',
   });
 
-  export const poppins = Poppins({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: ['300', '400', '800'],
-  });
+export const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '800'],
+});
+
+export const openSauce = localFont({
+  src: "../../public/fonts/open-sauce.one-regular.ttf",
+  variable: "--font-open-sauce",
+  weight: "400",
+  display: "swap",
+});

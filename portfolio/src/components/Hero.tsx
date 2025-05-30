@@ -20,7 +20,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-blue-300">
+    <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-100">
 
       {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">

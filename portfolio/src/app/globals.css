@@ -6,6 +6,13 @@
   --color-tertiary: #BCDBDF; 
 }
 
+@font-face {
+  font-family: 'Open Sauce Sans';
+  src: url('/fonts/open-sauce.one-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
