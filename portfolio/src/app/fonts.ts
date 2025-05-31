@@ -35,6 +35,11 @@ export const blackOpenSauce = localFont({
       style: "normal"
     },
     {
+      path: "../../public/fonts/open-sauce.sans-medium-italic.ttf", 
+      weight: '500',
+      style: "italic"
+    },
+    {
       path: "../../public/fonts/open-sauce.sans-black-italic.ttf", 
       weight: '900',
       style: "normal"

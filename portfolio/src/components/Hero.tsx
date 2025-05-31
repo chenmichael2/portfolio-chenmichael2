@@ -21,7 +21,9 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col justify-evenly w-full h-[calc(100vh-2rem)] bg-gray-100">
-      <div className={`${openSauce.className} font-bold`}>Michael Chen</div>
+      <div className={`${openSauce.className} text-2xl font-medium italic flex flex-col w-full`}>
+        <span className="self-start">Michael</span><span className="self-end">Chen</span>
+      </div>
       {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">
           <h1 className="font-extrabold pr-25 text-[8vw] text-primary animate__animated animate__slideInDown">Michael</h1>
