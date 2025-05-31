@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { poppins } from "../app/fonts";
+import { poppins, openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
 
 export default function Hero() {
@@ -20,8 +20,8 @@ export default function Hero() {
   ]
 
   return (
-    <section className="flex flex-col justify-evenly w-full h-[calc(100vh-100px)] bg-gray-100">
-
+    <section className="flex flex-col justify-evenly w-full h-[calc(100vh-2rem)] bg-gray-100">
+      <div className={`${openSauce.className} font-bold`}>Michael Chen</div>
       {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">
           <h1 className="font-extrabold pr-25 text-[8vw] text-primary animate__animated animate__slideInDown">Michael</h1>

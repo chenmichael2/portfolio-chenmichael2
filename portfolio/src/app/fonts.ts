@@ -24,7 +24,21 @@ export const poppins = Poppins({
 
 export const openSauce = localFont({
   src: "../../public/fonts/open-sauce.one-regular.ttf",
-  variable: "--font-open-sauce",
-  weight: "400",
+  display: "swap",
+});
+
+export const blackOpenSauce = localFont({
+  src: [
+    {
+      path: "../../public/fonts/open-sauce.one-regular.ttf", 
+      weight: '400',
+      style: "normal"
+    },
+    {
+      path: "../../public/fonts/open-sauce.sans-black-italic.ttf", 
+      weight: '900',
+      style: "normal"
+    },
+  ],
   display: "swap",
 });

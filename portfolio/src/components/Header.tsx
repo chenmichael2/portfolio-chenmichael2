@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { useLenis } from "lenis/react";
 import '@/app/globals.css'
 import 'animate.css'
-import { poppins, openSauce } from "@/app/fonts";
+import { openSauce } from "@/app/fonts";
 import Image from "next/image";
 import EmailIcon from "../../public/icons/email";
 import GithubIcon from "../../public/icons/github";
