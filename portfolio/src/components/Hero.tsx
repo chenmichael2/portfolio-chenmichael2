@@ -20,8 +20,8 @@ export default function Hero() {
   ]
 
   return (
-    <section className="flex flex-col pt-10 w-full h-[calc(100vh-2rem)] bg-gray-100">
-      <div className={`${openSauce.className} text-5xl font-medium flex flex-col w-full p-7`}>
+    <section className="flex flex-col pt-18 w-full h-[calc(100vh-2rem)] bg-gray-100">
+      <div className={`${openSauce.className} text-5xl font-medium flex flex-col w-full p-6`}>
         <span className="self-start">Michael</span><span className="self-end">Chen</span>
       </div>
       {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>

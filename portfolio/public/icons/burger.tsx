@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion as m } from "motion/react"
 
 export default function BurgerIcon() {
+    const strokeColor = "black";
     const closeHam = {
         top: "M6 20H24V22C24 23.1046 23.1046 24 22 24H8C6.89543 24 6 23.1046 6 22V20Z",
         middle: "M15 6C10.0294 6 6 8.55837 6 11.7143V14H24V11.7143C24 8.55837 19.9706 6 15 6Z",
@@ -17,9 +18,9 @@ export default function BurgerIcon() {
     return (
         <div onClick={() => {setHandleHam(handleHam === 'close' ? 'open' : 'close')}} className="">
             <m.svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <m.path animate={handleHam === 'open' ? {d: xHam.top} : {d: closeHam.top}} d={closeHam.top} stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <m.path animate={handleHam === 'open' ? {d: xHam.middle} : {d: closeHam.middle}} d={closeHam.middle} stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <m.path animate={handleHam === 'open' ? {d: xHam.bottom} : {d: closeHam.bottom}} d={closeHam.bottom} stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.top} : {d: closeHam.top}} d={closeHam.top} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.middle} : {d: closeHam.middle}} d={closeHam.middle} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.bottom} : {d: closeHam.bottom}} d={closeHam.bottom} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </m.svg>
         </div>
     )
