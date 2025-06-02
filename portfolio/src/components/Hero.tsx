@@ -20,10 +20,18 @@ export default function Hero() {
   ]
 
   return (
-    <section className="flex flex-col pt-18 w-full h-[calc(100vh-2rem)] bg-gray-100">
+    <section className="pt-18 w-full h-[calc(100vh-2rem)] bg-gray-100">
+<Image
+          src="/images/full_profile.JPG"
+          alt="Hero Image"
+          width={100}
+          height={10}
+          className="rounded-xl shadow-lg"
+        />
       <div className={`${openSauce.className} text-5xl font-medium flex flex-col w-full p-6`}>
         <span className="self-start">Michael</span><span className="self-end">Chen</span>
       </div>
+
       {/* <div className={`${poppins.className} flex items-center justify-evenly leading-none w-full`}>
         <div className="flex flex-col">
           <h1 className="font-extrabold pr-25 text-[8vw] text-primary animate__animated animate__slideInDown">Michael</h1>
