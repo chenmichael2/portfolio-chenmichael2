@@ -18,9 +18,9 @@ export default function BurgerIcon() {
     return (
         <div onClick={() => {setHandleHam(handleHam === 'close' ? 'open' : 'close')}} className="">
             <m.svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <m.path animate={handleHam === 'open' ? {d: xHam.top} : {d: closeHam.top}} d={closeHam.top} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <m.path animate={handleHam === 'open' ? {d: xHam.middle} : {d: closeHam.middle}} d={closeHam.middle} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <m.path animate={handleHam === 'open' ? {d: xHam.bottom} : {d: closeHam.bottom}} d={closeHam.bottom} stroke={strokeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.top} : {d: closeHam.top}} d={closeHam.top} stroke={strokeColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.middle} : {d: closeHam.middle}} d={closeHam.middle} stroke={strokeColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <m.path animate={handleHam === 'open' ? {d: xHam.bottom} : {d: closeHam.bottom}} d={closeHam.bottom} stroke={strokeColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </m.svg>
         </div>
     )

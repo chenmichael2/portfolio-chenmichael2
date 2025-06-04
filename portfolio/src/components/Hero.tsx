@@ -20,7 +20,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="pt-18 w-full h-[calc(100vh-2rem)] bg-gray-100">
+    <section className="pt-18 w-full h-[calc(100vh-2rem)] bg-gray-50">
       <div className={`${openSauce.className} text-5xl font-medium flex flex-col w-full p-6`}>
         <span className="self-start">Michael</span><span className="self-end">Chen</span>
       </div>

@@ -39,14 +39,14 @@ export default function Header() {
             document.querySelector(".mobile-dropdown")?.classList.add("-translate-y-400");
             document.querySelector(".mobile-dropdown")?.classList.remove("translate-y-16");
             document.querySelector("header")?.classList.add("bg-transparent");
-            document.querySelector("header")?.classList.remove("bg-gray-100");
+            document.querySelector("header")?.classList.remove("bg-gray-50");
             setIsOpen(false);
         }
         else {
             document.querySelector(".mobile-dropdown")?.classList.remove("-translate-y-400");
             document.querySelector(".mobile-dropdown")?.classList.add("translate-y-16");
             document.querySelector("header")?.classList.remove("bg-transparent");
-            document.querySelector("header")?.classList.add("bg-gray-100");
+            document.querySelector("header")?.classList.add("bg-gray-50");
             setIsOpen(true);
         }
     };
@@ -75,7 +75,7 @@ export default function Header() {
                  </div>
                 <button onClick={handleNav} className="md:hidden"><BurgerIcon/></button>
             </header>
-            <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-100 z-20 top-0 -translate-y-400 transition-transform duration-300
+            <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300
             md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52 md:bg-transparent`}>
                 <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
