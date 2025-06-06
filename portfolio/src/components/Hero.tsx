@@ -24,14 +24,16 @@ export default function Hero() {
       <div className={`${openSauce.className} text-5xl font-medium flex flex-col w-full p-6`}>
         <span className="self-start">Michael</span><span className="self-end">Chen</span>
       </div>
-      <div className="w-100 h-100 bg-blue-500 overflow-hidden" style={{borderRadius: '73% 27% 78% 22% / 86% 63% 37% 14% '}}></div>
-      <Image
-        src="/images/full-profile-no-bg.png"
-        alt="Hero Image"
-        width={300}
-        height={300}
-        className="rounded-xl"
-      />
+      <div className="relative overflow-x-hidden w-full h-full">
+        <div className="absolute w-100 h-100 bg-blue-500 overflow-hidden left-1/2 -translate-x-1/2" style={{borderRadius: '73% 27% 78% 22% / 86% 63% 37% 14% '}}></div>
+        <Image
+          src="/images/full-profile-no-bg.png"
+          alt="Hero Image"
+          width={400}
+          height={400}
+          className="absolute rounded-xl left-1/2 -translate-x-1/2"
+        />
+      </div>
     </section>
   );
 }

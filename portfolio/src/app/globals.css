@@ -5,9 +5,6 @@
   --color-secondary: #235784;
   --color-tertiary: #BCDBDF; 
 }
-html, body {
-  overflow-x: hidden;
-}
 
 html {
   scroll-behavior: smooth;
