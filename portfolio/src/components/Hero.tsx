@@ -18,6 +18,11 @@ export default function Hero() {
       color: "#dfc5fe",
     }
   ]
+  const blobs = [
+    {
+      
+    }
+  ]
 
   return (
     <section className="pt-18 w-full h-[calc(100vh-2rem)] bg-gray-50">
@@ -25,7 +30,7 @@ export default function Hero() {
         <span className="self-start">Michael</span><span className="self-end">Chen</span>
       </div>
       <div className="relative overflow-x-hidden w-full h-full">
-        <div className="absolute w-100 h-100 bg-blue-500 overflow-hidden left-1/2 -translate-x-1/2" style={{borderRadius: '73% 27% 78% 22% / 86% 63% 37% 14% '}}></div>
+        <div className="absolute w-100 h-100 bg-[#2E72AC] overflow-hidden left-1/2 -translate-x-1/2" style={{borderRadius: '73% 27% 78% 22% / 86% 63% 37% 14% '}}></div>
         <Image
           src="/images/full-profile-no-bg.png"
           alt="Hero Image"
