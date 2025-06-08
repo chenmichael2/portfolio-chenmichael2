@@ -27,7 +27,7 @@ export default function Hero() {
   return (
     <section className="pt-15 w-full h-[calc(100vh-2rem)] bg-gray-50">
       <div className="relative overflow-x-hidden w-full h-full">
-        <div className={`${openSauce.className} absolute z-42 text-secondary text-5xl font-medium flex flex-col w-full p-6 text-center translate-y-85`}>
+        <div className={`${openSauce.className} absolute z-42 text-secondary text-5xl font-medium flex flex-col w-full p-6 text-center translate-y-76`}>
           <span className="flex justify-center align-center">Michael Chen</span>
         </div>
         {/* <div className="absolute w-100 h-100 bg-primary overflow-hidden left-1/2 -translate-x-1/2" style={{borderRadius: '73% 27% 78% 22% / 86% 63% 37% 14% '}}></div> */}
