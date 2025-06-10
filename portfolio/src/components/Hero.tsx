@@ -39,16 +39,18 @@ export default function Hero() {
           height={600}
           className="absolute rounded-xl z-10 left-1/2 -translate-x-1/2 -translate-y-17"
         />
-        <div className={`${openSauce.className} relative z-12 flex flex-col w-full p-6 text-center translate-y-60 mt-10`}>
+        <div className={`${openSauce.className} relative z-12 flex flex-col w-full pt-6 text-center translate-y-60 mt-10`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
-          {tagData.map((tag, index) => (
-            <span 
-              key={index} 
-              className="text-md w-max font-light mt-2 backdrop-blur-xl border-1 border-black"
-            >
-              {tag.title}
-            </span>
-          ))}
+          <div className="flex w-full flex-wrap justify-center">
+            {tagData.map((tag, index) => (
+              <span 
+                key={index} 
+                className="text-sm w-max font-light m-2 p-2 backdrop-blur-2xl border-1 rounded-full border-black whitespace-nowrap"
+              >
+                {tag.title}
+              </span>
+            ))}
+          </div>
         </div> 
       </div>
     </section>
