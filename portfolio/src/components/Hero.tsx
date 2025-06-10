@@ -42,12 +42,12 @@ export default function Hero() {
         <div className={`${openSauce.className} relative z-12 flex flex-col w-full p-6 text-center translate-y-60 mt-10`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
           {tagData.map((tag, index) => (
-            <div 
+            <span 
               key={index} 
-              className="text-xl font-bold mt-2 backdrop-blur-xl border-1 border-black"
+              className="text-md w-max font-light mt-2 backdrop-blur-xl border-1 border-black"
             >
               {tag.title}
-            </div>
+            </span>
           ))}
         </div> 
       </div>
