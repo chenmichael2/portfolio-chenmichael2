@@ -49,7 +49,7 @@ export default function Hero() {
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
           <div className="flex w-full flex-wrap justify-center mt-2">
             {tagData.map((tag, index) => (
-              <div className="flex justify-center align-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-black bg-gray-100 whitespace-nowrap">
+              <div className="flex justify-center align-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-black bg-gray-100 whitespace-nowrap" key={index}>
                 <Image 
                   src={`/icons/${tag.icon}`}
                   alt={tag.alt}
@@ -57,12 +57,7 @@ export default function Hero() {
                   height={16}
                   className="mx-1"
                 />
-                <span 
-                  key={index} 
-                  className=""
-                >
-                  {tag.title}
-                </span>
+                <span>{tag.title}</span>
               </div>
             ))}
           </div>
