@@ -2,21 +2,27 @@
 import Image from "next/image";
 import { poppins, openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
-import { svg } from "motion/react-client";
+import { a, svg } from "motion/react-client";
 
 export default function Hero() {
   const tagData = [ 
     {
       title: "Software Engineer", 
       color: "#66B2D6",
+      icon: "desktopComputer.svg",
+      alt: "Computer Icon"
     },
     {
-      title: "Web Developer",
+      title: "Marketing Web Developer",
       color: "#fccf55",
+      icon: "Necktie.svg",
+      alt: "Necktie Icon"
     },
     {
       title: "Marine Reservist",
       color: "#dfc5fe",
+      icon: "Military Helmet.svg",
+      alt: "Military Helmet Icon"
     }
   ]
 
@@ -41,14 +47,23 @@ export default function Hero() {
         />
         <div className={`${openSauce.className} relative z-12 flex flex-col w-full pt-6 text-center translate-y-60 mt-10`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
-          <div className="flex w-full flex-wrap justify-center">
+          <div className="flex w-full flex-wrap justify-center mt-2">
             {tagData.map((tag, index) => (
-              <span 
-                key={index} 
-                className="text-sm w-max font-light m-2 p-2 backdrop-blur-2xl border-1 rounded-full border-black whitespace-nowrap"
-              >
-                {tag.title}
-              </span>
+              <div className="flex justify-center align-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-black bg-gray-100 whitespace-nowrap">
+                <Image 
+                  src={`/icons/${tag.icon}`}
+                  alt={tag.alt}
+                  width={16}
+                  height={16}
+                  className="mx-1"
+                />
+                <span 
+                  key={index} 
+                  className=""
+                >
+                  {tag.title}
+                </span>
+              </div>
             ))}
           </div>
         </div> 
