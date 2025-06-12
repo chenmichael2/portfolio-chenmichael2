@@ -3,7 +3,8 @@
 @theme {
   --color-primary: #2E72AC;
   --color-secondary: #235784;
-  --color-tertiary: #BCDBDF; 
+  --color-tertiary: #BCDBDF;
+  --breakpoint-sm: 425px;
 }
 
 html {
