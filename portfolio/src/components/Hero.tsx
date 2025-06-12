@@ -53,7 +53,8 @@ export default function Hero() {
         <div className={`${openSauce.className} relative z-12 flex flex-col justify-center align-center w-full pt-6 text-center translate-y-60 mt-10
         sm:translate-y-80`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
-          <div className="flex w-full flex-wrap justify-center mt-2">
+          <div className="flex w-full flex-wrap justify-center mt-2
+          sm:mt-4">
             {tagData.map((tag, index) => (
               <div className="flex justify-center align-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap" key={index}>
                 <Image 
