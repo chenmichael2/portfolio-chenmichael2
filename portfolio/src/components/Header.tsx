@@ -5,20 +5,22 @@ import '@/app/globals.css'
 import 'animate.css'
 import { openSauce } from "@/app/fonts";
 import Image from "next/image";
-import EmailIcon from "../../public/icons/email";
-import GithubIcon from "../../public/icons/github";
-import LinkedinIcon from "../../public/icons/linkedin";
-import ResumeIcon from "../../public/icons/resume";
+import { icon_list } from "@/app/lib/iconLib";
+// import EmailIcon from "../../public/icons/email";
+// import GithubIcon from "../../public/icons/github";
+// import LinkedinIcon from "../../public/icons/linkedin";
+// import ResumeIcon from "../../public/icons/resume";
 import BurgerIcon from "../../public/icons/burger";
 
 export default function Header() {
     const lenis = useLenis();
-    var icon_list = [
-        { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
-        { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#66B2D6", import: LinkedinIcon},
-        { name: "email", href: "/", color:"#fccf55", import: EmailIcon},
-        { name: "resume", href: "/", color:"#dfc5fe", import: ResumeIcon},
-    ];
+    
+    // var icon_list = [
+    //     { name: "github", href: "https://github.com/chenmichael2", color: "#555", import: GithubIcon},
+    //     { name: "linkedin", href: "https://www.linkedin.com/in/chenmichael2/", color:"#66B2D6", import: LinkedinIcon},
+    //     { name: "email", href: "/", color:"#fccf55", import: EmailIcon},
+    //     { name: "resume", href: "/", color:"#dfc5fe", import: ResumeIcon},
+    // ];
     
     const nav_list = [
         { name: "About Me", href: "#about" },

@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import { icon_list } from "@/app/lib/iconLib";
 import { poppins, openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
 import { a, svg } from "motion/react-client";
@@ -61,7 +62,11 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="relative z-12">hello</div>
+          <ul className="relative z-12 flex flex-row justify-center mt-3">
+            {icon_list.map((icon) => (
+                <li key={icon.name} className="pr-2">{icon.import({ icon })}</li>
+            ))}
+          </ul>
         </div>
         
       </div>
