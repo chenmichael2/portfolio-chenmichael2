@@ -16,3 +16,4 @@
 - <a href="">GSAP</a>, Specifically Scroll Trigger
 - Portfolio Analysis
 - <a href="https://github.com/marcologous/Open-Sauce-Fonts/blob/master/fonts/OpenSauceOne-Regular.ttf">Open Sause Font</a>
+- <a href="https://www.blobmaker.app/">Blob maker</a>
