@@ -50,7 +50,8 @@ export default function Hero() {
             className="absolute rounded-xl h-150 z-10 left-1/2 -translate-x-1/2 top-5"
           />
         </div>
-        <div className={`${openSauce.className} absolute top-120 z-12 h-full w-full text-center`}>
+        <div className={`${openSauce.className} absolute top-120 z-12 h-full w-full text-center
+        sm:top-130`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
           <div className="flex w-full flex-wrap justify-center mt-2">
             {tagData.map((tag, index) => (
