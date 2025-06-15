@@ -30,8 +30,8 @@ export default function Hero() {
   return (
     <section className="pt-14 w-full min-h-215 h-[calc(100vh-2rem)] max-h-230 bg-gray-50">
       <div className="relative overflow-hidden w-full h-full
-      md:flex md:flex-row">
-        <div className="md:h-full md:w-full md:justify-center md:items-center md:relative md:overflow-hidden">
+      md:flex md:flex-row-reverse md:justify-around">
+        <div className="md:block md:h-full md:w-max md:justify-center md:items-center md:overflow-hidden">
           <svg className="absolute w-100 h-100 overflow-hidden left-1/2 -translate-x-1/2 top-10 scale-200
           sm:scale-300 
           md:scale-100
@@ -59,9 +59,9 @@ export default function Hero() {
             md:relative"
           />
         </div>
-        <div className={`${openSauce.className} absolute top-120 z-12 h-full w-full text-center
+        <div className={`${openSauce.className} relative top-120 z-12 h-full w-full text-center
         sm:top-130
-        md:block md:h-max md:w-1/2`}>
+        md:h-max md:w-1/2`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
           <div className="flex w-full flex-wrap justify-center mt-2">
             {tagData.map((tag, index) => (
