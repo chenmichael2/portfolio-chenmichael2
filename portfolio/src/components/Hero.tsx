@@ -46,7 +46,7 @@ export default function Hero() {
           </svg>
           <svg className="absolute w-100 h-100 overflow-hidden left-1/2 -translate-x-1/2 top-45 scale-200
           sm:scale-270 sm:top-53
-          md:scale-100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          md:scale-100 md:relative" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#235784" d="M29.8,-49C35.4,-42.9,34.3,-29,42.6,-17.5C50.9,-6,68.7,3.2,74.2,15.3C79.7,27.4,73,42.4,60.1,45.6C47.2,48.7,28.2,40,13.3,43.6C-1.6,47.2,-12.4,63.1,-21.3,64.2C-30.1,65.4,-37,51.7,-49.7,40.9C-62.3,30.1,-80.6,22.2,-83,11.4C-85.3,0.6,-71.8,-13,-61.2,-24.5C-50.6,-36.1,-43,-45.6,-33.3,-49.8C-23.6,-54,-11.8,-52.8,0.2,-53.1C12.2,-53.3,24.3,-55,29.8,-49Z" transform="translate(100 100)" />
           </svg>
           {/* <svg className="absolute w-100 h-100 z-11 overflow-hidden left-1/2 -translate-x-1/2 top-90 scale-90 rotate-180
@@ -55,13 +55,13 @@ export default function Hero() {
           </svg> */}
           <svg className="absolute w-100 h-100 z-11 overflow-hidden left-1/2 -translate-x-1/2 top-100 scale-150
           sm:scale-170 sm:top-105
-          md:scale-100" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          md:scale-100 md:relativeHa" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#BCDBDF" d="M38.4,-52.6C53.5,-50.1,72.1,-45.8,80.1,-34.7C88.2,-23.6,85.7,-5.8,81.5,10.6C77.4,27,71.6,42,61.9,54.2C52.2,66.3,38.6,75.6,25.2,74.3C11.8,73.1,-1.4,61.3,-13.2,53.8C-25,46.3,-35.5,43.1,-49.2,37.1C-62.9,31.2,-79.9,22.6,-83.4,10.8C-86.8,-0.9,-76.8,-15.7,-67,-27.9C-57.2,-40.1,-47.7,-49.7,-36.6,-54.1C-25.4,-58.4,-12.7,-57.4,-0.5,-56.6C11.7,-55.8,23.3,-55.1,38.4,-52.6Z" transform="translate(100 100)" />
           </svg>
         </div>
         <div className={`${openSauce.className} relative top-120 z-12 h-full w-full text-center
         sm:top-130
-        md:h-max md:w-1/2`}>
+        md:h-max md:w-1/2 md:top-0 md:items-center`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
           <div className="flex w-full flex-wrap justify-center mt-2">
             {tagData.map((tag, index) => (
