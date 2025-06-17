@@ -28,7 +28,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="pt-14 w-full min-h-215 h-[calc(100vh-2rem)] max-h-230 bg-gray-50">
+    <section className=" w-full min-h-215 h-[calc(100vh-2rem)] bg-gray-50">
       <div className="relative overflow-hidden w-full h-full
       md:flex md:flex-row-reverse md:justify-around md:align-center md:items-center md:gap-10">
         <div className="md:block md:w-max md:justify-center md:items-center md:overflow-hidden">
