@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section className=" w-full min-h-215 h-[calc(100vh-2rem)] max-h-280 bg-gray-50">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full
-      md:flex-row-reverse">
+      md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
         md:h-full">
           <img
@@ -51,15 +51,16 @@ export default function Hero() {
           </svg>
           <svg className="relative w-100 h-100 z-11 overflow-hidden left-1/2 -translate-x-1/2 translate-y-40 scale-370
           sm:scale-400
-          md:scale-370 md:-translate-y-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          md:scale-360 md:-translate-y-65" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#BCDBDF" d="M38.4,-52.6C53.5,-50.1,72.1,-45.8,80.1,-34.7C88.2,-23.6,85.7,-5.8,81.5,10.6C77.4,27,71.6,42,61.9,54.2C52.2,66.3,38.6,75.6,25.2,74.3C11.8,73.1,-1.4,61.3,-13.2,53.8C-25,46.3,-35.5,43.1,-49.2,37.1C-62.9,31.2,-79.9,22.6,-83.4,10.8C-86.8,-0.9,-76.8,-15.7,-67,-27.9C-57.2,-40.1,-47.7,-49.7,-36.6,-54.1C-25.4,-58.4,-12.7,-57.4,-0.5,-56.6C11.7,-55.8,23.3,-55.1,38.4,-52.6Z" transform="translate(100 100)" />
           </svg>
         </div>
 
         <div className={`${openSauce.className} relative z-12 h-max w-full text-center -translate-y-10
-        md:translate-y-auto`}>
+        md:translate-y-auto md:max-w-xl md:text-left`}>
           <span className="text-secondary text-6xl font-bold">Michael Chen</span>
-          <div className="flex w-full flex-wrap justify-center mt-2">
+          <div className="flex w-full flex-wrap justify-center mt-2
+          md:justify-start">
             {tagData.map((tag, index) => (
               <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap" key={index}>
                 <Image 
@@ -73,7 +74,8 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1">
+          <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
+          md:justify-start md:mx-0">
             {icon_list.map((icon) => (
                 <li key={icon.name} className="pr-2">{icon.import({ icon })}</li>
             ))}
