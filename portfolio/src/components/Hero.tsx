@@ -56,11 +56,11 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`${openSauce.className} relative z-12 h-max w-full text-center -translate-y-10
+        <div className={`${openSauce.className} relative z-12 h-max w-full text-center -translate-y-15
         md:translate-y-auto md:max-w-xl md:text-left md:h-auto md:ml-10`}>
-          <span className="text-secondary text-6xl font-bold
-          md:text-7xl">Michael Chen</span>
-          <div className="flex w-full flex-wrap justify-center mt-2
+          <div className="text-secondary text-6xl font-bold animate__animated animate__bounceInLeft
+          md:text-7xl">Michael Chen</div>
+          <div className="flex w-full flex-wrap justify-center mt-2  animate__animated animate__bounceInLeft animate__delay-300ms
           md:justify-start">
             {tagData.map((tag, index) => (
               <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap" key={index}>
@@ -75,12 +75,13 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
+          <div></div>
+          {/* <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
           md:justify-start md:mx-0">
             {icon_list.map((icon) => (
                 <li key={icon.name} className="pr-2">{icon.import({ icon })}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         
       </div>
