@@ -18,3 +18,7 @@ a {
 .navIcon path {
   transition: fill 0.3s ease;
 }
+
+.hero-tags {
+  animation-delay: 700ms;
+}
