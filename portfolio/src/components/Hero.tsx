@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className=" w-full min-h-215 h-[calc(100vh-1rem)] max-h-300 bg-gray-50">
+    <section className=" w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
       md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
@@ -40,7 +40,7 @@ export default function Hero() {
           <img
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
-            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2 top-15
+            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2
             md:relative md:translate-y-20"
           />
           <svg className="absolute z-5 w-200 overflow-hidden left-1/2 -translate-x-1/2 translate-y-3
@@ -57,11 +57,11 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`${openSauce.className} relative z-12 h-max w-full text-center -translate-y-15
+        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-15
         md:translate-y-auto md:max-w-xl md:text-left md:h-auto md:ml-10`}>
           <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown
           md:text-7xl">Michael Chen</div>
-          <div className="hero-tags flex w-full flex-wrap justify-center mt-2  animate__animated animate__fadeInDown animate__delay-300ms
+          <div className="hero-tags flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown animate__delay-300ms
           md:justify-start">
             {tagData.map((tag, index) => (
               <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap" key={index}>
