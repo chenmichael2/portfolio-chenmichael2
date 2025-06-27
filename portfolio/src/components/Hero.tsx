@@ -56,12 +56,13 @@ export default function Hero() {
           </svg>
           <svg className="absolute z-11 w-150 overflow-hidden left-1/2 -translate-x-1/2 translate-y-85 
           sm:w-180 sm:translate-y-50 
-          md:translate-y-0" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          md:translate-y-5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#BCDBDF" d="M38.4,-52.6C53.5,-50.1,72.1,-45.8,80.1,-34.7C88.2,-23.6,85.7,-5.8,81.5,10.6C77.4,27,71.6,42,61.9,54.2C52.2,66.3,38.6,75.6,25.2,74.3C11.8,73.1,-1.4,61.3,-13.2,53.8C-25,46.3,-35.5,43.1,-49.2,37.1C-62.9,31.2,-79.9,22.6,-83.4,10.8C-86.8,-0.9,-76.8,-15.7,-67,-27.9C-57.2,-40.1,-47.7,-49.7,-36.6,-54.1C-25.4,-58.4,-12.7,-57.4,-0.5,-56.6C11.7,-55.8,23.3,-55.1,38.4,-52.6Z" transform="translate(100 100)" />
           </svg>
         </div>
 
-        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-10
+        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-8
+        sm:-translate-y-25
         md:translate-y-auto md:max-w-xl md:text-left md:h-auto md:ml-10`}>
           <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown
           md:text-7xl">Michael Chen</div>
