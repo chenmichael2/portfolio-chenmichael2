@@ -56,7 +56,7 @@ export default function Header() {
     return (
         <div>
             <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 backdrop-blur-3xl bg-gray-50/50 transition-all duration-100 ease-in
-            md:mx-5 md:w-[calc(100vw-2.5rem)] md:p-0 md:transition-none">
+            md:mx-0 md:px-5 md:transition-none">
                 <button onClick={scrollToTop}>
                     <Image 
                         className="w-15 h-15 hover:scale-120 transition-all duration-300 z-51
