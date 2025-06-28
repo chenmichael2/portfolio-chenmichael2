@@ -34,15 +34,15 @@ export default function Hero() {
   return (
     <section className=" w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
-      md:flex-row-reverse md:justify-evenly">
+      md:flex-row-reverse md:justify-between">
         <div className="flex flex-col h-140
-        md:h-full">
+        md:h-full md:w-full">
           <img
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
             className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2
             sm:w-80 sm:-translate-y-20
-            md:relative md:w-auto md:h-50 md:translate-y-0"
+            md:relative md:w-70 md:h-auto md:translate-y-0"
           />
           <svg className="absolute z-5 w-200 overflow-hidden left-1/2 -translate-x-1/2 translate-y-3 
           sm:w-255 sm:-translate-y-60
