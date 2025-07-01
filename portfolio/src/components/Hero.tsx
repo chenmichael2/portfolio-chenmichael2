@@ -34,10 +34,10 @@ export default function Hero() {
   return (
     <section className=" w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50 mt-15">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
-      md:flex-row-reverse md:justify-between">
+      md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
         md:relative md:h-full md:w-full md:justify-center
-        lg:w-full">
+        lg:w-[50%]">
           <img
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
@@ -67,9 +67,11 @@ export default function Hero() {
 
         <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-8
         sm:-translate-y-25
-        md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10`}>
+        md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
+        lg:w-max`}>
           <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown
-          md:text-7xl">Michael Chen</div>
+          md:text-7xl
+          lg:w-max">Michael Chen</div>
           <div className="hero-tags flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown animate__delay-300ms
           md:justify-start">
             {tagData.map((tag, index) => (
