@@ -68,7 +68,7 @@ export default function Hero() {
         <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-8
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
-        lg:w-max lg:ml-0`}>
+        lg:w-max lg:ml-5`}>
           <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown
           md:text-6xl
           lg:w-max
