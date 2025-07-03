@@ -41,23 +41,23 @@ export default function Hero() {
           <img
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
-            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2
+            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2 -translate-y-15
             sm:w-80 sm:-translate-y-20
             md:relative md:w-70 md:h-auto md:translate-y-20"
           />
-          <svg className="absolute z-5 w-200 overflow-hidden left-1/2 -translate-x-1/2 translate-y-3 
+          <svg className="absolute z-5 w-200 overflow-hidden left-1/2 -translate-x-1/2 -translate-y-20 
           sm:w-255 sm:-translate-y-60
           md:relative md:-translate-y-90 md:w-100 md:scale-165
           xl:scale-220" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#2E72AC" d="M41.3,-51.1C55.2,-37.6,69.3,-26.1,74.9,-10.8C80.5,4.6,77.6,23.9,69.2,41.5C60.8,59,47,74.9,29.9,80.4C12.8,85.9,-7.4,80.9,-25.4,73C-43.4,65,-59.1,54.1,-68.6,39C-78.1,23.8,-81.3,4.5,-79.3,-15.2C-77.2,-34.8,-69.9,-54.7,-55.8,-68.2C-41.7,-81.7,-20.9,-88.8,-3.6,-84.6C13.7,-80.3,27.4,-64.7,41.3,-51.1Z" transform="translate(100 100)" />
           </svg>
-          <svg className="absolute z-6 w-200 overflow-hidden left-1/2 -translate-x-1/2 translate-y-10 
+          <svg className="absolute z-6 w-200 overflow-hidden left-1/2 -translate-x-1/2 -translate-y-10 
           sm:w-270 sm:-translate-y-50
           md:translate-y-14 md:ml-22 md:w-100 md:scale-130
           xl:scale-180" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path fill="#235784" d="M29.8,-49C35.4,-42.9,34.3,-29,42.6,-17.5C50.9,-6,68.7,3.2,74.2,15.3C79.7,27.4,73,42.4,60.1,45.6C47.2,48.7,28.2,40,13.3,43.6C-1.6,47.2,-12.4,63.1,-21.3,64.2C-30.1,65.4,-37,51.7,-49.7,40.9C-62.3,30.1,-80.6,22.2,-83,11.4C-85.3,0.6,-71.8,-13,-61.2,-24.5C-50.6,-36.1,-43,-45.6,-33.3,-49.8C-23.6,-54,-11.8,-52.8,0.2,-53.1C12.2,-53.3,24.3,-55,29.8,-49Z" transform="translate(100 100)" />
           </svg>
-          <svg className="absolute z-12 w-150 overflow-hidden left-1/2 -translate-x-1/2 translate-y-85 
+          <svg className="absolute z-12 w-150 overflow-hidden left-1/2 -translate-x-1/2 translate-y-70 
           sm:w-180 sm:translate-y-50 
           md:translate-y-40 md:w-100
           xl:scale-130 xl:translate-y-50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-8
+        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
