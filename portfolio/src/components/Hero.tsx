@@ -89,7 +89,14 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div></div>
+          <div>
+            <Image src="/icons/pin.svg"
+              alt="Pin Icon"
+              width={16}
+              height={16}
+              className="inline mx-1"
+            />
+          </div>
           {/* <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
           md:justify-start md:mx-0">
             {icon_list.map((icon) => (
