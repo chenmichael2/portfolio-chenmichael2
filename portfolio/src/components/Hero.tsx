@@ -89,14 +89,14 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown ">
+          <div className={`${openSauce.className} animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown`}>
             <Image src="/icons/pin.svg"
               alt="Pin Icon"
               width={30}
               height={30}
               className="inline rotate-350 mr-1"
             />
-            <span className="text-secondary font-medium text-lg">Torrance, CA</span>
+            <span className="text-secondary text-lg">Torrance, CA</span>
           </div>
           {/* <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
           md:justify-start md:mx-0">
