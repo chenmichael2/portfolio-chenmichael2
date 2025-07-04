@@ -73,7 +73,7 @@ export default function Hero() {
           md:text-6xl
           lg:w-max
           xl:text-7xl">Michael Chen</div>
-          <div className="hero-tags flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown animate__delay-300ms
+          <div className="animate-2 flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown
           md:justify-start">
             {tagData.map((tag, index) => (
               <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap
@@ -89,13 +89,14 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div>
+          <div className="animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown ">
             <Image src="/icons/pin.svg"
               alt="Pin Icon"
-              width={16}
-              height={16}
-              className="inline mx-1"
+              width={30}
+              height={30}
+              className="inline rotate-350 mr-1"
             />
+            <span className="text-secondary font-medium text-lg">Torrance, CA</span>
           </div>
           {/* <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
           md:justify-start md:mx-0">
