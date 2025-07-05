@@ -73,6 +73,15 @@ export default function Hero() {
           md:text-6xl
           lg:w-max
           xl:text-7xl">Michael Chen</div>
+          <div className={`${openSauce.className} animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown`}>
+            <Image src="/icons/pin.svg"
+              alt="Pin Icon"
+              width={30}
+              height={30}
+              className="inline rotate-350 mr-1"
+            />
+            <span className="text-secondary text-lg">Torrance, CA</span>
+          </div>
           <div className="animate-2 flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown
           md:justify-start">
             {tagData.map((tag, index) => (
@@ -89,7 +98,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className={`${openSauce.className} animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown`}>
+          {/* <div className={`${openSauce.className} animate-3 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown`}>
             <Image src="/icons/pin.svg"
               alt="Pin Icon"
               width={30}
@@ -97,7 +106,7 @@ export default function Hero() {
               className="inline rotate-350 mr-1"
             />
             <span className="text-secondary text-lg">Torrance, CA</span>
-          </div>
+          </div> */}
           {/* <ul className="w-max mx-auto z-12 flex flex-row mt-3 border-1 border-gray-300 rounded-full backdrop-blur-sm bg-gray-50/50 p-1
           md:justify-start md:mx-0">
             {icon_list.map((icon) => (
