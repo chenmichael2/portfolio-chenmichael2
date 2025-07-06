@@ -19,8 +19,12 @@ a {
   transition: fill 0.3s ease;
 }
 
-.animate-2 {
+.animate-1 {
   animation-delay: 400ms;
+}
+
+.animate-2 {
+  animation-delay: 600ms;
 }
 
 .animate-3 {
