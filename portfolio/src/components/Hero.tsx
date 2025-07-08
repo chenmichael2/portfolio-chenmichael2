@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import { icon_list } from "@/app/lib/iconLib";
-import { poppins, openSauce } from "../app/fonts";
+import { openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
 import { a, svg } from "motion/react-client";
 
@@ -86,7 +86,7 @@ export default function Hero() {
           <div className="animate-3 flex w-full flex-wrap justify-center mt-2 animate__animated animate__fadeInDown
           md:justify-start">
             {tagData.map((tag, index) => (
-              <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-400 bg-gray-100 whitespace-nowrap
+              <div className="flex justify-center items-center text-sm w-max font-light m-1 p-2 border-1 rounded-full border-gray-300 bg-gray-100 whitespace-nowrap
               md:ml-0" key={index}>
                 <Image 
                   src={`/icons/${tag.icon}`}
