@@ -59,7 +59,7 @@ export default function Header() {
             md:mx-0 md:px-5 md:transition-none">
                 <button onClick={scrollToTop}>
                     <Image 
-                        className="w-15 h-15 hover:scale-120 transition-all duration-300 z-51
+                        className="w-15 h-15 hover:scale-120 transition-all duration-300 z-51 animate__animated animate__fadeInDown
                         md:w-20 md:h-20 md:mt-3"
                         src="/logo.svg"
                         alt="Logo"
@@ -68,16 +68,16 @@ export default function Header() {
                         priority
                     />
                 </button>
-                <div className="hidden flex-row justify-center ml-3 mt-2 md:flex">
+                <div className="hidden flex-row justify-center ml-3 mt-2 md:flex animate__animated animate__fadeInDown">
                     {icon_list.map((icon) => (
                         <div key={icon.name} className="pr-2">
                             {icon.import({ icon })}
                         </div>
                     ))}
                  </div>
-                <button onClick={handleNav} className="md:hidden"><BurgerIcon/></button>
+                <button onClick={handleNav} className="md:hidden animate__animated animate__fadeInDown"><BurgerIcon/></button>
             </header>
-            <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300
+            <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 animate__animated animate__fadeInDown
             md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52 md:bg-transparent md:transition-nonemd:duration-1`}>
                 <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
