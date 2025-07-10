@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import { gsap } from "gsap"
 import { icon_list } from "@/app/lib/iconLib";
 import { openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
@@ -28,7 +29,15 @@ export default function Hero() {
   ]
 
   useEffect(() => {
-    
+    let tl = gsap.timeline();
+    tl.to(".profile-picture", {
+      duration: 1,
+      y: 0,
+      ease: "power3.out",
+      delay: 0.5,
+      opacity: 1,
+      scale: 1,
+      stagger: 0.2}) 
   }, []);
 
   return (
