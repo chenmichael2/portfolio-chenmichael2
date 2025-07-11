@@ -29,15 +29,15 @@ export default function Hero() {
   ]
 
   useEffect(() => {
-    let tl = gsap.timeline();
-    tl.to(".profile-picture", {
-      duration: 1,
-      y: 0,
-      ease: "power3.out",
-      delay: 0.5,
-      opacity: 1,
-      scale: 1,
-      stagger: 0.2}) 
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      }
+    });
+
   }, []);
 
   return (
