@@ -1,12 +1,14 @@
 'use client';
 import Image from "next/image";
 import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { icon_list } from "@/app/lib/iconLib";
 import { openSauce } from "../app/fonts";
 import { useEffect, useState} from "react";
 import { a, svg } from "motion/react-client";
 
 export default function Hero() {
+  gsap.registerPlugin(ScrollTrigger);
   const tagData = [ 
     {
       title: "Software Engineer", 
@@ -31,7 +33,7 @@ export default function Hero() {
   useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero",
+        trigger: ".hero-text",
         start: "top top",
         end: "bottom bottom",
         scrub: 1,
@@ -74,7 +76,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
+        <div className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
