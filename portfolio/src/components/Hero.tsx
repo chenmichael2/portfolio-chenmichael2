@@ -32,10 +32,11 @@ export default function Hero() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".hero-text", {
+    let tl = gsap.timeline();
+    tl.to(".hero-text", {
       scrollTrigger: {
         trigger: ".hero-text",
-        start: "top top",
+        start: "center top",
         end: "bottom bottom",
         scrub: 1,
       },
