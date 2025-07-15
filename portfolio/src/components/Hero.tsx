@@ -8,7 +8,7 @@ import { useEffect, useState} from "react";
 import { a, svg } from "motion/react-client";
 
 export default function Hero() {
-  gsap.registerPlugin(ScrollTrigger);
+  
   const tagData = [ 
     {
       title: "Software Engineer", 
@@ -31,6 +31,7 @@ export default function Hero() {
   ]
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to(".hero-text", {
       scrollTrigger: {
         trigger: ".hero-text",
