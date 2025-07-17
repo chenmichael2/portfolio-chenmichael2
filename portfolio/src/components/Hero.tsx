@@ -35,13 +35,11 @@ export default function Hero() {
     gsap.to(".hero-text", {
       scrollTrigger: {
         trigger: ".hero-text",
-        start: "top 20%",
-        end: "bottom 20%",
+        start: "top 50%",
+        end: "bottom 100%",
         markers: true, 
         toggleActions: "play none none reverse",
       },
-      y: 10,
-      duration: 10
     }
     );
 
