@@ -38,6 +38,7 @@ export default function Hero() {
         start: "top 50%",
         end: "bottom 100%",
         markers: true, 
+        scrub: 1, 
         toggleActions: "play none none reverse",
       },
     }
@@ -113,9 +114,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-
         </div>
-        
       </div>
     </section>
   );
