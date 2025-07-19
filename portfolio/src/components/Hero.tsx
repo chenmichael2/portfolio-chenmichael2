@@ -4,10 +4,13 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { icon_list } from "@/app/lib/iconLib";
 import { openSauce } from "../app/fonts";
-import { useEffect, useState} from "react";
+import { useEffect, useState, useRef } from "react";
 import { a, svg } from "motion/react-client";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero() {
+  const heroTextRef = useRef(null);
   
   const tagData = [ 
     {
@@ -31,19 +34,41 @@ export default function Hero() {
   ]
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(".hero-text", {
+
+    // gsap.to(".hero-text", {
+    //   scrollTrigger: {
+    //     trigger: ".hero-text",
+    //     start: "top 20%",
+    //     end: "top 20%",
+    //     markers: true, 
+    //     toggleActions: "play none none reverse",
+    //   },
+    //   y: 10,
+    //   duration: 10
+    // }
+    // );
+    gsap.to(heroTextRef.current, {
       scrollTrigger: {
-        trigger: ".hero-text",
-        start: "top 50%",
-        end: "bottom 100%",
-        markers: true, 
-        scrub: 1, 
+        trigger: heroTextRef.current,
+        start: "top 20%",
+        end: "top 20%",
+        markers: true,
         toggleActions: "play none none reverse",
       },
-    }
-    );
+      y: 10,
+      duration: 10,
+    });
 
+    // Refresh after layout and on resize/orientation
+    const refresh = () => ScrollTrigger.refresh();
+    setTimeout(refresh, 200);
+    window.addEventListener("resize", refresh);
+    window.addEventListener("orientationchange", refresh);
+
+    return () => {
+      window.removeEventListener("resize", refresh);
+      window.removeEventListener("orientationchange", refresh);
+    };
   }, []);
 
   return (
@@ -114,7 +139,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
+        </div>       
       </div>
     </section>
   );
