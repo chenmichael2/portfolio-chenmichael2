@@ -35,44 +35,44 @@ export default function Hero() {
 
   useEffect(() => {
 
-    // gsap.to(".hero-text", {
-    //   scrollTrigger: {
-    //     trigger: ".hero-text",
-    //     start: "top 20%",
-    //     end: "top 20%",
-    //     markers: true, 
-    //     toggleActions: "play none none reverse",
-    //   },
-    //   y: 10,
-    //   duration: 10
-    // }
-    // );
-    gsap.to(heroTextRef.current, {
+    gsap.to(".hero-text", {
       scrollTrigger: {
-        trigger: heroTextRef.current,
-        start: "top 20%",
-        end: "top 20%",
-        markers: true,
+        trigger: ".hero-section",
+        start: "center 25%",
+        end: "center 100%",
+        markers: true, 
         toggleActions: "play none none reverse",
       },
       y: 10,
-      duration: 10,
-    });
+      duration: 10
+    }
+    );
+    // gsap.to(heroTextRef.current, {
+    //   scrollTrigger: {
+    //     trigger: heroTextRef.current,
+    //     start: "100px 20%",
+    //     end: "+=200 20%",
+    //     markers: true,
+    //     toggleActions: "play none none reverse",
+    //   },
+    //   y: 10,
+    //   duration: 10,
+    // });
 
-    // Refresh after layout and on resize/orientation
-    const refresh = () => ScrollTrigger.refresh();
-    setTimeout(refresh, 200);
-    window.addEventListener("resize", refresh);
-    window.addEventListener("orientationchange", refresh);
+    // // Refresh after layout and on resize/orientation
+    // const refresh = () => ScrollTrigger.refresh();
+    // setTimeout(refresh, 200);
+    // window.addEventListener("resize", refresh);
+    // window.addEventListener("orientationchange", refresh);
 
-    return () => {
-      window.removeEventListener("resize", refresh);
-      window.removeEventListener("orientationchange", refresh);
-    };
+    // return () => {
+    //   window.removeEventListener("resize", refresh);
+    //   window.removeEventListener("orientationchange", refresh);
+    // };
   }, []);
 
   return (
-    <section className="w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50 pt-15">
+    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50 pt-15">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
       md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
@@ -105,7 +105,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
+        <div ref={heroTextRef} className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
