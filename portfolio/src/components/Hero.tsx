@@ -34,41 +34,50 @@ export default function Hero() {
   ]
 
   useEffect(() => {
-
+    ScrollTrigger.matchMedia({
+      "(min-width: 768px)": () => {
+        gsap.to(".hero-text", {
+          scrollTrigger: {
+            trigger: ".hero-section",
+            start: "top 25%",
+            end: "bottom 40%",
+            markers: true, 
+            scrub: 1, 
+            toggleActions: "play none none reverse",
+          },
+          y: 0,
+          duration: 1,
+        });
+      },
+      "(min-width: 769px)": () => {
+        gsap.to(".hero-text", {
+          scrollTrigger: {
+            trigger: ".hero-section",
+            start: "top 25%",
+            end: "bottom 40%",
+            markers: true, 
+            scrub: 1, 
+            toggleActions: "play none none reverse",
+          },
+          y: 0,
+          duration: 1,
+        });
+      }
+    })
     gsap.to(".hero-text", {
       scrollTrigger: {
         trigger: ".hero-section",
-        start: "center 25%",
-        end: "center 100%",
+        start: "50% 25%",
+        end: "70% 40%",
         markers: true, 
+        scrub: 1, 
         toggleActions: "play none none reverse",
       },
       y: 10,
-      duration: 10
+      duration: 1,
     }
     );
-    // gsap.to(heroTextRef.current, {
-    //   scrollTrigger: {
-    //     trigger: heroTextRef.current,
-    //     start: "100px 20%",
-    //     end: "+=200 20%",
-    //     markers: true,
-    //     toggleActions: "play none none reverse",
-    //   },
-    //   y: 10,
-    //   duration: 10,
-    // });
 
-    // // Refresh after layout and on resize/orientation
-    // const refresh = () => ScrollTrigger.refresh();
-    // setTimeout(refresh, 200);
-    // window.addEventListener("resize", refresh);
-    // window.addEventListener("orientationchange", refresh);
-
-    // return () => {
-    //   window.removeEventListener("resize", refresh);
-    //   window.removeEventListener("orientationchange", refresh);
-    // };
   }, []);
 
   return (
