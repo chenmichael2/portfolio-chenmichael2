@@ -36,17 +36,17 @@ export default function Hero() {
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => {
-        gsap.to(".hero-text", {
+        gsap.to(".hero-section", {
           scrollTrigger: {
             trigger: ".hero-section",
-            start: "top 25%",
+            start: "30% 25%",
             end: "bottom 40%",
             markers: true, 
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
           y: -10,
-          duration: 1,
+          opacity: 0.1,
         });
       },
       "(min-width: 769px)": () => {
@@ -60,7 +60,7 @@ export default function Hero() {
             toggleActions: "play none none reverse",
           },
           y: -10,
-          duration: 1,
+          duration: 0.1,
         });
       }
     })
