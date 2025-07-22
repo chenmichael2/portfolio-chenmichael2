@@ -45,7 +45,7 @@ export default function Hero() {
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: 0,
+          y: -10,
           duration: 1,
         });
       },
@@ -59,24 +59,11 @@ export default function Hero() {
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: 0,
+          y: -10,
           duration: 1,
         });
       }
     })
-    gsap.to(".hero-text", {
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "50% 25%",
-        end: "70% 40%",
-        markers: true, 
-        scrub: 1, 
-        toggleActions: "play none none reverse",
-      },
-      y: 10,
-      duration: 1,
-    }
-    );
 
   }, []);
 
