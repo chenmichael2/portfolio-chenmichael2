@@ -36,7 +36,11 @@ export default function Hero() {
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => {
-        gsap.to(".hero-section", {
+        gsap.fromTo(".hero-section", 
+          {
+            y: 0, 
+            opacity: 1 
+          }, {
           scrollTrigger: {
             trigger: ".hero-section",
             start: "30% 25%",
