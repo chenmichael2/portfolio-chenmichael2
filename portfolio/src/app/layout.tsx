@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className={`overflow-x-hidden antialiased`}>
+      <body className={`overflow-x-hidden antialiased bg-gray-50`}>
           <Header />
           {children}
       </body>

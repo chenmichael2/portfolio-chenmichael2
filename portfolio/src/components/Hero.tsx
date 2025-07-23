@@ -35,7 +35,7 @@ export default function Hero() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 768px)": () => {
+      "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
         gsap.fromTo(".hero-section", 
           {
             y: 0, 
@@ -43,23 +43,23 @@ export default function Hero() {
           }, {
           scrollTrigger: {
             trigger: ".hero-section",
-            start: "30% 25%",
-            end: "bottom 40%",
+            start: "30% 20%",
+            end: "50% 20%",
             markers: true, 
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: -10,
+          y: -100,
           opacity: 0.1,
         });
       },
-      "(min-width: 769px)": () => {
+      "(max-width: 769px)": () => { // For larger screens, apply a different animation
         gsap.to(".hero-text", {
           scrollTrigger: {
             trigger: ".hero-section",
             start: "top 25%",
             end: "bottom 40%",
-            markers: true, 
+            markers: false, 
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
