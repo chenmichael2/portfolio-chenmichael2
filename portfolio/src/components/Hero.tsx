@@ -44,13 +44,12 @@ export default function Hero() {
           scrollTrigger: {
             trigger: ".hero-section",
             start: "30% 20%",
-            end: "50% 20%",
-            markers: true, 
+            end: "bottom 20%",
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: -100,
-          opacity: 0.1,
+          y: -50,
+          opacity: 0,
         });
       },
       "(max-width: 769px)": () => { // For larger screens, apply a different animation
@@ -59,12 +58,12 @@ export default function Hero() {
             trigger: ".hero-section",
             start: "top 25%",
             end: "bottom 40%",
-            markers: false, 
-            scrub: 1, 
+            markers: true, 
+            scrub: 0.5, 
             toggleActions: "play none none reverse",
           },
           y: -10,
-          duration: 0.1,
+          opacity: 0,
         });
       }
     })
