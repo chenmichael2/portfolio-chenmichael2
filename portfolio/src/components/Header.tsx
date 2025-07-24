@@ -6,10 +6,6 @@ import 'animate.css'
 import { openSauce } from "@/app/fonts";
 import Image from "next/image";
 import { icon_list } from "@/app/lib/iconLib";
-// import EmailIcon from "../../public/icons/email";
-// import GithubIcon from "../../public/icons/github";
-// import LinkedinIcon from "../../public/icons/linkedin";
-// import ResumeIcon from "../../public/icons/resume";
 import BurgerIcon from "../../public/icons/burger";
 
 export default function Header() {
@@ -22,7 +18,7 @@ export default function Header() {
     ];
 
     const [navIsOpen, setIsOpen] = useState(false);
-    const [hovered, setHovered] = useState(false);
+    // const [hovered, setHovered] = useState(false);
 
     const scrollToTop = () => {
         lenis?.scrollTo("top", { duration: 1, force: true });

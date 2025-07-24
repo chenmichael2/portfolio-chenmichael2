@@ -30,3 +30,7 @@ a {
 .animate-3 {
   animation-delay: 800ms;
 }
+
+.animate-4 {
+  animation-delay: 1000ms;
+}

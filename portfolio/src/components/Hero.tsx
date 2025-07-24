@@ -53,10 +53,14 @@ export default function Hero() {
         });
       },
       "(max-width: 769px)": () => { // For larger screens, apply a different animation
-        gsap.to(".hero-text", {
+        gsap.fromTo(".hero-section", 
+          {
+            y: 0, 
+            opacity: 1
+          }, {
           scrollTrigger: {
             trigger: ".hero-section",
-            start: "top 25%",
+            start: "50% 25%",
             end: "bottom 40%",
             markers: true, 
             scrub: 0.5, 
@@ -71,7 +75,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-gray-50 pt-15">
+    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-transparent pt-15 z-1">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
       md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
@@ -81,7 +85,7 @@ export default function Hero() {
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
             className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2 -translate-y-5
-            sm:w-80 sm:-translate-y-20
+            sm:w-80 sm:-translate-y-15
             md:relative md:w-70 md:h-auto md:translate-y-20"
           />
           <svg className="absolute z-5 w-200 overflow-hidden left-1/2 -translate-x-1/2 -translate-y-20 
@@ -108,7 +112,7 @@ export default function Hero() {
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
-          <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown
+          <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown animate-1
           md:text-6xl
           lg:w-max
           xl:text-7xl">Michael Chen</div>
