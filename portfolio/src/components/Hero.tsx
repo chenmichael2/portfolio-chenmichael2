@@ -75,7 +75,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-transparent pt-15 z-1">
+    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-transparent pt-15">
       <div className="flex justify-center items-center flex-col relative overflow-hidden w-full h-full animate__animated animate__fadeInDown
       md:flex-row-reverse md:justify-evenly">
         <div className="flex flex-col h-140
