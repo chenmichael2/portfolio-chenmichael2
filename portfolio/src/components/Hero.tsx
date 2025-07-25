@@ -142,7 +142,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="flex mt-2">Button</div>
+          <div className="flex mt-2 justify-center items-center">Button</div>
         </div>       
       </div>
     </section>
