@@ -142,7 +142,7 @@ export default function Hero() {
             ))}
           </div>
           <div className="flex mt-2 justify-center items-center animate-4 animate__animated animate__fadeInDown">
-            <button className="p-3 border-1 bg-accent-light rounded-full"><span>Get in Contact <ArrowRight></ArrowRight></span></button>
+            <button className="p-3 border-1 bg-gradient-to-br from-accent-light to-accent-dark rounded-full"><span>Get in Contact <ArrowRight></ArrowRight></span></button>
           </div>
         </div>       
       </div>
