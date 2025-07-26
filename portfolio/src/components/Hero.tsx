@@ -142,7 +142,9 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="flex mt-2 justify-center items-center">Button</div>
+          <div className="flex mt-2 justify-center items-center animate-4 animate__animated animate__fadeInDown">
+            <button>Get in Contact</button>
+          </div>
         </div>       
       </div>
     </section>
