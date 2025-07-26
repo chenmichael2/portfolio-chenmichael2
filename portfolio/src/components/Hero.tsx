@@ -2,10 +2,9 @@
 import Image from "next/image";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { icon_list } from "@/app/lib/iconLib";
 import { openSauce } from "../app/fonts";
 import { useEffect, useState, useRef } from "react";
-import { a, svg } from "motion/react-client";
+import ArrowRight from "../../public/icons/arrow-right";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -143,7 +142,7 @@ export default function Hero() {
             ))}
           </div>
           <div className="flex mt-2 justify-center items-center animate-4 animate__animated animate__fadeInDown">
-            <button>Get in Contact</button>
+            <button className="p-3 border-1 bg-accent-light rounded-full"><span>Get in Contact <ArrowRight></ArrowRight></span></button>
           </div>
         </div>       
       </div>
