@@ -141,7 +141,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="flex mt-2 justify-center items-center animate-4 animate__animated animate__fadeInDown">
+          <div className="flex mt-3 justify-center items-center animate-4 animate__animated animate__fadeInDown">
             <button className="flex flex-nowrap p-3 border-1 bg-gradient-to-br from-accent-light to-accent-dark rounded-full ">Get in Contact <ArrowRight></ArrowRight></button>
           </div>
         </div>       
