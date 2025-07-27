@@ -9,7 +9,6 @@ import ArrowRight from "../../public/icons/arrow-right";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  const heroTextRef = useRef(null);
   
   const tagData = [ 
     {
@@ -33,6 +32,15 @@ export default function Hero() {
   ]
 
   useEffect(() => {
+    const button = document.querySelector('.contact-btn');
+    const matchDiv = document.querySelector('.btn-bg');
+
+    if (button && matchDiv) {
+      const { width, height } = button.getBoundingClientRect();
+      (matchDiv as HTMLElement).style.width = `${width}px`;
+      (matchDiv as HTMLElement).style.height = `${height}px`;
+    }
+
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
         gsap.fromTo(".hero-section", 
@@ -107,7 +115,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div ref={heroTextRef} className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
+        <div className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
@@ -141,8 +149,12 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="flex mt-3 justify-center items-center animate-4 animate__animated animate__fadeInDown">
-            <button className="flex flex-nowrap p-3 border-1 bg-gradient-to-br from-accent-light to-accent-dark rounded-full ">Get in Contact <ArrowRight></ArrowRight></button>
+          <div className="flex mt-3 justify-center items-center animate-4 animate__animated animate__fadeInDown
+          ">
+            <div className="inset-0">
+              <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full">Get in Contact <ArrowRight></ArrowRight></button>
+              <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full -translate-y-11 -translate-x-2"></div>
+            </div>
           </div>
         </div>       
       </div>
