@@ -150,8 +150,8 @@ export default function Hero() {
             ))}
           </div>
           <div className="flex mt-3 justify-center items-center animate-4 animate__animated animate__fadeInDown
-          ">
-            <div className="inset-0">
+          md:justify-start">
+            <div className="">
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full hover:scale-110 hover:translate-y-2 hover:-translate-x-2 duration-75">Get in Contact <ArrowRight></ArrowRight></button>
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full -translate-y-11 -translate-x-2"></div>
             </div>
