@@ -91,7 +91,7 @@ export default function Hero() {
           <img
             src="/images/full-profile-no-bg.png"
             alt="Hero Image"
-            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2 -translate-y-5
+            className="profile-picture absolute rounded-xl w-70 z-10 left-1/2 -translate-x-1/2
             sm:w-80 sm:-translate-y-15
             md:relative md:w-70 md:h-auto md:translate-y-20"
           />
@@ -151,10 +151,9 @@ export default function Hero() {
           </div>
           <div className="flex mt-4 justify-center items-center animate-4 animate__animated animate__fadeInDown
           md:justify-start">
-            <div className="">
+            <div>
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full"></div>
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Get in Contact <ArrowRight></ArrowRight></button>
-              
             </div>
           </div>
         </div>       
