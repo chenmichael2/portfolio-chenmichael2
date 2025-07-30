@@ -8,6 +8,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,7 @@ export default function Home() {
       <ReactLenis root />
       <Hero />
       <About />
+      <Experience />
     </>
   );
 }

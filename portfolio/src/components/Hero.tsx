@@ -115,7 +115,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        <div className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-20
+        <div className={`hero-text ${openSauce.className} relative z-12 h-max w-full p-2 text-center -translate-y-10
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
