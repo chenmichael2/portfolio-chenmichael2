@@ -78,7 +78,6 @@ export default function Hero() {
             trigger: ".hero-section",
             start: "50% 25%",
             end: "bottom 40%",
-            markers: true, 
             scrub: 0.5, 
             toggleActions: "play none none reverse",
           },
