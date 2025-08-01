@@ -37,13 +37,18 @@ export default function Hero() {
     const btnGroup = document.querySelectorAll('.btn-group');
 
     if (button && matchDiv) {
-      const { width, height } = button.getBoundingClientRect();
-      (matchDiv as NodeListOf<HTMLElement>).forEach(div => {
-        div.style.width = `${width}px`;
-        div.style.height = `${height}px`;
-      });
+
+      // const { width, height } = button.getBoundingClientRect();
+      // (matchDiv as NodeListOf<HTMLElement>).forEach(div => {
+      //   div.style.width = `${width}px`;
+      //   div.style.height = `${height}px`;
+      // });
       (btnGroup as NodeListOf<HTMLElement>).forEach(div => {
+        console.log(div.children);
+        const { width, height } = (div.children[1] as HTMLElement).getBoundingClientRect();
         div.style.height = `${height}px`;
+        (div.children[0] as HTMLElement).style.width = `${width}px`;
+        (div.children[0] as HTMLElement).style.height = `${height}px`;
       });
 
       // (matchDiv as HTMLElement).style.width = `${width}px`;
@@ -159,15 +164,16 @@ export default function Hero() {
           </div>
           <div className="flex mt-1 flex-col justify-center items-center animate-4 animate__animated animate__fadeInDown
           md:justify-start md:flex-row">
-            <div className="btn-group m-3
+            <div className="btn-group m-2
             md:ml-0">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full"></div>
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Contact Me <ArrowRight></ArrowRight></button>
             </div>
-            {/* <div className="btn-group">
+            <div className="btn-group m-2
+            md:ml-0">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full"></div>
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Get in Contact <ArrowRight></ArrowRight></button>
-            </div> */}
+            </div>
           </div>
         </div>       
       </div>
