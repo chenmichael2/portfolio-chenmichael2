@@ -49,7 +49,7 @@ export default function Header() {
             lg:px-15">
                 <button onClick={scrollToTop}>
                     <Image 
-                        className="w-15 h-15 hover:scale-120 transition-all duration-300 z-51 animate__animated animate__fadeInDown
+                        className="w-16 h-16 mt-1 hover:scale-120 transition-all duration-300 z-51 animate__animated animate__fadeInDown
                         md:w-20 md:h-20 md:mt-3"
                         src="/logo.svg"
                         alt="Logo"

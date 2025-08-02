@@ -4,8 +4,10 @@
   --color-primary: #2E72AC;
   --color-secondary: #235784;
   --color-tertiary: #BCDBDF;
-  --color-accent-light: #FFD166;
-  --color-accent-dark: #43AA8B;
+  --color-accent-light: #FFB17A;   /* Warm Peach */
+  --color-accent-light-1: #FF6E6C;  /* Coral Pink */
+  --color-accent-dark: #4ECDC4;    /* Mint/Teal */
+  --color-accent-dark-1: #45B7D1; 
   --breakpoint-sm: 425px;
 }
 
