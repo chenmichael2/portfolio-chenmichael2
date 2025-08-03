@@ -4,10 +4,11 @@ export default function About() {
       sm:-mt-0
       md:-mt-0">
       <div>This is the About</div>
-      <ul>
-        <li>Maybe Picture Left</li>
+      <ul className="flex items-between justify-between gap-10">
+        <li>Small profile picture w/ information</li>
         <li>Description Right?</li>
       </ul>
+      <div>skills under</div>
     </section>
   );
 }
