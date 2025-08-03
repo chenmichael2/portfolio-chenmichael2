@@ -162,8 +162,8 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <div className="flex mt-3 flex-col justify-center items-center animate-4 animate__animated animate__fadeInDown
-          md:justify-start md:flex-row">
+          <div className="flex mt-3 mx-4 flex-row flex-wrap justify-center items-center animate-4 animate__animated animate__fadeInDown
+          md:justify-start md:flex-row md:mx-0">
             <div className="btn-group m-2
             md:ml-0 md:mr-4">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full"></div>

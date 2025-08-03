@@ -12,9 +12,10 @@ export default function Header() {
     const lenis = useLenis();
     
     const nav_list = [
-        { name: "About Me", href: "#about" },
+        { name: "About", href: "#about" },
         { name: "Projects", href: "/projects" },
         { name: "Contact", href: "/contact" },
+        { name: "Experience", href: "/experience" },
     ];
 
     const [navIsOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ export default function Header() {
     return (
         <div>
             <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
-            md:mx-0 md:px-10 md:transition-none
+            md:mx-0 md:px-2 md:transition-none
             lg:px-15">
                 <button onClick={scrollToTop}>
                     <Image 
