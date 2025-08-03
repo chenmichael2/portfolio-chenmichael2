@@ -165,12 +165,12 @@ export default function Hero() {
           <div className="flex mt-3 flex-col justify-center items-center animate-4 animate__animated animate__fadeInDown
           md:justify-start md:flex-row">
             <div className="btn-group m-2
-            md:ml-0">
+            md:ml-0 md:mr-4">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light to-accent-dark rounded-full"></div>
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Contact Me <ArrowRight></ArrowRight></button>
             </div>
             <div className="btn-group m-2
-            md:ml-0">
+            md:ml-0 md:mr-2">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light-1 to-accent-dark-1 rounded-full"></div>
               <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Get in Contact <ArrowRight></ArrowRight></button>
             </div>
