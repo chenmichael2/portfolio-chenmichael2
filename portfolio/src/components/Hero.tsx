@@ -132,10 +132,10 @@ export default function Hero() {
         sm:-translate-y-25
         md:translate-y-auto md:max-w-[33%] md:text-left md:h-auto md:ml-10
         lg:w-max lg:ml-5`}>
-          <div className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown animate-1
+          <h1 className="text-secondary text-6xl font-bold animate__animated animate__fadeInDown animate-1
           md:text-6xl
           lg:w-max
-          xl:text-7xl">Michael Chen</div>
+          xl:text-7xl">Michael Chen</h1>
           <div className={`${openSauce.className} animate-2 my-2 pr-3 flex justify-center items-center animate__animated animate__fadeInDown
           md:justify-start`}>
             <Image src="/icons/pin.svg"

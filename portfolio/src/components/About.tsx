@@ -9,7 +9,7 @@ export default function About() {
         <li>Description Right?</li>
       </ul>
       <div>skills
-        <div className="flex">
+        <div className="flex ">
           <div>Front-end</div>
           <div>Back-end</div>
           <div>Tools</div>
