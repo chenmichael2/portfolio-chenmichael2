@@ -3,12 +3,19 @@ export default function About() {
     <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-100 animate__animated animate__fadeIn
       sm:-mt-0
       md:-mt-0">
-      <div>This is the About</div>
+      <div>About me</div>
       <ul className="flex items-between justify-between gap-10">
         <li>Small profile picture w/ information</li>
         <li>Description Right?</li>
       </ul>
-      <div>skills under</div>
+      <div>skills
+        <div className="flex">
+          <div>Front-end</div>
+          <div>Back-end</div>
+          <div>Tools</div>
+          <div>Lanugages</div>
+        </div>
+      </div>
     </section>
   );
 }
