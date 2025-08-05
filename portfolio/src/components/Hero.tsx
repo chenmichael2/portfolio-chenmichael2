@@ -37,12 +37,6 @@ export default function Hero() {
     const btnGroup = document.querySelectorAll('.btn-group');
 
     if (button && matchDiv) {
-
-      // const { width, height } = button.getBoundingClientRect();
-      // (matchDiv as NodeListOf<HTMLElement>).forEach(div => {
-      //   div.style.width = `${width}px`;
-      //   div.style.height = `${height}px`;
-      // });
       (btnGroup as NodeListOf<HTMLElement>).forEach(div => {
         console.log(div.children);
         const { width, height } = (div.children[1] as HTMLElement).getBoundingClientRect();
@@ -50,9 +44,6 @@ export default function Hero() {
         (div.children[0] as HTMLElement).style.width = `${width}px`;
         (div.children[0] as HTMLElement).style.height = `${height}px`;
       });
-
-      // (matchDiv as HTMLElement).style.width = `${width}px`;
-      // (matchDiv as HTMLElement).style.height = `${height}px`;
     }
 
     ScrollTrigger.matchMedia({
@@ -82,15 +73,16 @@ export default function Hero() {
           scrollTrigger: {
             trigger: ".hero-section",
             start: "50% 25%",
-            end: "bottom 40%",
-            scrub: 0.5, 
+            end: "bottom 25%",
+            scrub: 0.5,
+            markers: true,
             toggleActions: "play none none reverse",
           },
           y: -10,
           opacity: 0,
         });
       }
-    })
+    });
 
   }, []);
 
