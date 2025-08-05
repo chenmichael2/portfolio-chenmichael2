@@ -4,6 +4,7 @@ export default function Experience() {
       sm:-mt-0
       md:-mt-0">
       <div> This is the Experience</div>
+      <div>Maybe career starts big with small education and they switch on a toggle</div>
     </section>
   );
 }
