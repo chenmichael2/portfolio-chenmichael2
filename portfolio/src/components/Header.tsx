@@ -46,7 +46,7 @@ export default function Header() {
     return (
         <div>
             <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
-            md:mx-0 md:px-2 md:transition-none
+            md:mx-0 md:px-3 md:transition-none
             lg:px-15">
                 <button onClick={scrollToTop}>
                     <Image 
@@ -74,7 +74,7 @@ export default function Header() {
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
                     {nav_list.map((item) => (
                         <li key={item.name} className="text-4xl m-3 p-2 hover:outline-1 rounded-md transition-all duration:300
-                        md:z-50 md:text-base md:p-2 md:hover:scale-120
+                        md:z-50 md:text-base md:p-2 md:hover:scale-120 md:m-2
                         lg:text-lg"><button>{item.name}</button></li>
                     ))}
                     <li className="flex flex-row justify-center ml-3 mt-2 md:hidden">
