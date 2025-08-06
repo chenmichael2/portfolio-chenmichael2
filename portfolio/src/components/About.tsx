@@ -71,7 +71,7 @@ export default function About() {
         </div>
       </div>
       
-      <div className="text-center mt-3 text-lg px-2">{description}</div>
+      <div className="text-center mt-3 text-xl px-2">{description}</div>
       <div>
         <h2>Skills</h2>
         <div className="flex ">
