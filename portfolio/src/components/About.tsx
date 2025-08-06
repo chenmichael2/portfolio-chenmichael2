@@ -1,52 +1,56 @@
 import Image from "next/image";
 import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const description = "I am a software engineer with a passion for building scalable web applications. My journey started with a small education in computer science, and I have since grown my skills through various projects and experiences.";
 
   useEffect(() => {
-    // ScrollTrigger.matchMedia({
-    //   "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
-    //     gsap.fromTo(".hero-section", 
-    //       {
-    //         y: 0, 
-    //         opacity: 1 
-    //       }, {
-    //       scrollTrigger: {
-    //         trigger: ".hero-section",
-    //         start: "30% 20%",
-    //         end: "bottom 20%",
-    //         scrub: 1, 
-    //         toggleActions: "play none none reverse",
-    //       },
-    //       y: -50,
-    //       opacity: 0,
-    //     });
-    //   },
-    //   "(max-width: 769px)": () => { // For larger screens, apply a different animation
-    //     gsap.fromTo(".hero-section", 
-    //       {
-    //         y: 0, 
-    //         opacity: 1
-    //       }, {
-    //       scrollTrigger: {
-    //         trigger: ".hero-section",
-    //         start: "50% 25%",
-    //         end: "bottom 25%",
-    //         scrub: 0.5,
-    //         markers: true,
-    //         toggleActions: "play none none reverse",
-    //       },
-    //       y: -10,
-    //       opacity: 0,
-    //     });
-    //   }
-    // });
+    ScrollTrigger.matchMedia({
+      // "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
+      //   gsap.fromTo(".hero-section", 
+      //     {
+      //       y: 0, 
+      //       opacity: 1 
+      //     }, {
+      //     scrollTrigger: {
+      //       trigger: ".hero-section",
+      //       start: "30% 20%",
+      //       end: "bottom 20%",
+      //       scrub: 1, 
+      //       toggleActions: "play none none reverse",
+      //     },
+      //     y: -50,
+      //     opacity: 0,
+      //   });
+      // },
+      "(max-width: 769px)": () => { // For larger screens, apply a different animation
+        gsap.fromTo("#about", 
+          {
+            y: 0, 
+            opacity: 0
+          }, {
+          scrollTrigger: {
+            trigger: ".hero-section",
+            start: "50% 25%",
+            end: "bottom 25%",
+            scrub: 0.5,
+            markers: true,
+            toggleActions: "play none none reverse",
+          },
+          y: -20,
+          opacity: 1,
+        });
+      }
+    });
 
   }, []);
 
   return (
-    <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50 border-t-1 border-b-1 animate__animated animate__fadeIn
+    <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50 border-t-1 border-b-1 
       sm:-mt-0
       md:-mt-0">
       <div className="">
