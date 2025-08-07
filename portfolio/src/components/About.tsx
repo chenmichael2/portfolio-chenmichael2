@@ -59,19 +59,22 @@ export default function About() {
           <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
         <div className="flex flex-col items-around justify-around gap-10">
-          <div className="border-1 border-gray-300 shadow-lg rounded-md ">
-            <Image 
-              width={200}
-              height={200}
-              src="/images/moose_me.jpeg"
-              alt="Michael with his dog Moose"
-              className="rounded-md w-50 h-auto object-cover"
-            />
+          <div className="flex flex-col items-center ">
+            <div className="border-1 border-gray-300 w-max shadow-lg rounded-md ">
+              <Image 
+                width={200}
+                height={200}
+                src="/images/moose_me.jpeg"
+                alt="Michael with his dog Moose"
+                className="rounded-md w-50 h-auto object-cover"
+              />
+            </div>
+            <div className="text-center mt-5 text-xl px-2">{description}</div>
           </div>
         </div>
       </div>
       
-      <div className="text-center mt-3 text-xl px-2">{description}</div>
+      
       <div>
         <h2>Skills</h2>
         <div className="flex ">
