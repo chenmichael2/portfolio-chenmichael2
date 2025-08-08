@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const description = "I am a software engineer with a passion for building scalable web applications. My journey started with a small education in computer science, and I have since grown my skills through various projects and experiences.";
+  const description = "A Software Engineer";
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
