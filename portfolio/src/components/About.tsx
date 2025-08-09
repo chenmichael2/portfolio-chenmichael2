@@ -59,7 +59,8 @@ export default function About() {
           <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
         <div className="flex flex-col items-around justify-around gap-10">
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center
+            md:flex-row">
             <div className="border-1 border-gray-300 w-max shadow-lg rounded-md ">
               <Image 
                 width={200}
@@ -69,7 +70,7 @@ export default function About() {
                 className="rounded-md w-50 h-auto object-cover"
               />
             </div>
-            <div className="text-center mt-5 text-xl px-2">{description}</div>
+            <div className="text-center text-3xl font-medium mt-5 px-2 text-secondary">{description}</div>
           </div>
         </div>
       </div>

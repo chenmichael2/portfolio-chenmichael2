@@ -75,7 +75,6 @@ export default function Hero() {
             start: "50% 25%",
             end: "bottom 25%",
             scrub: 0.5,
-            markers: true,
             toggleActions: "play none none reverse",
           },
           y: -10,
