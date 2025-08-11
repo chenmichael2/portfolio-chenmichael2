@@ -60,17 +60,20 @@ export default function About() {
         </div>
         <div className="flex flex-col items-around justify-around gap-10">
           <div className="flex flex-col items-center
-            md:flex-row">
+            md:flex-row md:justify-around md:mt-10">
             <div className="border-1 border-gray-300 w-max shadow-lg rounded-md ">
               <Image 
                 width={200}
                 height={200}
                 src="/images/moose_me.jpeg"
                 alt="Michael with his dog Moose"
-                className="rounded-md w-50 h-auto object-cover"
+                className="rounded-md w-60 h-auto object-cover
+                sm:w-80
+                md:w-80"
               />
             </div>
-            <div className="text-center text-3xl font-medium mt-5 px-2 text-secondary">{description}</div>
+            <div className="text-center text-3xl font-medium mt-5 px-2 text-secondary
+            md:w-[50%] md:text-start md:pr-0">{description}</div>
           </div>
         </div>
       </div>
@@ -79,9 +82,9 @@ export default function About() {
       <div>
         <h2>Skills</h2>
         <div className="flex ">
-          <div>Front-end</div>
-          <div>Back-end</div>
-          <div>Tools</div>
+          <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
+          <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
+          <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
           <div>Lanugages</div>
         </div>
       </div>
