@@ -5,6 +5,7 @@ export default function Experience() {
       md:-mt-0">
       <div> This is the Experience</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
+      <div>Have gradient border</div>
     </section>
   );
 }

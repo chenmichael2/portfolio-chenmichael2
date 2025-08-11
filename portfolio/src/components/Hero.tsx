@@ -38,7 +38,6 @@ export default function Hero() {
 
     if (button && matchDiv) {
       (btnGroup as NodeListOf<HTMLElement>).forEach(div => {
-        console.log(div.children);
         const { width, height } = (div.children[1] as HTMLElement).getBoundingClientRect();
         div.style.height = `${height}px`;
         (div.children[0] as HTMLElement).style.width = `${width}px`;
