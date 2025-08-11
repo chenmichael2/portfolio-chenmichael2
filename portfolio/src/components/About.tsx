@@ -64,7 +64,6 @@ export default function About() {
           <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
           <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
           <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
-          <div>Lanugages</div>
         </div>
       </div>
     </section>
