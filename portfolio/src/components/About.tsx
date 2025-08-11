@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  const description = "I'm a Software Engineer combining technical skill with adaptability to build clean, engaging, and impactful web experiences.";
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -53,31 +52,11 @@ export default function About() {
     <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50 border-t-1 border-b-1 
       sm:-mt-0
       md:-mt-0">
-      <div className="m-2">
+
         <div className="flex flex-col justify-center items-center gap-3 mb-5">
           <h1 className="text-gray-700 text-4xl">About me</h1>
           <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
-        <div className="flex flex-col items-around justify-around gap-10">
-          <div className="flex flex-col items-center
-            md:flex-row md:justify-around md:mt-10">
-            <div className="border-1 border-gray-300 w-max shadow-lg rounded-md ">
-              <Image 
-                width={200}
-                height={200}
-                src="/images/moose_me.jpeg"
-                alt="Michael with his dog Moose"
-                className="rounded-md w-60 h-auto object-cover
-                sm:w-80
-                md:w-80"
-              />
-            </div>
-            <div className="text-center text-3xl font-medium mt-5 px-2 text-secondary
-            md:w-[50%] md:text-start md:pr-0">{description}</div>
-          </div>
-        </div>
-      </div>
-      
       
       <div>
         <h2>Skills</h2>
