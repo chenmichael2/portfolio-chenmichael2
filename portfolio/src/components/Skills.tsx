@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function Skills() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -54,13 +54,14 @@ export default function About() {
       md:-mt-0">
 
         <div className="flex flex-col justify-center items-center gap-3 mb-5">
-          <h1 className="text-gray-700 text-4xl">About me</h1>
+          <h1 className="text-gray-700 text-4xl">Skills</h1>
           <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
       
       <div>
         <h2>Skills</h2>
-        <div className="flex ">
+        <div className="flex flex-col">
+          <div>make scroll trigger lock to scroll through all the stuff</div>
           <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
           <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
           <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>

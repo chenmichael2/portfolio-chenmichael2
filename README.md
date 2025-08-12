@@ -17,3 +17,4 @@
 - Portfolio Analysis
 - <a href="https://github.com/marcologous/Open-Sauce-Fonts/blob/master/fonts/OpenSauceOne-Regular.ttf">Open Sause Font</a>
 - <a href="https://www.blobmaker.app/">Blob maker</a>
+<a href="https://iconscout.com/icons" class="text-underline font-size-sm" target="_blank">Logos</a> by <a href="https://iconscout.com/contributors/pixel-icons" class="text-underline font-size-sm" target="_blank">Pixel Icons</a>
