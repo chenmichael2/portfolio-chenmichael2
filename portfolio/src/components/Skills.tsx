@@ -7,9 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
   const languages = [
-    {name: "HTML", icon: "/icons/Technologies/Light/html.svg"},
-    {name: "CSS", icon: "/icons/Technologies/Light/css.svg"},
-  ];
+    {name: "HTML", icon: "/icons/technologies/Light/languages/html.svg"},
+    {name: "CSS", icon: "/icons/technologies/Light/languages/css.svg"},
+    {name: "JavaScript", icon: "/icons/technologies/Light/languages/javascript.svg"},
+    {name: "TypeScript", icon: "/icons/technologies/Light/languages/typescript.svg"},
+    {name: "Python", icon: "/icons/technologies/Light/languages/python.svg"},
+    {name: "PostgreSQL", icon: "/icons/technologies/Light/languages/postgresql.svg"},
+    {name: "JSON", icon: "/icons/technologies/Light/languages/json.svg"},
+  ]; 
+  // JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -62,17 +68,17 @@ export default function Skills() {
       </div>
       <div>
         <div className="flex flex-col justify-center items-center border-1 mb-5 py-5 overflow-x-scroll">
-          <div className="flex justify-center items-center">
+          <div className="flex items-center">
             {languages.map((lang, index) => (
-              <Image key={index} src={lang.icon} alt={lang.name} width={50} height={50} className="mx-2" />                                                                                               
+              <Image key={index} src={lang.icon} alt={lang.name} width={1000} height={1000} className="mx-6 px-2 w-40" />                                                                                               
             ))}
-            {/* <Image src={"/icons/Technologies/Light/html.svg"} alt="HTML" width={50} height={50} /> */}
+            {/* <Image src={"/icons/technologies/Light/html.svg"} alt="HTML" width={50} height={50} /> */}
           </div>
         </div>
       </div>
     </section>
           // <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
-          // <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
+          // <div>technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
           // <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
   );
 }
