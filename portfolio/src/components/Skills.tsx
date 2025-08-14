@@ -6,6 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
+  const languages = [
+    {name: "HTML", icon: "/icons/Technologies/Light/html.svg"},
+    {name: "CSS", icon: "/icons/Technologies/Light/css.svg"},
+  ];
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -40,7 +44,7 @@ export default function Skills() {
             markers: true,
             toggleActions: "play none none reverse",
           },
-          y: -20,
+          y: -80,
           opacity: 1,
         });
       }
@@ -52,21 +56,23 @@ export default function Skills() {
     <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50 border-t-1 border-b-1 
       sm:-mt-0
       md:-mt-0">
-
-        <div className="flex flex-col justify-center items-center gap-3 mb-5">
-          <h1 className="text-gray-700 text-4xl">Skills</h1>
-          <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
-        </div>
-      
+      <div className="flex flex-col justify-center items-center gap-3 mb-5">
+        <h1 className="text-gray-700 text-4xl">Skills</h1>
+        <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
+      </div>
       <div>
-        <h2>Skills</h2>
-        <div className="flex flex-col">
-          <div>make scroll trigger lock to scroll through all the stuff</div>
-          <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
-          <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
-          <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
+        <div className="flex flex-col justify-center items-center border-1 mb-5 py-5 overflow-x-scroll">
+          <div className="flex justify-center items-center">
+            {languages.map((lang, index) => (
+              <Image key={index} src={lang.icon} alt={lang.name} width={50} height={50} className="mx-2" />                                                                                               
+            ))}
+            {/* <Image src={"/icons/Technologies/Light/html.svg"} alt="HTML" width={50} height={50} /> */}
+          </div>
         </div>
       </div>
     </section>
+          // <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
+          // <div>Technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
+          // <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
   );
 }
