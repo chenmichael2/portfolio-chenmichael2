@@ -16,7 +16,19 @@ export default function Home() {
   const lenis = useLenis((lenis) => {
     // called every scroll
   })
-    
+
+  useEffect(() => {
+    window.addEventListener("mousemove", (e) => {
+      const cursor = document.querySelector(".cursor") as HTMLElement;
+      if (cursor) {
+        cursor.style.left = `${e.pageX}px`;
+        cursor.style.top = `${e.pageY}px`;
+      }
+      console.log(`Mouse position: X: ${e.pageX}, Y: ${e.pageY}`);
+
+    });
+  }, []);
+  
   return (
     <>
       <ReactLenis root />
