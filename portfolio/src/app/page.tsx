@@ -28,10 +28,11 @@ export default function Home() {
 
     });
   }, []);
-  
+
   return (
     <>
       <ReactLenis root />
+      <div className="custom-cursor"></div>
       <Hero />
       <Skills />
       <Experience />
