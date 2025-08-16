@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  cursor: none;
+  cursor: none  !important;
 }
 
 a {
@@ -41,4 +41,14 @@ a {
 
 .animate-4 {
   animation-delay: 1000ms;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

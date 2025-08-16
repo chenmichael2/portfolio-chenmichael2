@@ -67,8 +67,8 @@ export default function Skills() {
         <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
       <div>
-        <div className="flex flex-col justify-center items-center border-1 mb-5 py-5 overflow-x-scroll">
-          <div className="flex items-center">
+        <div className="flex flex-col justify-center items-center border-1 mb-5 py-5">
+          <div className="flex items-center overflow-x-scroll no-scrollbar">
             {languages.map((lang, index) => (
               <Image key={index} src={lang.icon} alt={lang.name} width={1000} height={1000} className="mx-6 px-2 w-40" />                                                                                               
             ))}

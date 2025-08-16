@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import "./globals.css";
 import Header from "@/components/Header";
-import Cursor from "../../public/icons/Cursor.svg";
+import Cursor from "../../public/icons/cursor/Cursor-border.svg";
 
 export const metadata: Metadata = {
   title: "Michael Chen",
