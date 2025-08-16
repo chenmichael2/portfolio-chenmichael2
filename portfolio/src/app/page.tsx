@@ -15,7 +15,16 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const lenis = useLenis((lenis) => {
     // called every scroll
-  })
+  });
+  
+  useEffect(() => {
+    const cursor = document.querySelector('.cursor') as HTMLElement;
+    window.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    });
+
+  }, []);
 
   return (
     <>
