@@ -7,15 +7,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
   const languages = [
-    {name: "HTML", icon: "/icons/technologies/Light/languages/html.svg"},
-    {name: "CSS", icon: "/icons/technologies/Light/languages/css.svg"},
-    {name: "JavaScript", icon: "/icons/technologies/Light/languages/javascript.svg"},
-    {name: "TypeScript", icon: "/icons/technologies/Light/languages/typescript.svg"},
-    {name: "Python", icon: "/icons/technologies/Light/languages/python.svg"},
-    {name: "PostgreSQL", icon: "/icons/technologies/Light/languages/postgresql.svg"},
-    {name: "JSON", icon: "/icons/technologies/Light/languages/json.svg"},
-  ]; 
-  // JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON
+    {name: "HTML", icon: `/icons/technologies/Light/html.svg`},
+    {name: "CSS", icon: "/icons/technologies/Light/css.svg"},
+    {name: "JavaScript", icon: "/icons/technologies/Light/javascript.svg"},
+    {name: "TypeScript", icon: "/icons/technologies/Light/typescript.svg"},
+    {name: "Python", icon: "/icons/technologies/Light/python.svg"},
+    {name: "PostgreSQL", icon: "/icons/technologies/Light/postgresql.svg"},
+    {name: "JSON", icon: "/icons/technologies/Light/json.svg"},
+    {name: "Angular.js", icon: "/icons/technologies/Light/angular.svg"},
+    {name: "React", icon: "/icons/technologies/Light/react.svg"},
+    {name: "Next.js", icon: "/icons/technologies/Light/nextjs.svg"},
+    {name: "Material UI", icon: "/icons/technologies/Light/materialui.svg"},
+    {name: "jQuery", icon: "/icons/technologies/Light/jquery.svg"},
+    {name: "Express", icon: "/icons/technologies/Light/express.svg"},
+    {name: "Django", icon: "/icons/technologies/Light/django.svg"},
+    {name: "MongoDB", icon: "/icons/technologies/Light/mongodb.svg"},
+    {name: "TailwindCSS", icon: "/icons/technologies/Light/tailwindcss.svg"},
+    {name: "Node.js", icon: "/icons/technologies/Light/nodejs.svg"},
+    {name: "Github", icon: "/icons/technologies/Light/github.svg"},
+    {name: "Hubspot", icon: "/icons/technologies/Light/hubspot.svg"},
+    {name: "Crownpeak CMS", icon: "/icons/technologies/Light/crownpeak.svg"},
+    {name: "Adobe Tag Manager", icon: "/icons/technologies/Light/adobe-experience-manager.svg"},
+    {name: "Adobe Analytics", icon: "/icons/technologies/Light/adobe-analytics.svg"},
+    {name: "SOAP", icon: "/icons/technologies/Light/soapui.svg"},
+    {name: "REST API", icon: "/icons/technologies/Light/restapi.svg"},
+    {name: "Figma", icon: "/icons/technologies/Light/figma.svg"},
+    {name: "Postman", icon: "/icons/technologies/Light/postman.svg"},
+    {name: "Jira", icon: "/icons/technologies/Light/jira.svg"},
+  ];
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -67,18 +86,14 @@ export default function Skills() {
         <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
       <div>
-        <div className="flex flex-col justify-center items-center border-1 mb-5 py-5">
-          <div className="flex items-center overflow-x-scroll no-scrollbar">
+        <div className="border-1 mb-5 py-5">
+          <div className="flex flex-wrap justify-center items-center">
             {languages.map((lang, index) => (
-              <Image key={index} src={lang.icon} alt={lang.name} width={1000} height={1000} className="mx-6 px-2 w-40" />                                                                                               
+              <Image key={index} src={lang.icon} alt={`${lang.name} Icon`} width={50} height={40} className="m-4 h-[50px]" />
             ))}
-            {/* <Image src={"/icons/technologies/Light/html.svg"} alt="HTML" width={50} height={50} /> */}
           </div>
         </div>
       </div>
     </section>
-          // <div>Languages: HTML, CSS, JavaScript, TypeScript, Python, SQL (PostgreSQL), JSON</div>
-          // <div>technologies: Angular.js, React, Next.js, Material UI, jQuery, Express, Django</div>
-          // <div>Tools: Github, Node.js, Hubspot, Crownpeak CMS, Adobe Tag Manager, Adobe Analytics, SOAP, REST API, Figma</div>
   );
 }
