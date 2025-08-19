@@ -89,7 +89,10 @@ export default function Skills() {
         <div className="border-1 mb-5 py-5">
           <div className="flex flex-wrap justify-center items-center">
             {languages.map((lang, index) => (
-              <Image key={index} src={lang.icon} alt={`${lang.name} Icon`} width={50} height={40} className="m-4 h-[50px]" />
+              <>
+                <Image key={index} src={lang.icon} alt={`${lang.name} Icon`} width={50} height={40} className="m-4 h-[50px]" />
+                <div>{lang.name}</div>
+              </>
             ))}
           </div>
         </div>
