@@ -45,7 +45,7 @@ export default function Header() {
 
     return (
         <div>
-            <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
+            <header className="flex items-center justify-between fixed px-5 -top-2 z-48 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
             md:mx-0 md:px-3 md:transition-none
             lg:px-15">
                 <button onClick={scrollToTop}>
@@ -59,9 +59,9 @@ export default function Header() {
                         priority
                     />
                 </button>
-                <div className="hidden flex-row justify-center ml-3 mt-2 md:flex animate__animated animate__fadeInDown">
+                <div className="hidden flex-row justify-center ml-3 mt-2 z-51 md:flex animate__animated animate__fadeInDown">
                     {icon_list.map((icon) => (
-                        <div key={icon.name} className="pr-2">
+                        <div key={icon.name} className="pr-2 z-51">
                             {icon.import({ icon })}
                         </div>
                     ))}
@@ -70,7 +70,7 @@ export default function Header() {
             </header>
             <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 animate__animated animate__fadeInDown
             md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52 md:bg-transparent md:transition-nonemd:duration-1`}>
-                <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 w-content
+                <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
                     {nav_list.map((item) => (
                         <li key={item.name} className="text-4xl m-3 p-2 hover:outline-1 rounded-md transition-all duration:300
