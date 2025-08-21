@@ -45,7 +45,7 @@ export default function Header() {
 
     return (
         <div>
-            <header className="flex items-center justify-between fixed px-5 -top-2 z-48 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
+            <header className="flex items-center justify-between fixed px-5 -top-2 z-50 w-full h-18 backdrop-blur-3xl transition-all duration-100 ease-in
             md:mx-0 md:px-3 md:transition-none
             lg:px-15">
                 <button onClick={scrollToTop}>
@@ -61,7 +61,7 @@ export default function Header() {
                 </button>
                 <div className="hidden flex-row justify-center ml-3 mt-2 z-51 md:flex animate__animated animate__fadeInDown">
                     {icon_list.map((icon) => (
-                        <div key={icon.name} className="pr-2 z-51">
+                        <div key={icon.name} className="pr-2 ">
                             {icon.import({ icon })}
                         </div>
                     ))}
