@@ -69,7 +69,7 @@ export default function Header() {
                 <button onClick={handleNav} className="md:hidden animate__animated animate__fadeInDown"><BurgerIcon/></button>
             </header>
             <nav className={`mobile-dropdown ${openSauce.className} fixed w-full h-[calc(100vh-4rem)] bg-gray-50 z-20 top-0 -translate-y-400 transition-transform duration-300 animate__animated animate__fadeInDown
-            md:flex md:w-[calc(100vw-26rem)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-52 md:bg-transparent md:transition-nonemd:duration-1`}>
+            md:flex md:w-[calc(100vw-60vw)] md:translate-y-0 md:h-16 md:z-50 md:justify-center md:mx-[30vw] md:bg-transparent md:transition-nonemd:duration-1`}>
                 <ul className="flex flex-col items-start justify-end h-full ml-3 pb-20 
                 md:flex-row md:items-center md:justify-center md:h-full md:m-0 md:p-0">
                     {nav_list.map((item) => (
