@@ -78,7 +78,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50 border-t-1 border-b-1 
+    <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
@@ -86,7 +86,7 @@ export default function Skills() {
         <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
       <div>
-        <div className="border-1 mb-5 py-5">
+        <div className="mb-5 py-5">
           <div className="flex flex-wrap justify-center items-center">
             {languages.map((lang, index) => (
               <div key={index}>
