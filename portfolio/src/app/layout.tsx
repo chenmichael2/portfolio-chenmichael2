@@ -26,7 +26,7 @@ export default function RootLayout({
           <Image
             src={Cursor}
             alt="Cursor Icon"
-            className="cursor fixed top-0 left-0 z-50 pointer-events-none"/>
+            className="cursor fixed z-50 pointer-events-none"/>
       </body>
     </html>
   );

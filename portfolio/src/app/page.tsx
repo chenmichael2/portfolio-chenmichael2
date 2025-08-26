@@ -20,9 +20,12 @@ export default function Home() {
   const [cursorVisible, setCursorVisible] = useState(true);
   
   useEffect(() => {
+    setCursorVisible(false);
     const cursor = document.querySelector('.cursor') as HTMLElement;
     if (cursor) cursor.style.opacity = cursorVisible ? '1' : '0';
+    
     window.addEventListener('mousemove', (e) => {
+      cursor.style.opacity = '1';
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
     });
