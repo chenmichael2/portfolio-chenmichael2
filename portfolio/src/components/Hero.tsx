@@ -162,7 +162,7 @@ export default function Hero() {
             <div className="btn-group m-2
             md:ml-0 md:mr-2">
               <div className="btn-bg relative z-1 w-full h-full bg-gradient-to-br from-accent-light-1 to-accent-dark-1 rounded-full"></div>
-              <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light hover:to-accent-dark hover:backdrop-none duration-75">Get in Contact <ArrowRight></ArrowRight></button>
+              <button className="contact-btn relative flex z-20 flex-nowrap p-3 backdrop-blur-3xl border-1 rounded-full origin-center -translate-y-13.5 translate-x-1.5 hover:scale-115 hover:bg-gradient-to-br hover:from-accent-light-1 hover:to-accent-dark-1 hover:backdrop-none duration-75">Get in Contact <ArrowRight></ArrowRight></button>
             </div>
           </div>
         </div>       
