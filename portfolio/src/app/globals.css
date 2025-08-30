@@ -19,6 +19,10 @@ body {
   cursor: none !important;
 }
 
+button, a, input, [role="button"] {
+    cursor: none;
+}
+
 a {
   font-family: var(--font-roboto);
 }
