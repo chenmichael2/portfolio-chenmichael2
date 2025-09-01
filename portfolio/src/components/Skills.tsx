@@ -26,14 +26,13 @@ export default function Skills() {
     {name: "Node.js", icon: "/icons/technologies/Light/nodejs.svg"},
     {name: "Github", icon: "/icons/technologies/Light/github.svg"},
     {name: "Hubspot", icon: "/icons/technologies/Light/hubspot.svg"},
-    {name: "Crownpeak CMS", icon: "/icons/technologies/Light/crownpeak.svg"},
-    {name: "Adobe Tag Manager", icon: "/icons/technologies/Light/adobe-experience-manager.svg"},
-    {name: "Adobe Analytics", icon: "/icons/technologies/Light/adobe-analytics.svg"},
+    {name: "Crownpeak", icon: "/icons/technologies/Light/crownpeak.svg"},
     {name: "SOAP", icon: "/icons/technologies/Light/soapui.svg"},
     {name: "REST API", icon: "/icons/technologies/Light/restapi.svg"},
     {name: "Figma", icon: "/icons/technologies/Light/figma.svg"},
     {name: "Postman", icon: "/icons/technologies/Light/postman.svg"},
-    {name: "Jira", icon: "/icons/technologies/Light/jira.svg"},
+    {name: "Adobe Tag Manager", icon: "/icons/technologies/Light/adobe-experience-manager.svg"},
+    {name: "Adobe Analytics", icon: "/icons/technologies/Light/adobe-analytics.svg"},
   ];
 
   useEffect(() => {
