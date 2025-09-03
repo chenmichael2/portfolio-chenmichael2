@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Skills() {
   const languages = [
-    {name: "HTML", icon: `/icons/technologies/Light/html.svg`},
+    {name: "HTML", icon: `/icons/technologies/Light/html.svg`, alt:"HTML"},
     {name: "CSS", icon: "/icons/technologies/Light/css.svg"},
     {name: "JavaScript", icon: "/icons/technologies/Light/javascript.svg"},
     {name: "TypeScript", icon: "/icons/technologies/Light/typescript.svg"},
