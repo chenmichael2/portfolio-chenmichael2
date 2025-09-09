@@ -24,7 +24,7 @@ export default function Skills() {
     {alt: "MongoDB", icon: "/icons/technologies/Light/mongodb.svg", name:"MongoDB"},
     {alt: "TailwindCSS", icon: "/icons/technologies/Light/tailwindcss.svg", name:"Tailwind"},
     {alt: "Node.js", icon: "/icons/technologies/Light/nodejs.svg", name:"Node.js"},
-    {alt: "Github", icon: "/icons/technologies/Light/github.svg", name:""},
+    {alt: "Github", icon: "/icons/technologies/Light/github.svg", name:"Github"},
     {alt: "Hubspot", icon: "/icons/technologies/Light/hubspot.svg", name:""},
     {alt: "Crownpeak", icon: "/icons/technologies/Light/crownpeak.svg", name:""},
     {alt: "SOAP", icon: "/icons/technologies/Light/soapui.svg", name:""},
