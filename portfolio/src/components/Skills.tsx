@@ -28,7 +28,7 @@ export default function Skills() {
     {alt: "Hubspot", icon: "/icons/technologies/Light/hubspot.svg", name:"Hubspot"},
     {alt: "Crownpeak", icon: "/icons/technologies/Light/crownpeak.svg", name:"Crownpeak"},
     {alt: "SOAP", icon: "/icons/technologies/Light/soapui.svg", name:"SOAP"},
-    {alt: "REST API", icon: "/icons/technologies/Light/restapi.svg", name:""},
+    {alt: "REST API", icon: "/icons/technologies/Light/restapi.svg", name:"Rest API"},
     {alt: "Figma", icon: "/icons/technologies/Light/figma.svg", name:""},
     {alt: "Postman", icon: "/icons/technologies/Light/postman.svg", name:""},
     {alt: "Adobe Tag Manager", icon: "/icons/technologies/Light/adobe-experience-manager.svg", name:""},
