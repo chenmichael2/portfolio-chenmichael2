@@ -89,7 +89,9 @@ export default function Skills() {
             {languages.map((lang, index) => (
               <div key={index} className="flex flex-col justify-center items-center m-4">
                 <Image key={index} src={lang.icon} alt={`${lang.name} Icon`} width={0} height={0} className="h-[50px] w-auto" />
-                <div className="border-1 px-2 mt-1 text-xs rounded-md backdrop-blur-3xl whitespace-nowrap">{lang.name}</div>
+                <div className="border-1 px-2 mt-1 text-xs rounded-md backdrop-blur-3xl whitespace-nowrap
+                sm:text-sm
+                md:text-md">{lang.name}</div>
               </div>
             ))}
           </div>
