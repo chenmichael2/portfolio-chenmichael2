@@ -88,7 +88,7 @@ export default function Skills() {
           <div className="grid grid-cols-3
           sm:grid-cols-4
           md:grid-cols-5
-          lg:flex lg:flex-wrap lg:justify-center lg:px-20">
+          lg:flex lg:flex-wrap lg:justify-center lg:px-20 lg:max-w-7xl">
             {languages.map((lang, index) => (
               <div key={index} className="flex flex-col justify-center items-center m-4">
                 <Image key={index} src={lang.icon} alt={`${lang.name} Icon`} width={0} height={0} className="h-[50px] w-auto" />
