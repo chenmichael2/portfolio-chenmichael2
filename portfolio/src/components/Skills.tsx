@@ -37,24 +37,25 @@ export default function Skills() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      // "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
-      //   gsap.fromTo(".hero-section", 
-      //     {
-      //       y: 0, 
-      //       opacity: 1 
-      //     }, {
-      //     scrollTrigger: {
-      //       trigger: ".hero-section",
-      //       start: "30% 20%",
-      //       end: "bottom 20%",
-      //       scrub: 1, 
-      //       toggleActions: "play none none reverse",
-      //     },
-      //     y: -50,
-      //     opacity: 0,
-      //   });
-      // },
-      "(max-width: 769px)": () => { // For larger screens, apply a different animation
+      "(min-width: 768px)": () => { // For larger screens, apply the initial animation
+        gsap.fromTo("#about", 
+          {
+            y: 0, 
+            opacity: 1 
+          }, {
+          scrollTrigger: {
+            // trigger: ".hero-section",
+            // start: "30% 20%",
+            // end: "bottom 20%",
+            markers: true,
+            scrub: 1, 
+            toggleActions: "play none none reverse",
+          },
+          y: -50,
+          opacity: 0,
+        });
+      },
+      "(max-width: 769px)": () => { // For smaller screens, apply a different animation
         gsap.fromTo("#about", 
           {
             y: 0, 
