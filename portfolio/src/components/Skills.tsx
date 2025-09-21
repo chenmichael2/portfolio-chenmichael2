@@ -41,7 +41,7 @@ export default function Skills() {
         gsap.fromTo("#about", 
           {
             y: 0, 
-            opacity: 1 
+            opacity: 0 
           }, {
           scrollTrigger: {
             // trigger: ".hero-section",
