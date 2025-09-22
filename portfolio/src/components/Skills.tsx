@@ -67,6 +67,7 @@ export default function Skills() {
             end: "bottom 25%",
             scrub: 0.5,
             toggleActions: "play none none reverse",
+            markers: true
           },
           y: -80,
           opacity: 1,
