@@ -45,8 +45,8 @@ export default function Skills() {
           }, {
           scrollTrigger: {
             // trigger: ".hero-section",
-            // start: "30% 20%",
-            // end: "bottom 20%",
+            start: "30% 20%",
+            end: "bottom 20%",
             markers: true,
             scrub: 1, 
             toggleActions: "play none none reverse",
