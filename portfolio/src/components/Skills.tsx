@@ -44,7 +44,7 @@ export default function Skills() {
             opacity: 0 
           }, {
           scrollTrigger: {
-            // trigger: ".hero-section",
+            trigger: ".hero-section",
             start: "30% 20%",
             end: "bottom 20%",
             markers: true,
