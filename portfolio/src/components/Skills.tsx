@@ -51,8 +51,8 @@ export default function Skills() {
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: -50,
-          opacity: 0,
+          y: -80,
+          opacity: 1,
         });
       },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
