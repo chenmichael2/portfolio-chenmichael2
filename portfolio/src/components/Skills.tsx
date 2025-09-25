@@ -51,7 +51,7 @@ export default function Skills() {
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: -80,
+          y: -150,
           opacity: 1,
         });
       },
