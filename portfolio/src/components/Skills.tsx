@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useEffect }  from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Skills() {
   const languages = [
@@ -37,24 +35,24 @@ export default function Skills() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 768px)": () => { // For larger screens, apply the initial animation
-        gsap.fromTo("#about", 
-          {
-            y: 0, 
-            opacity: 0 
-          }, {
-          scrollTrigger: {
-            trigger: ".hero-section",
-            start: "30% 20%",
-            end: "bottom 20%",
-            markers: true,
-            scrub: 1, 
-            toggleActions: "play none none reverse",
-          },
-          y: -150,
-          opacity: 1,
-        });
-      },
+      // "(min-width: 768px)": () => { // For larger screens, apply the initial animation
+      //   gsap.fromTo("#about", 
+      //     {
+      //       y: 0, 
+      //       opacity: 0 
+      //     }, {
+      //     scrollTrigger: {
+      //       trigger: ".hero-section",
+      //       start: "30% 20%",
+      //       end: "bottom 20%",
+      //       markers: true,
+      //       scrub: 1, 
+      //       toggleActions: "play none none reverse",
+      //     },
+      //     y: -150,
+      //     opacity: 1,
+      //   });
+      // },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
         gsap.fromTo("#about", 
           {
