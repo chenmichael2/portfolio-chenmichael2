@@ -25,13 +25,13 @@ export default function Experience() {
       //   });
       // },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
-        gsap.fromTo("#about", 
+        gsap.fromTo("#experience", 
           {
             y: 0, 
             opacity: 0
           }, {
           scrollTrigger: {
-            trigger: ".hero-section",
+            trigger: "#skills",
             start: "50% 25%",
             end: "bottom 25%",
             scrub: 0.5,

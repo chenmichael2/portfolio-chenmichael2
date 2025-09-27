@@ -36,7 +36,7 @@ export default function Skills() {
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For larger screens, apply the initial animation
-        gsap.fromTo("#about", 
+        gsap.fromTo("#skills", 
           {
             y: 0, 
             opacity: 0 
@@ -53,7 +53,7 @@ export default function Skills() {
         });
       },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
-        gsap.fromTo("#about", 
+        gsap.fromTo("#skills", 
           {
             y: 0, 
             opacity: 0
@@ -74,7 +74,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="about" className="flex flex-col items-center justify-center w-full bg-gray-50
+    <section id="skills" className="flex flex-col items-center justify-center w-full bg-gray-50
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
