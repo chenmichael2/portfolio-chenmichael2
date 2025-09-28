@@ -29,7 +29,7 @@ export default function Experience() {
           {
             y: 0, 
             opacity: 0
-          }, {
+          }, { 
           scrollTrigger: {
             trigger: "#skills",
             start: "80% 25%",
