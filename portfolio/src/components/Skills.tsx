@@ -74,7 +74,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="flex flex-col items-center justify-center w-full bg-gray-50
+    <section id="skills" className="flex flex-col items-center justify-center w-full bg-transparent
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
