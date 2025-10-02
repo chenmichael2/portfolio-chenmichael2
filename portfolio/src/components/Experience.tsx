@@ -41,6 +41,18 @@ export default function Experience() {
           y: -80,
           opacity: 1,
         });
+        gsap.to("#skills", 
+          {
+            scrollTrigger: {
+              trigger:"#skills", 
+              start: "50% 25%",
+              end: "bottom 25%",
+              scrub: 0.5,
+              toggleActions: "play none none reverse",
+              markers: true
+            }
+          }
+        )
       }
     });
 
