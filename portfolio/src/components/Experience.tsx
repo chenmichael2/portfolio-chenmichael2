@@ -35,8 +35,7 @@ export default function Experience() {
             start: "50% 25%",
             end: "bottom 25%",
             scrub: 0.5,
-            toggleActions: "play none none reverse",
-            markers: true
+            toggleActions: "play none none reverse", 
           },
           y: -80,
           opacity: 1,
@@ -45,12 +44,13 @@ export default function Experience() {
           {
             scrollTrigger: {
               trigger:"#skills", 
-              start: "50% 25%",
-              end: "bottom 25%",
+              start: "80% 25%",
+              end: "bottom 5%",
               scrub: 0.5,
               toggleActions: "play none none reverse",
               markers: true
-            }
+            },
+            opacity: 0
           }
         )
       }
