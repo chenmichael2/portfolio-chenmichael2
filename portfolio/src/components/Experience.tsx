@@ -35,7 +35,8 @@ export default function Experience() {
             start: "50% 25%",
             end: "bottom 25%",
             scrub: 0.5,
-            toggleActions: "play none none reverse", 
+            toggleActions: "play none none reverse",
+            markers: true,
           },
           y: -80,
           opacity: 1,
@@ -48,7 +49,6 @@ export default function Experience() {
               end: "bottom 5%",
               scrub: 0.5,
               toggleActions: "play none none reverse",
-              markers: true
             },
             opacity: 0
           }
@@ -63,8 +63,8 @@ export default function Experience() {
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
-        <h1 className="text-gray-700 text-4xl">Skills</h1>
-        <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>
+        <h1 className="text-gray-700 text-4xl">Experience</h1>
+        <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
       <div> This is the Experience</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
