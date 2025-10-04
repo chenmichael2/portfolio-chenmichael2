@@ -41,7 +41,10 @@ export default function Experience() {
           y: -80,
           opacity: 1,
         });
-        gsap.to("#skills", 
+        gsap.fromTo("#skills",
+          {
+            opacity: 1
+          },
           {
             scrollTrigger: {
               trigger:"#skills", 
