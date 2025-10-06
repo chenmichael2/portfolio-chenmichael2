@@ -49,7 +49,7 @@ export default function Experience() {
             scrollTrigger: {
               trigger:"#skills", 
               start: "80% 25%",
-              end: "bottom 5%",
+              end: "bottom 7%",
               scrub: 0.5,
               toggleActions: "play none none reverse",
             },
