@@ -38,7 +38,7 @@ export default function Experience() {
             toggleActions: "play none none reverse",
             markers: true,
           },
-          y: -80,
+          y: -150,
           opacity: 1,
         });
         gsap.fromTo("#skills",
@@ -49,7 +49,7 @@ export default function Experience() {
             scrollTrigger: {
               trigger:"#skills", 
               start: "80% 25%",
-              end: "bottom 7%",
+              end: "bottom 25%",
               scrub: 0.5,
               toggleActions: "play none none reverse",
             },
