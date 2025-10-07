@@ -36,7 +36,6 @@ export default function Experience() {
             end: "bottom 25%",
             scrub: 0.5,
             toggleActions: "play none none reverse",
-            markers: true,
           },
           y: -150,
           opacity: 1,
