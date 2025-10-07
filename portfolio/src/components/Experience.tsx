@@ -62,7 +62,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-center w-full h-screen bg-gray-100 -mt-0
+    <section id="experience" className="flex flex-col items-center justify-center w-full h-screen bg-transparent -mt-0
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
