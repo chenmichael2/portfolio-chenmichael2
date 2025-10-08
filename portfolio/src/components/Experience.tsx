@@ -61,13 +61,14 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-center w-full h-screen bg-transparent -mt-0
+    <section id="experience" className="flex flex-col items-center justify-center w-full bg-transparent -mt-0
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
         <h1 className="text-gray-700 text-4xl">Experience</h1>
         <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
+      <div>Toggle Button</div>
       <div> This is the Experience</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
