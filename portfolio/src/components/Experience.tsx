@@ -37,7 +37,7 @@ export default function Experience() {
             scrub: 0.5,
             toggleActions: "play none none reverse",
           },
-          y: -150,
+          y: -100,
           opacity: 1,
         });
         gsap.fromTo("#skills",
@@ -61,14 +61,17 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-center w-full h-screen bg-transparent -mt-0
+    <section id="experience" className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
         <h1 className="text-gray-700 text-4xl">Experience</h1>
         <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
-      <div><button>Experience</button><button>Education</button></div>
+      <div className="w-content border-1 flex flex-row justify-around p-1 gap-3">
+        <button className="border-1 px-5 py-0.3">Experience</button>
+        <button className="border-1 px-5 py-0.3">Education</button>
+      </div>
       <div> This is the Experience</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
