@@ -72,7 +72,8 @@ export default function Experience() {
         <button className="border-1 px-5 py-0.3 rounded-sm">Experience</button>
         <button className="border-1 px-5 py-0.3 rounded-sm">Education</button>
       </div>
-      <div> This is the Experience</div>
+      <div>This is the Experience</div>
+      <div>This is the Education</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
     </section>
