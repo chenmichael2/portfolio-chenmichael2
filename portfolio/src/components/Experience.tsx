@@ -68,9 +68,10 @@ export default function Experience() {
         <h1 className="text-gray-700 text-4xl">Experience</h1>
         <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
       </div>
-      <div className="w-content border-1 flex flex-row justify-around p-1 gap-3 rounded-md">
-        <button className="border-1 px-5 py-0.3 rounded-sm">Experience</button>
-        <button className="border-1 px-5 py-0.3 rounded-sm">Education</button>
+      <div className="w-content border-1 flex flex-row justify-around p-1 gap-3 rounded-md bg-gradient-to-r to-primary from-tertiary">
+        <button className="px-5 py-0.3 rounded-sm ">Experience</button>
+        <div className="absolute w-30 rounded-sm bg-neutral-400/20 text-neutral-200 backdrop-blur-[1px] border border-neutral-400/20 hover:bg-neutral-400/30">glass</div>
+        <button className="px-5 py-0.3 rounded-sm">Education</button>
       </div>
       <div>This is the Experience</div>
       <div>This is the Education</div>
