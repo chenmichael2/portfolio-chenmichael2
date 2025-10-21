@@ -6,24 +6,38 @@ export default function Experience() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      // "(min-width: 768px)": () => { // For larger screens, apply the initial animation
-      //   gsap.fromTo("#about", 
-      //     {
-      //       y: 0, 
-      //       opacity: 0 
-      //     }, {
-      //     scrollTrigger: {
-      //       trigger: ".hero-section",
-      //       start: "30% 20%",
-      //       end: "bottom 20%",
-      //       markers: true,
-      //       scrub: 1, 
-      //       toggleActions: "play none none reverse",
-      //     },
-      //     y: -150,
-      //     opacity: 1,
-      //   });
-      // },
+      "(min-width: 768px)": () => { // For larger screens, apply the initial animation
+        gsap.fromTo("#experience", 
+          {
+            y: 0, 
+            opacity: 0,
+          }, { 
+          scrollTrigger: {
+            trigger: "#skills",
+            start: "50% 25%",
+            end: "bottom 25%",
+            scrub: 0.5,
+            toggleActions: "play none none reverse",
+          },
+          y: -100,
+          opacity: 1,
+        });
+        gsap.fromTo("#skills",
+          {
+            opacity: 1
+          },
+          {
+            scrollTrigger: {
+              trigger:"#skills", 
+              start: "80% 25%",
+              end: "bottom 25%",
+              scrub: 0.5,
+              toggleActions: "play none none reverse",
+            },
+            opacity: 0
+          }
+        )
+      },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
         gsap.fromTo("#experience", 
           {
