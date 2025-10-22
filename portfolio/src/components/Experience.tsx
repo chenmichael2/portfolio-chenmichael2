@@ -14,10 +14,11 @@ export default function Experience() {
           }, { 
           scrollTrigger: {
             trigger: "#skills",
-            start: "50% 25%",
-            end: "bottom 25%",
+            start: "-60% 25%",
+            end: "70% 25%",
             scrub: 0.5,
             toggleActions: "play none none reverse",
+            markers: true,
           },
           y: -100,
           opacity: 1,
