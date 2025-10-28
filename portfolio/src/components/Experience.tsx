@@ -97,4 +97,4 @@ export default function Experience() {
       <div>Have gradient border</div>
     </section>
   );
-}``
+}
