@@ -90,11 +90,11 @@ export default function Experience() {
       </div>
       <div id="exp">
         <h2>This is the Experience</h2>
-        </div>
+      </div>
       
       <div id="edu">This is the Education</div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
     </section>
   );
-}
+}``
