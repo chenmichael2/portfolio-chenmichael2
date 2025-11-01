@@ -4,10 +4,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
   
-  const [expButton, setExpState] = useState("experience");
+  const [expButton, setExpState] = useState(true);
 
   const handleClick = () => {
-    setExpState(exp => (exp === 'experience' ? 'education' : 'experience'));
+    setExpState(exp => (exp === true ? false : true));
     console.log(expButton);
   }
   useEffect(() => {
@@ -91,7 +91,7 @@ export default function Experience() {
       </div>
       <button id="expeButton" className="w-content border-1 flex flex-row justify-around p-1 gap-3 rounded-md bg-gradient-to-r to-primary from-tertiary" onClick={handleClick}>
         <div className="px-5 py-0.3 z-99 text-gray-50">Experience</div>
-        <div id="buttonSlider" className="absolute w-30 h-6 -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30"></div>
+        <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-15.5 w-29" : "translate-x-16.5 w-27"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
       <div id="exp">
