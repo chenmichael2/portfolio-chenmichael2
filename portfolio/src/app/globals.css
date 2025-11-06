@@ -47,6 +47,14 @@ a {
   animation-delay: 1000ms;
 }
 
+.hollow-circle {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Must match width */
+    border-radius: 50%;
+    background-color: transparent;
+    border: 20px solid blue; /* Adjust thickness and color */
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

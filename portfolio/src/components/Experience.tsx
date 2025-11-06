@@ -104,6 +104,7 @@ export default function Experience() {
       </div>
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
+      <div className="hollow-circle"></div>
     </section>
   );
 }
