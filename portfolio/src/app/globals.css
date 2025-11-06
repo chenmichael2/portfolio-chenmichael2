@@ -48,8 +48,8 @@ a {
 }
 
 .hollow-circle {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Must match width */
+    width: 10px; /* Adjust as needed */
+    height: 10px; /* Must match width */
     border-radius: 50%;
     background-color: transparent;
     border: 20px solid blue; /* Adjust thickness and color */
