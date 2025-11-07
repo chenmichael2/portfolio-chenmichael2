@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Dot from "../../public/icons/dot";
 
 export default function Experience() {
   
@@ -95,7 +96,6 @@ export default function Experience() {
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
       <div className="pt-7 w-full">
-        <div className="w-2 h-10 mx-auto bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
         <div id="exp" className={`h-auto ${expButton ? "block animate__fadeInLeft" : "hidden animate__fadeOutLeft"} animate__animated `}>
           <h2>This is the Experience</h2>
         </div>
@@ -103,9 +103,11 @@ export default function Experience() {
           <h2>This is the Education</h2>
         </div>
       </div>
+      <Dot outside="blue" inside="#f9fafb" />
+      <div className="relative z-40 w-2 h-10 -translate-y-10 mx-auto bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+        
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
-      <div className="hollow-circle"></div>
     </section>
   );
 }
