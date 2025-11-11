@@ -96,18 +96,18 @@ export default function Experience() {
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
       <div className="pt-7 w-full h-auto">
-        {/* <div id="exp" className={`${expButton ? "block animate__fadeInLeft" : "hidden animate__fadeOutLeft"} animate__animated `}>
+        <div id="exp" className={`${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} animate__animated `}>
           <h2>This is the Experience</h2>
         </div>
-        <div id="edu" className={`${expButton ? "hidden animate__fadeOutRight" : "block animate__fadeInRight"} animate__animated`}>
+        <div id="edu" className={`${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} animate__animated`}>
           <h2>This is the Education</h2>
-        </div> */}
-        <div id="exp" className={``}>
+        </div>
+        {/* <div id="exp" className={``}>
           <h2>This is the Experience</h2>
         </div>
         <div id="edu" className={``}>
           <h2>This is the Education</h2>
-        </div>
+        </div> */}
       </div>
       <Dot outside="blue" inside="#f9fafb" />
       <div className="relative z-40 w-2 h-10 -translate-y-10 mx-auto bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
