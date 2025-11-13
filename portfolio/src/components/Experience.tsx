@@ -95,9 +95,16 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-15.5 w-29" : "translate-x-16.5 w-27"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className="pt-7 w-full h-auto">
+      <div className="pt-7 mx-auto w-auto h-auto">
+        <Dot outside="blue" inside="#f9fafb" />
+        <div className="relative z-40 w-2 h-10 -translate-y-10 mx-auto bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
         <div id="exp" className={`${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} animate__animated `}>
           <h2>This is the Experience</h2>
+          <div className="flex justify-center">
+            <div>Left</div>
+            <div className="w-2 border-1 border-black"></div>
+            <div>Right</div>
+          </div>
         </div>
         <div id="edu" className={`${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} animate__animated`}>
           <h2>This is the Education</h2>
@@ -109,8 +116,7 @@ export default function Experience() {
           <h2>This is the Education</h2>
         </div> */}
       </div>
-      <Dot outside="blue" inside="#f9fafb" />
-      <div className="relative z-40 w-2 h-10 -translate-y-10 mx-auto bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+
       <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
     </section>
