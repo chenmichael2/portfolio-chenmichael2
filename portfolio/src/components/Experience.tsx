@@ -96,8 +96,8 @@ export default function Experience() {
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
       <div className="pt-7 h-auto">
+        <div className="relative z-40 w-2 h-10 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
         <Dot outside="blue" inside="#f9fafb" />
-        <div className="relative z-40 w-2 h-10 -translate-y-10 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
           <h2>This is the Experience</h2>
           <div className="w-full flex justify-center">
