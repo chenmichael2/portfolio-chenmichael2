@@ -95,15 +95,14 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-15.5 w-29" : "translate-x-16.5 w-27"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className="pt-7 h-auto">
+      <div className="pt-7 h-auto w-full">
         <div className="relative z-40 w-2 h-10 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
         <Dot outside="blue" inside="#f9fafb" />
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
           <h2>This is the Experience</h2>
-          <div className="w-full flex justify-center">
-            <div>Left</div>
-            <div className="w-2 border-1 border-black"></div>
-            <div>Right</div>
+          <div className="w-full grid grid-cols-2 gap-10">
+            <div className="border-1 p-2">Left</div>
+            <div className="border-1 p-2">Right</div>
           </div>
         </div>
         <div id="edu" className={`animate__animated ${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} `}>
