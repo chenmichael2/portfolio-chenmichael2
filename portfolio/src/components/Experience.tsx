@@ -100,9 +100,9 @@ export default function Experience() {
         <Dot outside="blue" inside="#f9fafb" />
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
           <h2>This is the Experience</h2>
-          <div className="w-full grid grid-cols-2 gap-10">
-            <div className="border-1 p-2 px-4">Left</div>
-            <div className="border-1 p-2 px-4">Right</div>
+          <div className="w-full px-5 grid grid-cols-2 gap-10">
+            <div className="border-1 p-2 px-4 max-w-sm">Left</div>
+            <div className="border-1 p-2 px-4 max-w-sm">Right</div>
           </div>
         </div>
         <div id="edu" className={`animate__animated ${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} `}>
