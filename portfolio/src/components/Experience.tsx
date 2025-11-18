@@ -6,9 +6,11 @@ import Dot from "../../public/icons/dot";
 export default function Experience() {
   
   const [expButton, setExpState] = useState(true);
+  const [timeHeight, setLineHeight] = useState(10);
 
   const handleClick = () => {
     setExpState(exp => (exp === true ? false : true));
+    setLineHeight(height => (height === 10 ? 20 : 10));
     console.log(expButton);
   }
   useEffect(() => {
@@ -95,9 +97,11 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-15.5 w-29" : "translate-x-16.5 w-27"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className="pt-7 h-auto w-full">
-        <div className="relative z-40 w-2 h-10 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
-        <Dot outside="blue" inside="#f9fafb" />
+      <div className={`pt-7 h-${timeHeight} w-full`}>
+        <div id="timeline" className="flex justify-center">
+          <div className={`absolute z-40 w-2 h-${timeHeight} rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all duration-150`}></div>
+          <Dot outside="blue" inside="#f9fafb" percent="20"/>
+        </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
           <h2>This is the Experience</h2>
           <div className="w-full px-5 grid grid-cols-2 gap-10">
@@ -116,7 +120,6 @@ export default function Experience() {
         </div> */}
       </div>
 
-      <div>Maybe career starts big with small education and they switch on a toggle</div>
       <div>Have gradient border</div>
     </section>
   );
