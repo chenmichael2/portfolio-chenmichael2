@@ -4,7 +4,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Dot from "../../public/icons/dot";
 
 export default function Experience() {
-  
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(10);
 
@@ -13,6 +12,13 @@ export default function Experience() {
     setLineHeight(height => (height === 10 ? 20 : 10));
     console.log(expButton);
   }
+
+  const dot: object = {
+    10: "blue", 
+    25: "yellow", 
+    40: "red"
+  };
+
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For larger screens, apply the initial animation
@@ -101,6 +107,9 @@ export default function Experience() {
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 h-${timeHeight} rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all duration-150`}
           style={{ height: `${timeHeight}rem` }}></div>
+          {Object.entries(dot).map(([key, value]) => (
+            <Dot key={key} outside={value} inside="#f9fafb" percent={key} />
+          ))}
           <Dot outside="blue" inside="#f9fafb" percent="20"/>
         </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
