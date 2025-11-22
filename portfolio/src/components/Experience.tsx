@@ -19,6 +19,11 @@ export default function Experience() {
     40: "red"
   };
 
+  const cardInfo = {
+    "exp": {}, 
+    "edu": {}
+  }
+
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For larger screens, apply the initial animation
@@ -129,8 +134,6 @@ export default function Experience() {
           <h2>This is the Education</h2>
         </div> */}
       </div>
-
-      <div>Have gradient border</div>
     </section>
   );
 }
