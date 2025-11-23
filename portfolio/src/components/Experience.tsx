@@ -110,10 +110,10 @@ export default function Experience() {
       </button>
       <div className={`pt-7 h-${timeHeight} w-full`}>
         <div id="timeline" className="flex justify-center">
-          <div className={`absolute z-40 w-2 h-${timeHeight} rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all duration-150`}
+          <div className={`absolute z-40 w-2 h-${timeHeight} rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }}></div>
           {Object.entries(dot).map(([key, value]) => (
-            <Dot key={key} outside={value} inside="#f9fafb" percent={key} />
+            <Dot key={key} outside={value} inside="#f9fafb" percent={key}/>
           ))}
           <Dot outside="blue" inside="#f9fafb" percent="20"/>
         </div>
