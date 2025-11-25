@@ -126,12 +126,6 @@ export default function Experience() {
         <div id="edu" className={`animate__animated ${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} `}>
           <h2>This is the Education</h2>
         </div>
-        {/* <div id="exp" className={``}>
-          <h2>This is the Experience</h2>
-        </div>
-        <div id="edu" className={``}>
-          <h2>This is the Education</h2>
-        </div> */}
       </div>
     </section>
   );
