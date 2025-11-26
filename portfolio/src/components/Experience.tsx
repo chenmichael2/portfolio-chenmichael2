@@ -14,13 +14,15 @@ export default function Experience() {
   }
 
   const dot: object = {
-    8: "blue", 
-    25: "yellow", 
-    100: "red"
+    "blue": 8,
+    "yellow": 25,
+    "red": 100,
   };
 
   const cardInfo = {
-    "exp": {}, 
+    "exp": {
+
+    }, 
     "edu": {}
   }
 
@@ -113,7 +115,7 @@ export default function Experience() {
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
           {Object.entries(dot).map(([key, value]) => (
-            <Dot key={key} outside={value} inside="#f9fafb" percent={String(Number(key) / timeHeight)}/>
+            <Dot key={value} outside={key} inside="#f9fafb" percent={String(Number(value) / timeHeight)}/>
           ))}
         </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
