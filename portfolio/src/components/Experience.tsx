@@ -118,12 +118,10 @@ export default function Experience() {
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
           {Object.entries(dot).map(([key, value]) => (
-            
             <svg key={key} className={`z-50 absolute transition-all duration-300`} style={{top: `${value[dotIndex]}rem`, marginTop: '8rem'}} width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="5" cy="5" r="5" fill={`${key ? key : "#0000FF"}`}/>
               <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
             </svg>
-            // <Dot key={key} outside={key} inside="#f9fafb" percent={value} section={expButton}/>
           ))}
         </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
