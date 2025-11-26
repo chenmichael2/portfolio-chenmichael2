@@ -2,21 +2,24 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Dot from "../../public/icons/dot";
+import { div } from "motion/react-client";
 
 export default function Experience() {
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(10);
-
+  const [dotIndex, setDotIndex] = useState(0);
+  
   const handleClick = () => {
     setExpState(exp => (exp === true ? false : true));
     setLineHeight(height => (height === 10 ? 20 : 10));
+    setDotIndex(exp => (exp === 0 ? 1 : 0))
     console.log(expButton);
   }
 
   const dot: object = {
-    "blue": 8,
-    "yellow": 25,
-    "red": 100,
+    "blue": [1, 1],
+    "yellow": [5, 10],
+    "red": [10, 20],
   };
 
   const cardInfo = {
@@ -115,7 +118,12 @@ export default function Experience() {
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
           {Object.entries(dot).map(([key, value]) => (
-            <Dot key={value} outside={key} inside="#f9fafb" percent={String(Number(value) / timeHeight)}/>
+            
+            <svg key={key} className={`z-50 absolute transition-all duration-300`} style={{top: `${value[dotIndex]}rem`, marginTop: '8rem'}} width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5" cy="5" r="5" fill={`${key ? key : "#0000FF"}`}/>
+              <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
+            </svg>
+            // <Dot key={key} outside={key} inside="#f9fafb" percent={value} section={expButton}/>
           ))}
         </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
