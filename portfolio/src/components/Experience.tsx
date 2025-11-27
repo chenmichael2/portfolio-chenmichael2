@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Dot from "../../public/icons/dot";
-import { div } from "motion/react-client";
 
 export default function Experience() {
   const [expButton, setExpState] = useState(true);
@@ -23,6 +21,15 @@ export default function Experience() {
 
   const cardInfo = {
     "exp": {
+      1: {
+        "title": "Mercury",
+        "date": "2024-2025",
+        "jobTitle": "Marketing Web Developer",
+        "description": [
+          "a is for apple", 
+          "b is for basket"
+        ],
+      }
 
     }, 
     "edu": {}
