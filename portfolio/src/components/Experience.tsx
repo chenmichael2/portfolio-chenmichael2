@@ -13,7 +13,6 @@ export default function Experience() {
     setExpState(exp => (exp === true ? false : true));
     setLineHeight(height => (height === 10 ? 20 : 10));
     setDotIndex(exp => (exp === 0 ? 1 : 0))
-    console.log(expButton);
   }
 
   const dot: object = {
@@ -123,6 +122,9 @@ export default function Experience() {
               <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
             </svg>
           ))}
+          <div>
+            Experience
+          </div>
         </div>
         <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
           <h2>This is the Experience</h2>
