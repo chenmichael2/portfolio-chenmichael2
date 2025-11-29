@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
+import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
@@ -132,6 +133,7 @@ export default function Experience() {
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
             <h2>This is the Experience</h2>
             <div className="w-full px-5 grid grid-cols-2 gap-10">
+              <ExpCard />
               <div className="border-1 p-2 px-4 max-w-sm">Left</div>
               <div className="border-1 p-2 px-4 max-w-sm">Right</div>
             </div>
