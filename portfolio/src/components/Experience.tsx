@@ -134,6 +134,7 @@ export default function Experience() {
             <h2>This is the Experience</h2>
             <div className="w-full px-5 grid grid-cols-2 gap-10">
               <ExpCard />
+              <ExpCard />
               <div className="border-1 p-2 px-4 max-w-sm">Left</div>
               <div className="border-1 p-2 px-4 max-w-sm">Right</div>
             </div>
