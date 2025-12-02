@@ -6,7 +6,7 @@ interface ExpCardProp {
 export default function ExpCard({side, }: ExpCardProp) {
 
     return (
-        <div>
+        <div className="border-1 border-black rounded-sm">
             hi
         </div>
     );
