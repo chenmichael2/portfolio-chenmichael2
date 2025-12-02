@@ -7,7 +7,7 @@ export default function ExpCard({side, }: ExpCardProp) {
 
     return (
         <div className="border-1 border-black rounded-sm">
-            hi
+            <h2>Title</h2>
         </div>
     );
 }
