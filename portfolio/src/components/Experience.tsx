@@ -30,6 +30,15 @@ export default function Experience() {
           "a is for apple", 
           "b is for basket"
         ],
+      },
+      2: {
+        "title": "Marines",
+        "date": "2018-2025",
+        "jobTitle": "Marketing Web Developer",
+        "description": [
+          "a is for apple", 
+          "b is for basket"
+        ],
       }
 
     }, 
