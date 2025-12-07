@@ -41,7 +41,7 @@ export default function Experience() {
         ],
       },
       3: {
-        "title": "Marines",
+        "title": "EMT",
         "date": "2018-2025",
         "jobTitle": "Marketing Web Developer",
         "description": [
