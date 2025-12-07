@@ -42,7 +42,7 @@ export default function Experience() {
       },
       3: {
         "title": "EMT",
-        "date": "2018-2025",
+        "date": "2017-2018",
         "jobTitle": "Marketing Web Developer",
         "description": [
           "a is for apple", 
