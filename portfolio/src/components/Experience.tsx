@@ -23,7 +23,7 @@ export default function Experience() {
   const cardInfo = {
     "exp": {
       1: {
-        "company": "Mercury",
+        "title": "Mercury",
         "date": "2024-2025",
         "jobTitle": "Marketing Web Developer",
         "description": [
@@ -32,7 +32,7 @@ export default function Experience() {
         ],
       },
       2: {
-        "company": "Marines",
+        "title": "Marines",
         "date": "2018-2025",
         "jobTitle": "Marketing Web Developer",
         "description": [
@@ -41,7 +41,7 @@ export default function Experience() {
         ],
       },
       3: {
-        "company": "EMT",
+        "title": "EMT",
         "date": "2017-2018",
         "jobTitle": "Emergency Medical Technician",
         "description": [

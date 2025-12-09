@@ -1,6 +1,8 @@
 
 interface ExpCardProp {
     side?: string,
+    title?: string, 
+
 
 }
 export default function ExpCard({side, }: ExpCardProp) {
