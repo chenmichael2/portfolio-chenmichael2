@@ -151,7 +151,7 @@ export default function Experience() {
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
             <h2>This is the Experience</h2>
             <div className="w-full px-5 grid grid-cols-2 gap-10">
-              <ExpCard />
+              <ExpCard title="hello"/>
               <ExpCard />
               <ExpCard />
               <div className="border-1 p-2 px-4 max-w-sm">Left</div>
