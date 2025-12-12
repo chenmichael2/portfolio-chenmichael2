@@ -151,9 +151,19 @@ export default function Experience() {
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
             <h2>This is the Experience</h2>
             <div className="w-full px-5 grid grid-cols-2 gap-10">
-              <ExpCard title="hello"/>
-              <ExpCard />
-              <ExpCard />
+              {Object.keys(cardInfo.exp).map(cardKey => {
+                const info = (cardInfo.exp as any)[Number(cardKey)];
+                if (!info) return null;
+                return (
+                  <ExpCard
+                    key={cardKey}
+                    title={info.title}
+                    date={info.date}
+                    jobTitle={info.jobTitle}
+                    description={info.description}
+                  />
+                );
+              })}
               <div className="border-1 p-2 px-4 max-w-sm">Left</div>
               <div className="border-1 p-2 px-4 max-w-sm">Right</div>
             </div>
