@@ -2,7 +2,9 @@
 interface ExpCardProp {
     side?: string,
     title?: string, 
-
+    dates?: string,
+    jobTitle?: string, 
+    description?: string, 
 
 }
 export default function ExpCard({side, title}: ExpCardProp) {

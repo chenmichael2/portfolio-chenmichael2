@@ -24,7 +24,7 @@ export default function Experience() {
     "exp": {
       1: {
         "title": "Mercury",
-        "date": "2024-2025",
+        "dates": "2024-2025",
         "jobTitle": "Marketing Web Developer",
         "description": [
           "a is for apple", 
@@ -33,7 +33,7 @@ export default function Experience() {
       },
       2: {
         "title": "Marines",
-        "date": "2018-2025",
+        "dates": "2018-2025",
         "jobTitle": "Marketing Web Developer",
         "description": [
           "a is for apple", 
@@ -42,7 +42,7 @@ export default function Experience() {
       },
       3: {
         "title": "EMT",
-        "date": "2017-2018",
+        "dates": "2017-2018",
         "jobTitle": "Emergency Medical Technician",
         "description": [
           "a is for apple", 
@@ -158,7 +158,7 @@ export default function Experience() {
                   <ExpCard
                     key={cardKey}
                     title={info.title}
-                    date={info.date}
+                    dates={info.dates}
                     jobTitle={info.jobTitle}
                     description={info.description}
                   />
