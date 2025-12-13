@@ -7,11 +7,12 @@ interface ExpCardProp {
     description?: string, 
 
 }
-export default function ExpCard({side, title}: ExpCardProp) {
+export default function ExpCard({side, title, dates}: ExpCardProp) {
 
     return (
         <div className="border-1 border-black rounded-sm p-2 px-4">
             <h2>{title}</h2>
+            <p>{dates}</p>
         </div>
     );
 }
