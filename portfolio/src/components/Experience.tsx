@@ -4,13 +4,16 @@ import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
+  const expHeight = 50;
+  const eduHeight = 60;
+
   const [expButton, setExpState] = useState(true);
-  const [timeHeight, setLineHeight] = useState(10);
+  const [timeHeight, setLineHeight] = useState(expHeight);
   const [dotIndex, setDotIndex] = useState(0);
   
   const handleClick = () => {
     setExpState(exp => (exp === true ? false : true));
-    setLineHeight(height => (height === 10 ? 20 : 10));
+    setLineHeight(height => (height === expHeight ? eduHeight : expHeight));
     setDotIndex(exp => (exp === 0 ? 1 : 0))
   }
 
