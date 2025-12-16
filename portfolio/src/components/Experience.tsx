@@ -24,8 +24,8 @@ export default function Experience() {
   };
 
   const cardInfo = {
-    "exp": {
-      1: {
+    "exp": [
+      {
         "title": "Mercury",
         "dates": "2024-2025",
         "jobTitle": "Marketing Web Developer",
@@ -34,7 +34,7 @@ export default function Experience() {
           "b is for basket"
         ],
       },
-      2: {
+      {
         "title": "Marines",
         "dates": "2018-2025",
         "jobTitle": "Marketing Web Developer",
@@ -43,7 +43,7 @@ export default function Experience() {
           "b is for basket"
         ],
       },
-      3: {
+      {
         "title": "EMT",
         "dates": "2017-2018",
         "jobTitle": "Emergency Medical Technician",
@@ -53,9 +53,11 @@ export default function Experience() {
         ],
       },
 
-    }, 
-    "edu": {}
+    ], 
+    "edu": []
   }
+
+  cardInfo
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -156,6 +158,7 @@ export default function Experience() {
             <div className="w-full px-5 grid grid-cols-2 gap-10">
               {Object.keys(cardInfo.exp).map(cardKey => {
                 const info = (cardInfo.exp as any)[Number(cardKey)];
+
                 if (!info) return null;
                 return (
                   <ExpCard
@@ -164,6 +167,7 @@ export default function Experience() {
                     dates={info.dates}
                     jobTitle={info.jobTitle}
                     description={info.description}
+                    
                   />
                 );
               })}
