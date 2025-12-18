@@ -26,31 +26,34 @@ export default function Experience() {
   const cardInfo = {
     "exp": [
       {
-        "title": "Mercury",
-        "dates": "2024-2025",
-        "jobTitle": "Marketing Web Developer",
-        "description": [
+        title: "Mercury",
+        dates: "2024-2025",
+        jobTitle: "Marketing Web Developer",
+        description: [
           "a is for apple", 
           "b is for basket"
         ],
+        top: 0
       },
       {
-        "title": "Marines",
-        "dates": "2018-2025",
-        "jobTitle": "Marketing Web Developer",
-        "description": [
+        title: "Marines",
+        dates: "2018-2025",
+        jobTitle: "Marketing Web Developer",
+        description: [
           "a is for apple", 
           "b is for basket"
         ],
+        top: 10
       },
       {
-        "title": "EMT",
-        "dates": "2017-2018",
-        "jobTitle": "Emergency Medical Technician",
-        "description": [
+        title: "EMT",
+        dates: "2017-2018",
+        jobTitle: "Emergency Medical Technician",
+        description: [
           "a is for apple", 
           "b is for basket"
         ],
+        top: 0
       },
 
     ], 
@@ -154,8 +157,7 @@ export default function Experience() {
             </svg>
           ))}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
-            <h2>This is the Experience</h2>
-            <div className="w-full px-5 grid grid-cols-2 gap-10">
+            <div className="w-full px-5 grid grid-cols-2 gap-x-10">
               {Object.keys(cardInfo.exp).map(cardKey => {
                 const info = (cardInfo.exp as any)[Number(cardKey)];
 
@@ -167,12 +169,10 @@ export default function Experience() {
                     dates={info.dates}
                     jobTitle={info.jobTitle}
                     description={info.description}
-                    
+                    top={info.top}
                   />
                 );
               })}
-              <div className="border-1 p-2 px-4 max-w-sm">Left</div>
-              <div className="border-1 p-2 px-4 max-w-sm">Right</div>
             </div>
           </div>
           <div id="edu" className={`animate__animated ${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} `}>

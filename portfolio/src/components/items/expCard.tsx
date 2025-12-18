@@ -1,14 +1,20 @@
 
 interface ExpCardProp {
-    title?: string, 
-    dates?: string,
-    jobTitle?: string, 
-    description?: string, 
+    title?: string;
+    dates?: string;
+    jobTitle?: string;
+    description?: string;
+    top?: number | string;
 }
-export default function ExpCard({title, dates, jobTitle, description}: ExpCardProp) {
+
+export default function ExpCard({ title, dates, jobTitle, description, top }: ExpCardProp) {
+    const marginTop = top === undefined ? undefined : (typeof top === 'number' ? `${top}rem` : top);
 
     return (
-        <div className="border-1 border-[#ccc] rounded-md shadowmd p-2 px-4 bg-neutral-primary-soft">
+        <div
+            style={{ marginTop }}
+            className="self-start border-1 border-[#ccc] rounded-md shadowmd p-2 pt-3 px-4 bg-neutral-primary-soft transition-all duration-300"
+        >
             <h2>{title}</h2>
             <p>{dates}</p>
             <h3>{jobTitle}</h3>
