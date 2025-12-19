@@ -18,7 +18,7 @@ export default function Experience() {
   }
 
   const dot: object = {
-    "blue": [11, 1],
+    "blue": [1, 1],
     "yellow": [5, 10],
     "red": [10, 20],
   };
