@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect, useState } from "react";
 
-import Image from "next/image";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
