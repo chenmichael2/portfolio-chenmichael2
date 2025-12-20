@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -14,23 +16,7 @@ export default function Home() {
   const lenis = useLenis((lenis) => {
     // called every scroll
   });
-  
   const [canHover, setCanHover] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
-    setCanHover(mq.matches);
-    const onChange = (e: MediaQueryListEvent) => setCanHover(e.matches);
-    if (mq.addEventListener) mq.addEventListener('change', onChange as EventListener);
-    else mq.addListener(onChange as unknown as (e: MediaQueryListEvent) => void);
-    return () => {
-      if (mq.removeEventListener) mq.removeEventListener('change', onChange as EventListener);
-      else mq.removeListener(onChange as unknown as (e: MediaQueryListEvent) => void);
-    };
-    
-  }, [canHover]);
-
   const [cursorVisible, setCursorVisible] = useState(true);
   
   useEffect(() => {
@@ -52,13 +38,22 @@ export default function Home() {
       cursor.style.opacity = '0';
     }
 
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
+    setCanHover(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setCanHover(e.matches);
+    if (mq.addEventListener) mq.addEventListener('change', onChange as EventListener);
+    else mq.addListener(onChange as unknown as (e: MediaQueryListEvent) => void);
+
     document.addEventListener('mouseenter', handleMouseEnter);
     document.addEventListener('mouseleave', handleMouseLeave);
     return () => {
       document.removeEventListener('mouseenter', handleMouseEnter);
       document.removeEventListener('mouseleave', handleMouseLeave);
+      if (mq.removeEventListener) mq.removeEventListener('change', onChange as EventListener);
+      else mq.removeListener(onChange as unknown as (e: MediaQueryListEvent) => void);
     };
-  }, [cursorVisible]);
+  }, [cursorVisible, ]);
 
   return (
     <>
