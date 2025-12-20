@@ -16,6 +16,21 @@ export default function Home() {
   const lenis = useLenis((lenis) => {
     // called every scroll
   });
+  const [canHover, setCanHover] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
+    setCanHover(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setCanHover(e.matches);
+    if (mq.addEventListener) mq.addEventListener('change', onChange as EventListener);
+    else mq.addListener(onChange as unknown as (e: MediaQueryListEvent) => void);
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', onChange as EventListener);
+      else mq.removeListener(onChange as unknown as (e: MediaQueryListEvent) => void);
+    };
+    
+  }, [canHover]);
 
   const [cursorVisible, setCursorVisible] = useState(true);
   
