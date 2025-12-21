@@ -160,7 +160,6 @@ export default function Experience() {
             <div className="w-full px-5 grid grid-cols-2 gap-x-10">
               {Object.keys(cardInfo.exp).map(cardKey => {
                 const info = (cardInfo.exp as any)[Number(cardKey)];
-
                 if (!info) return null;
                 return (
                   <ExpCard
