@@ -27,6 +27,7 @@ export default function Experience() {
     "exp": [
       {
         title: "Mercury",
+        logo: "/mercury-logo.jpg", 
         dates: "2024-2025",
         jobTitle: "Marketing Web Developer",
         description: [
@@ -165,6 +166,7 @@ export default function Experience() {
                   <ExpCard
                     key={cardKey}
                     title={info.title}
+                    logo={info.logo}
                     dates={info.dates}
                     jobTitle={info.jobTitle}
                     description={info.description}
