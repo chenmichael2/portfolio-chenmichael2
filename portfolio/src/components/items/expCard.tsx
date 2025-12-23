@@ -5,9 +5,10 @@ interface ExpCardProp {
     jobTitle?: string;
     description?: string;
     top?: number | string;
+    logo?: string;
 }
 
-export default function ExpCard({ title, dates, jobTitle, description, top }: ExpCardProp) {
+export default function ExpCard({ title, dates, jobTitle, description, top, logo }: ExpCardProp) {
     const marginTop = top === undefined ? undefined : (typeof top === 'number' ? `${top}rem` : top);
 
     return (
