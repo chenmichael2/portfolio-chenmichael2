@@ -16,8 +16,8 @@ export default function ExpCard({ title, dates, jobTitle, description, top, logo
             style={{ marginTop }}
             className="self-start border-1 border-[#ccc] rounded-md shadowmd p-2 pt-3 px-4 bg-neutral-primary-soft transition-all duration-300"
         >
-            <h2>{title}</h2>
-            <img src={`images/experience/${logo}`} alt={`${title} logo`} />
+            <img src={`images/experience/${logo}`} alt={`${title} logo`} className="w-15 h-15"/>
+            <h2 className="text-lg/5">{title}</h2>
             <p>{dates}</p>
             <h3>{jobTitle}</h3>
             <p>{description}</p>

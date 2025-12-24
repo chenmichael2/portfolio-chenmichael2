@@ -26,7 +26,7 @@ export default function Experience() {
   const cardInfo = {
     "exp": [
       {
-        title: "Mercury",
+        title: "Mercury Insurance",
         logo: "/mercury-logo.jpg", 
         dates: "2024-2025",
         jobTitle: "Marketing Web Developer",
@@ -38,6 +38,7 @@ export default function Experience() {
       },
       {
         title: "Marines",
+        logo: "", 
         dates: "2018-2025",
         jobTitle: "Marketing Web Developer",
         description: [
@@ -47,7 +48,8 @@ export default function Experience() {
         top: 10
       },
       {
-        title: "EMT",
+        title: "PRN Ambulance",
+        logo: "", 
         dates: "2017-2018",
         jobTitle: "Emergency Medical Technician",
         description: [
