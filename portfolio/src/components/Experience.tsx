@@ -38,7 +38,7 @@ export default function Experience() {
       },
       {
         title: "Marines",
-        logo: "", 
+        logo: "/marines_logo.jpeg", 
         dates: "2018-2025",
         jobTitle: "Marketing Web Developer",
         description: [
@@ -49,7 +49,7 @@ export default function Experience() {
       },
       {
         title: "PRN Ambulance",
-        logo: "", 
+        logo: "/prn_ambulance_inc_logo.jpeg", 
         dates: "2017-2018",
         jobTitle: "Emergency Medical Technician",
         description: [
