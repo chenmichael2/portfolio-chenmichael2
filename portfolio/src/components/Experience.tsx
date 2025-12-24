@@ -20,7 +20,7 @@ export default function Experience() {
   const dot: object = {
     "blue": [1, 1],
     "yellow": [10, 10],
-    "red": [10, 20],
+    "red": [12, 20],
   };
 
   const cardInfo = {
@@ -28,12 +28,8 @@ export default function Experience() {
       {
         title: "Mercury Insurance",
         logo: "/mercury-logo.jpg", 
-        dates: "2024-2025",
+        dates: "2024-present",
         jobTitle: "Marketing Web Developer",
-        description: [
-          "a is for apple", 
-          "b is for basket"
-        ],
         top: 0
       },
       {
@@ -41,10 +37,6 @@ export default function Experience() {
         logo: "/marines_logo.jpeg", 
         dates: "2018-2025",
         jobTitle: "Marketing Web Developer",
-        description: [
-          "a is for apple", 
-          "b is for basket"
-        ],
         top: 10
       },
       {
@@ -52,10 +44,6 @@ export default function Experience() {
         logo: "/prn_ambulance_inc_logo.jpeg", 
         dates: "2017-2018",
         jobTitle: "Emergency Medical Technician",
-        description: [
-          "a is for apple", 
-          "b is for basket"
-        ],
         top: 0
       },
 
