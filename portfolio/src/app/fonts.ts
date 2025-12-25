@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Outfit, Poppins, Londrina_Outline } from "next/font/google";
+import { Geist, Geist_Mono, Outfit, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 export const geistSans = Geist({
@@ -22,11 +22,6 @@ export const poppins = Poppins({
   weight: ['300', '400', '800'],
 });
 
-export const londrina = Londrina_Outline({
-  variable: "--font-londrina",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export const openSauce = localFont({
   src: "../../public/fonts/open-sauce.one-regular.ttf",

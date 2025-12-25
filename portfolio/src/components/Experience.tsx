@@ -3,8 +3,6 @@ import gsap from "gsap";
 import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { londrina } from "@/app/fonts";
-
 export default function Experience() {
   const expHeight = 50;
   const eduHeight = 60;
@@ -16,12 +14,17 @@ export default function Experience() {
   const handleClick = () => {
     setExpState(exp => (exp === true ? false : true));
     setLineHeight(height => (height === expHeight ? eduHeight : expHeight));
-    setDotIndex(exp => (exp === 0 ? 1 : 0))
+    setDotIndex(exp => (exp === 0 ? 1 : 0));
+    const year = document.querySelectorAll(".year");
+    year.forEach(el => {
+      el.classList.remove("animate__animated");
+      el.classList.add("animate__animated")
+    });
   }
 
   const dot: object = {
-    "blue": [7, 1],
-    "yellow": [20, 10],
+    "blue": [7, 1, 2024, 2025],
+    "yellow": [20, 10, 2017, 2018],
     "red": [34, 20],
   };
 
@@ -149,7 +152,7 @@ export default function Experience() {
                 <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
                 <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
               </svg>
-              <div className={`absolute text-5xl font-bold text-black ${londrina.className}`}>2024</div>
+              <div className={`year absolute text-3xl font-bold text-black animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>{expButton ? value[2]:value[3]}</div>
             </div>
           ))}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
