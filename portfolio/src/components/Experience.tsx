@@ -3,6 +3,8 @@ import gsap from "gsap";
 import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import { londrina } from "@/app/fonts";
+
 export default function Experience() {
   const expHeight = 50;
   const eduHeight = 60;
@@ -134,7 +136,7 @@ export default function Experience() {
       </div>
       <button id="expeButton" className="w-content border-1 flex flex-row justify-around p-1 gap-3 rounded-md bg-gradient-to-r to-primary from-tertiary" onClick={handleClick}>
         <div className="px-5 py-0.3 z-99 text-gray-50">Experience</div>
-        <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-15.5 w-29" : "translate-x-16.5 w-27"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
+        <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-16.5 w-28" : "translate-x-17 w-26"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
       <div className={`pt-7 h-${timeHeight} w-full`}>
@@ -147,7 +149,7 @@ export default function Experience() {
                 <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
                 <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
               </svg>
-              <div className="absolute">hello</div>
+              <div className={`absolute text-5xl font-bold text-black ${londrina.className}`}>2024</div>
             </div>
           ))}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>

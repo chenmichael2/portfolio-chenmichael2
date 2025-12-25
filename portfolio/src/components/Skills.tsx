@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { openSauce } from "../app/fonts";
 import { useEffect }  from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -74,9 +75,9 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="flex flex-col items-center justify-center w-full bg-transparent
+    <section id="skills" className={`flex flex-col items-center justify-center w-full bg-transparent ${openSauce.className}
       sm:-mt-0
-      md:-mt-0">
+      md:-mt-0`}>
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
         <h1 className="text-gray-700 text-4xl">Skills</h1>
         <div className="h-1 w-25 bg-gradient-to-r to-primary from-tertiary"></div>

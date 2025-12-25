@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import "./globals.css";
+import { openSauce } from "./fonts";
 import Header from "@/components/Header";
 import Cursor from "../../public/icons/cursor/Cursor-border.svg";
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`overflow-x-hidden antialiased bg-gray-50`}>
+      <body className={`overflow-x-hidden antialiased bg-gray-50 ${openSauce.className}`}>
           <Header />
           {children}
           <Image
