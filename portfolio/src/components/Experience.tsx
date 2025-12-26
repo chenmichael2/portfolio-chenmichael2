@@ -15,18 +15,19 @@ export default function Experience() {
     setExpState(exp => (exp === true ? false : true));
     setLineHeight(height => (height === expHeight ? eduHeight : expHeight));
     setDotIndex(exp => (exp === 0 ? 1 : 0));
-    const year = document.querySelectorAll(".year");
-    year.forEach(el => {
-      el.classList.remove("animate__animated");
-      el.classList.add("animate__animated")
-    });
-  }
+  };
 
   const dot: object = {
-    "blue": [7, 1, 2024, 2025],
-    "yellow": [20, 10, 2017, 2018],
-    "red": [34, 20],
+    1: [7, 1, 2024, 2025],
+    2: [20, 10, 2017, 2018],
+    3: [34, 20],
   };
+
+  const dates: Array<any> = [
+    {posExp: 7,  expYear: 2024, posEdu: 1, eduYear: 2025}, 
+    {posExp: 20,  expYear: 2017, posEdu: 10, eduYear: 2018}, 
+    {posExp: 34,  expYear: 2015, posEdu: 20, eduYear: 2016},
+  ]
 
   const cardInfo = {
     "exp": [
@@ -146,13 +147,13 @@ export default function Experience() {
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
-          {Object.entries(dot).map(([key, value]) => (
-            <div key={key} className="z-50 absolute transition-all duration-300" style={{top: `${value[dotIndex]}rem`, marginTop: '8rem'}} >
+          {dates.map((obj, index) => (
+            <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${dotIndex ? obj.posExp : obj.posEdu}rem`, marginTop: '8rem'}} >
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
                 <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
               </svg>
-              <div className={`year absolute text-3xl font-bold text-black animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>{expButton ? value[2]:value[3]}</div>
+              <div className={`absolute text-3xl font-bold text-black animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>{expButton ? obj.expYear : obj.eduYear}</div>
             </div>
           ))}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
