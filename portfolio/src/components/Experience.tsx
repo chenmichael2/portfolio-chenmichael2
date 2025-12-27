@@ -129,6 +129,26 @@ export default function Experience() {
         )
       }
     });
+    
+    // Loop through cards
+    gsap.utils.toArray('.exp-card').forEach((el, i) => {
+      ScrollTrigger.matchMedia({
+        "(max-width: 769px)": () => {
+          gsap.fromTo(el as Element, {
+          opacity: 0
+        }, {
+          scrollTrigger: {
+            trigger: el as Element, 
+            start: "-50% 80%", 
+            end: "50% 75%",
+            scrub: true,
+            markers: true
+          },
+          opacity: 1,
+        })
+        }
+      })
+    });
 
   }, []);
 
@@ -167,6 +187,7 @@ export default function Experience() {
                 if (!info) return null;
                 return (
                   <ExpCard
+                    id={`exp${cardKey}`}
                     key={cardKey}
                     title={info.title}
                     logo={info.logo}
