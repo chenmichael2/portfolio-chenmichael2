@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
   const expHeight = 60;
-  const eduHeight = 60;
+  const eduHeight = 50;
 
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(expHeight);
@@ -18,10 +18,10 @@ export default function Experience() {
   };
 
   const dates: Array<any> = [
-    {posExp: 7,  expYear: 2024, posEdu: 1, eduYear: 2025, right: true}, 
-    {posExp: 20,  expYear: 2017, posEdu: 10, eduYear: 2018, right: false}, 
-    {posExp: 34,  expYear: 2015, posEdu: 20, eduYear: 2016, right: true},
-    {posExp: 53,  expYear: 2018, posEdu: 20, eduYear: 2016, right: false},
+    {posExp: 7,  expYear: 2024, posEdu: 7, eduYear: 2025, right: true}, 
+    {posExp: 20,  expYear: 2017, posEdu: 20, eduYear: 2018, right: false}, 
+    {posExp: 34,  expYear: 2015, posEdu: 34, eduYear: 2016, right: true},
+    {posExp: 53,  expYear: 2018, posEdu: 53, eduYear: 2016, right: false},
   ]
 
   const cardInfo = {
@@ -56,7 +56,30 @@ export default function Experience() {
       },
 
     ], 
-    "edu": []
+    "edu": [
+      {
+        title: "Boston University",
+        logo: "/bu_logo.jpeg", 
+        dates: "2025-2027",
+        jobTitle: "MS, Data Science",
+        top: 1
+      },
+      {
+        title: "UC Irvine",
+        logo: "/university_of_california_irvine_logo.jpeg", 
+        dates: "2025-2027",
+        jobTitle: "BS, Biological Sciences",
+        top: 14.5
+      },
+      {
+        title: "General Assembly",
+        logo: "/generalassembly_logo.jpeg", 
+        dates: "2025-2027",
+        jobTitle: "Certificate, Software Engineering",
+        top: 1
+      },
+      
+    ]
   }
 
   cardInfo
@@ -141,8 +164,8 @@ export default function Experience() {
             trigger: el as Element, 
             start: "-50% 80%", 
             end: "50% 75%",
-            scrub: true,
-            markers: true
+            scrub: 0.1,
+            markers: false
           },
           opacity: 1,
         })
@@ -201,7 +224,24 @@ export default function Experience() {
             </div>
           </div>
           <div id="edu" className={`animate__animated ${expButton ? "hidden animate__fadeOutRight" : "inline animate__fadeInRight"} `}>
-            <h2>This is the Education</h2>
+            <div className="w-full px-5 grid grid-cols-2 gap-x-10">
+              {Object.keys(cardInfo.edu).map(cardKey => {
+                const info = (cardInfo.edu as any)[Number(cardKey)];
+                if (!info) return null;
+                return (
+                  <ExpCard
+                    id={`edu${cardKey}`}
+                    key={cardKey}
+                    title={info.title}
+                    logo={info.logo}
+                    dates={info.dates}
+                    jobTitle={info.jobTitle}
+                    description={info.description}
+                    top={info.top}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
