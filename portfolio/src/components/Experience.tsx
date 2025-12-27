@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
   const expHeight = 60;
-  const eduHeight = 50;
+  const eduHeight = 43;
 
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(expHeight);
@@ -16,13 +16,6 @@ export default function Experience() {
     setLineHeight(height => (height === expHeight ? eduHeight : expHeight));
     setDotIndex(exp => (exp === 0 ? 1 : 0));
   };
-
-  const dates: Array<any> = [
-    {posExp: 7,  expYear: 2024, posEdu: 7, eduYear: 2025, right: true}, 
-    {posExp: 20,  expYear: 2017, posEdu: 20, eduYear: 2018, right: false}, 
-    {posExp: 34,  expYear: 2015, posEdu: 34, eduYear: 2016, right: true},
-    {posExp: 53,  expYear: 2018, posEdu: 53, eduYear: 2016, right: false},
-  ]
 
   const cardInfo = {
     "exp": [
@@ -36,15 +29,15 @@ export default function Experience() {
       {
         title: "United States Marine Corps",
         logo: "/marine-red.jpg", 
-        dates: "2018-2025",
+        dates: "2018-present",
         jobTitle: "Expeditionary Airfield Technician",
         top: 14.5
       },
       {
-        title: "Software Engineering Fellow",
+        title: "General Assembly",
         logo: "/generalassembly_logo.jpeg", 
         dates: "2021-2022",
-        jobTitle: "Emergency Medical Technician",
+        jobTitle: "Software Engineering Fellow",
         top: 0.5
       },
       {
@@ -52,7 +45,7 @@ export default function Experience() {
         logo: "/prn_ambulance_inc_logo.jpeg", 
         dates: "2018",
         jobTitle: "Emergency Medical Technician",
-        top: 17
+        top: 15.5
       },
 
     ], 
@@ -82,14 +75,19 @@ export default function Experience() {
     ]
   }
 
-  cardInfo
+  const dates: Array<any> = [
+    {posExp: 7,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
+    {posExp: 22,  expYear: cardInfo.exp[1].dates, posEdu: 20, eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: 37,  expYear: cardInfo.exp[2].dates, posEdu: 34, eduYear: cardInfo.edu[2].dates, right: true},
+    {posExp: 52,  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
+  ]
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For larger screens, apply the initial animation
         gsap.fromTo("#experience", 
           {
-            y: 0, 
+            y: 100, 
             opacity: 0,
           }, { 
           scrollTrigger: {
@@ -100,7 +98,7 @@ export default function Experience() {
             toggleActions: "play none none reverse",
             markers: true,
           },
-          y: -100,
+          y: 0,
           opacity: 1,
         });
         gsap.fromTo("#skills",
@@ -122,7 +120,7 @@ export default function Experience() {
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
         gsap.fromTo("#experience", 
           {
-            y: 0, 
+            y: 100, 
             opacity: 0,
           }, { 
           scrollTrigger: {
@@ -132,7 +130,7 @@ export default function Experience() {
             scrub: 0.5,
             toggleActions: "play none none reverse",
           },
-          y: -100,
+          y: 0,
           opacity: 1,
         });
         gsap.fromTo("#skills",
@@ -176,7 +174,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-start w-full h-content bg-transparent -mt-0 px-3 pb-5
+    <section id="experience" className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0 px-3 pb-5
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
@@ -188,7 +186,7 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-16.5 w-28" : "translate-x-17 w-26"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className={`pt-7 h-${timeHeight} w-full`}>
+      <div className={`pt-7 h-${expHeight + 50} w-full`}>
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
@@ -198,7 +196,7 @@ export default function Experience() {
                 <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
                 <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
               </svg>
-              <div className={`absolute text-primary font-bold shadow-6xl text-3xl top-1/2 -translate-y-1/2 ${obj.right ? "translate-x-6" : "-translate-x-25"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
+              <div className={`absolute text-primary font-bold shadow-6xl text-3xl top-1/2 -translate-y-1/2 ${obj.right ? "translate-x-6" : "-translate-x-36"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
                 {expButton ? obj.expYear : obj.eduYear}
               </div>
             </div>
@@ -245,7 +243,6 @@ export default function Experience() {
           </div>
         </div>
       </div>
-      <div className="h-50">Larger section</div>
     </section>
   );
 }

@@ -39,7 +39,7 @@ export default function Skills() {
       "(min-width: 768px)": () => { // For larger screens, apply the initial animation
         gsap.fromTo("#skills", 
           {
-            y: 0, 
+            y: 150, 
             opacity: 0 
           }, {
           scrollTrigger: {
@@ -49,14 +49,14 @@ export default function Skills() {
             scrub: 1, 
             toggleActions: "play none none reverse",
           },
-          y: -150,
+          y: 0,
           opacity: 1,
         });
       },
       "(max-width: 769px)": () => { // For smaller screens, apply a different animation
         gsap.fromTo("#skills", 
           {
-            y: 0, 
+            y: 80, 
             opacity: 0
           }, {
           scrollTrigger: {
@@ -66,7 +66,7 @@ export default function Skills() {
             scrub: 0.5,
             toggleActions: "play none none reverse",
           },
-          y: -80,
+          y: 0,
           opacity: 1,
         });
       }
