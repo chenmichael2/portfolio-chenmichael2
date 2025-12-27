@@ -4,7 +4,7 @@ import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
-  const expHeight = 50;
+  const expHeight = 60;
   const eduHeight = 60;
 
   const [expButton, setExpState] = useState(true);
@@ -21,6 +21,7 @@ export default function Experience() {
     {posExp: 7,  expYear: 2024, posEdu: 1, eduYear: 2025, right: true}, 
     {posExp: 20,  expYear: 2017, posEdu: 10, eduYear: 2018, right: false}, 
     {posExp: 34,  expYear: 2015, posEdu: 20, eduYear: 2016, right: true},
+    {posExp: 53,  expYear: 2018, posEdu: 20, eduYear: 2016, right: false},
   ]
 
   const cardInfo = {
@@ -30,21 +31,28 @@ export default function Experience() {
         logo: "/mercury-logo.jpg", 
         dates: "2024-present",
         jobTitle: "Marketing Web Developer",
-        top: 0
+        top: 1
       },
       {
-        title: "Marines",
+        title: "United States Marine Corps",
         logo: "/marine-red.jpg", 
         dates: "2018-2025",
-        jobTitle: "Marketing Web Developer",
-        top: 14
+        jobTitle: "Expeditionary Airfield Technician",
+        top: 14.5
+      },
+      {
+        title: "Software Engineering Fellow",
+        logo: "/generalassembly_logo.jpeg", 
+        dates: "2021-2022",
+        jobTitle: "Emergency Medical Technician",
+        top: 0.5
       },
       {
         title: "PRN Ambulance",
         logo: "/prn_ambulance_inc_logo.jpeg", 
-        dates: "2017-2018",
+        dates: "2018",
         jobTitle: "Emergency Medical Technician",
-        top: 2
+        top: 17
       },
 
     ], 
@@ -125,7 +133,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0 px-3
+    <section id="experience" className="flex flex-col items-center justify-start w-full h-content bg-transparent -mt-0 px-3 pb-5
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
@@ -176,6 +184,7 @@ export default function Experience() {
           </div>
         </div>
       </div>
+      <div className="h-50">Larger section</div>
     </section>
   );
 }
