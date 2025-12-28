@@ -22,21 +22,21 @@ export default function Experience() {
       {
         title: "Mercury Insurance",
         logo: "/mercury-logo.jpg", 
-        dates: "2024-present",
+        dates: "2024 - present",
         jobTitle: "Marketing Web Developer",
         top: 1
       },
       {
         title: "United States Marine Corps",
         logo: "/marine-red.jpg", 
-        dates: "2018-present",
+        dates: "2018 - present",
         jobTitle: "Expeditionary Airfield Technician",
         top: 14.5
       },
       {
         title: "General Assembly",
         logo: "/generalassembly_logo.jpeg", 
-        dates: "2021-2022",
+        dates: "2021 - 2022",
         jobTitle: "Software Engineering Fellow",
         top: 0.5
       },
@@ -53,21 +53,21 @@ export default function Experience() {
       {
         title: "Boston University",
         logo: "/bu_logo.jpeg", 
-        dates: "2025-2027",
+        dates: "2025 - 2027",
         jobTitle: "MS, Data Science",
         top: 1
       },
       {
         title: "UC Irvine",
         logo: "/university_of_california_irvine_logo.jpeg", 
-        dates: "2025-2027",
+        dates: "2025 - 2027",
         jobTitle: "BS, Biological Sciences",
         top: 14.5
       },
       {
         title: "General Assembly",
         logo: "/generalassembly_logo.jpeg", 
-        dates: "2025-2027",
+        dates: "2025 - 2027",
         jobTitle: "Certificate, Software Engineering",
         top: 1
       },
@@ -196,9 +196,9 @@ export default function Experience() {
                 <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
                 <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
               </svg>
-              <div className={`absolute text-primary font-bold shadow-6xl text-3xl top-1/2 -translate-y-1/2 ${obj.right ? "translate-x-6" : "-translate-x-36"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
+              <p className={`absolute text-primary text-shadow text-center font-bold text-xl w-50 top-1/2 -translate-y-1/2 ${obj.right ? "" : "-translate-x-50"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
                 {expButton ? obj.expYear : obj.eduYear}
-              </div>
+              </p>
             </div>
           ))}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
