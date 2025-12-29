@@ -4,7 +4,7 @@ import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
-  const expHeight = 60;
+  const expHeight = 59;
   const eduHeight = 43;
 
   const [expButton, setExpState] = useState(true);
