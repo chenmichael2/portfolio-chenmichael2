@@ -24,14 +24,15 @@ export default function Experience() {
         logo: "/mercury-logo.jpg", 
         dates: "2024 - present",
         jobTitle: "Marketing Web Developer",
-        top: 1
+        top: 1,
+        height: 10,
       },
       {
         title: "United States Marine Corps",
         logo: "/marine-red.jpg", 
         dates: "2018 - present",
         jobTitle: "Expeditionary Airfield Technician",
-        top: 14.5
+        top: 5
       },
       {
         title: "General Assembly",
@@ -76,8 +77,8 @@ export default function Experience() {
   }
 
   const dates: Array<any> = [
-    {posExp: 7,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
-    {posExp: 22,  expYear: cardInfo.exp[1].dates, posEdu: 20, eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: 3,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
+    {posExp: 16,  expYear: cardInfo.exp[1].dates, posEdu: 20, eduYear: cardInfo.edu[1].dates, right: false}, 
     {posExp: 37,  expYear: cardInfo.exp[2].dates, posEdu: 34, eduYear: cardInfo.edu[2].dates, right: true},
     {posExp: 52,  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
   ]
@@ -214,7 +215,6 @@ export default function Experience() {
                     logo={info.logo}
                     dates={info.dates}
                     jobTitle={info.jobTitle}
-                    description={info.description}
                     top={info.top}
                   />
                 );
@@ -232,9 +232,8 @@ export default function Experience() {
                     key={cardKey}
                     title={info.title}
                     logo={info.logo}
-                    dates={info.dates}
                     jobTitle={info.jobTitle}
-                    description={info.description}
+                    height={info.height}
                     top={info.top}
                   />
                 );
