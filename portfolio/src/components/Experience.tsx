@@ -24,7 +24,7 @@ export default function Experience() {
         logo: "/mercury-logo.jpg", 
         dates: "2024 - present",
         jobTitle: "Marketing Web Developer",
-        top: 1,
+        top: 0.5,
         height: 10,
       },
       {
@@ -32,7 +32,7 @@ export default function Experience() {
         logo: "/marine-red.jpg", 
         dates: "2018 - present",
         jobTitle: "Expeditionary Airfield Technician",
-        top: 5
+        top: 13.5
       },
       {
         title: "General Assembly",
@@ -46,7 +46,7 @@ export default function Experience() {
         logo: "/prn_ambulance_inc_logo.jpeg", 
         dates: "2018",
         jobTitle: "Emergency Medical Technician",
-        top: 15.5
+        top: 14.5
       },
 
     ], 
@@ -56,14 +56,14 @@ export default function Experience() {
         logo: "/bu_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "MS, Data Science",
-        top: 1
+        top: 0.5
       },
       {
         title: "UC Irvine",
         logo: "/university_of_california_irvine_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "BS, Biological Sciences",
-        top: 14.5
+        top: 13.5
       },
       {
         title: "General Assembly",
@@ -77,9 +77,9 @@ export default function Experience() {
   }
 
   const dates: Array<any> = [
-    {posExp: 3,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
-    {posExp: 16,  expYear: cardInfo.exp[1].dates, posEdu: 20, eduYear: cardInfo.edu[1].dates, right: false}, 
-    {posExp: 37,  expYear: cardInfo.exp[2].dates, posEdu: 34, eduYear: cardInfo.edu[2].dates, right: true},
+    {posExp: 7,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
+    {posExp: 22,  expYear: cardInfo.exp[1].dates, posEdu: 19, eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: 37,  expYear: cardInfo.exp[2].dates, posEdu: 32, eduYear: cardInfo.edu[2].dates, right: true},
     {posExp: 52,  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
   ]
 
