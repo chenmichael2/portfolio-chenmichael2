@@ -3,8 +3,6 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
-
-
 export default function Project() {
   
   useEffect(() => {
@@ -49,8 +47,8 @@ export default function Project() {
   }, []);
 
   return (
-    <section className="hero-section w-full min-h-240 h-[calc(100vh-1rem)] max-h-300 bg-transparent pt-15">
-
+    <section className="project-section w-full min-h-240 h-screen max-h-300 bg-transparent pt-15">
+        <div></div>
     </section>
   );
 }

@@ -152,27 +152,53 @@ export default function Experience() {
       }
     });
     
-    // Loop through cards
-    gsap.utils.toArray('.exp-card').forEach((el, i) => {
-      ScrollTrigger.matchMedia({
-        "(max-width: 769px)": () => {
-          gsap.fromTo(el as Element, {
-          opacity: 0
-        }, {
-          scrollTrigger: {
-            trigger: el as Element, 
-            start: "-50% 80%", 
-            end: "50% 75%",
-            scrub: 0.1,
-            markers: false
-          },
-          opacity: 1,
-        })
-        }
-      })
-    });
-
   }, []);
+
+  // Per-card scroll animations. Rebuild when the visible tab (`expButton`) changes
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": () => {
+          gsap.utils.toArray('.exp-card').forEach((el) => {
+            gsap.fromTo(el as Element,
+              { y: 30, opacity: 0 },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 0.6,
+                scrollTrigger: {
+                  trigger: el as Element,
+                  start: 'top 80%',
+                  toggleActions: 'play none none reverse',
+                }
+              }
+            );
+          });
+        },
+        "(max-width: 768px)": () => {
+          gsap.utils.toArray('.exp-card').forEach((el) => {
+            gsap.fromTo(el as Element,
+              { opacity: 0 },
+              {
+                opacity: 1,
+                duration: 0.45,
+                scrollTrigger: {
+                  trigger: el as Element,
+                  start: 'top 90%',
+                  toggleActions: 'play none none reverse',
+                }
+              }
+            );
+          });
+        }
+      });
+    }, "#experience");
+
+    // Ensure ScrollTrigger calculates positions for any newly revealed elements
+    ScrollTrigger.refresh();
+
+    return () => ctx.revert();
+  }, [expButton]);
 
   return (
     <section id="experience" className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0 px-3 pb-5
