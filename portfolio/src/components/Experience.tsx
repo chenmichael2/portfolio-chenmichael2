@@ -32,7 +32,7 @@ export default function Experience() {
         logo: "/marine-red.jpg", 
         dates: "2018 - present",
         jobTitle: "Expeditionary Airfield Technician",
-        top: 13.5
+        top: [13.5, 13, 11.5, 10.5, 8, 7]
       },
       {
         title: "General Assembly",
@@ -46,7 +46,7 @@ export default function Experience() {
         logo: "/prn_ambulance_inc_logo.jpeg", 
         dates: "2018",
         jobTitle: "Emergency Medical Technician",
-        top: 14.5
+        top: [14.5, 14, 11.5, 10.5, 8, 7]
       },
 
     ], 
@@ -56,32 +56,58 @@ export default function Experience() {
         logo: "/bu_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "MS, Data Science",
-        top: 0.5
+        top: [0.5]
       },
       {
         title: "UC Irvine",
         logo: "/university_of_california_irvine_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "BS, Biological Sciences",
-        top: 13.5
+        top: [13.5]
       },
       {
         title: "General Assembly",
         logo: "/generalassembly_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "Certificate, Software Engineering",
-        top: 1
+        top: [1]
       },
       
     ]
   }
 
   const dates: Array<any> = [
-    {posExp: 7,  expYear: cardInfo.exp[0].dates, posEdu: 7, eduYear: cardInfo.edu[0].dates, right: true}, 
-    {posExp: 22,  expYear: cardInfo.exp[1].dates, posEdu: 19, eduYear: cardInfo.edu[1].dates, right: false}, 
-    {posExp: 37,  expYear: cardInfo.exp[2].dates, posEdu: 32, eduYear: cardInfo.edu[2].dates, right: true},
-    {posExp: 52,  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
+    // posExp / posEdu can be arrays of values per breakpoint [mobile, tablet, desktop]
+    {posExp: [7, 7, 5.5, 5, 4, 4],  expYear: cardInfo.exp[0].dates, posEdu: [7, 9, 7], eduYear: cardInfo.edu[0].dates, right: true}, 
+    {posExp: [22, 20, 17.5, 16, 12, 10],  expYear: cardInfo.exp[1].dates, posEdu: [19, 19, 19], eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: [37, 32, 29.5, 27, 19.5, 17],  expYear: cardInfo.exp[2].dates, posEdu: [32, 34, 32], eduYear: cardInfo.edu[2].dates, right: true},
+    {posExp: [51.5, 44, 41, 37, 27, 23],  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
   ]
+
+  const [bpIndex, setBpIndex] = useState<number>(2);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const getIndex = (w: number) => {
+      if (w < 434) return 0;
+      if (w < 524) return 1
+      if (w < 670) return 2;
+      if (w < 770) return 3;
+      if (w < 963) return 4;
+      return 5; // desktop
+    };
+
+    const update = () => setBpIndex(getIndex(window.innerWidth));
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  // refresh scroll triggers when breakpoint index changes so positions update
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    ScrollTrigger.refresh();
+  }, [bpIndex]);
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
@@ -217,22 +243,29 @@ export default function Experience() {
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
-          {dates.map((obj, index) => (
-            <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${dotIndex ? obj.posEdu : obj.posExp}rem`, marginTop: '8rem'}} >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
-                <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
-              </svg>
-              <p className={`absolute text-primary text-shadow text-center font-bold text-xl w-50 top-1/2 -translate-y-1/2 ${obj.right ? "" : "-translate-x-50"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
-                {expButton ? obj.expYear : obj.eduYear}
-              </p>
-            </div>
-          ))}
+          {dates.map((obj, index) => {
+            const source = dotIndex ? obj.posEdu : obj.posExp;
+            const topVal = Array.isArray(source) ? (source[bpIndex] ?? source[0]) : source;
+            return (
+              <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${topVal}rem`, marginTop: '8rem'}} >
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="5" cy="5" r="5" className="backdrop-blur-xl" />
+                  <circle cx="5" cy="5" r="3" fill="oklch(98.5% .002 247.839)"/>
+                </svg>
+                <p className={`absolute text-primary text-shadow text-center font-bold text-xl w-50 top-1/2 -translate-y-1/2 ${obj.right ? "" : "-translate-x-50"} animate-1 animate__animated ${expButton ? 'animate__fadeInLeft' : 'animate__fadeInRight'}`}>
+                  {expButton ? obj.expYear : obj.eduYear}
+                </p>
+              </div>
+            )
+          })}
           <div id="exp" className={`animate__animated w-auto ${expButton ? "inline animate__fadeInLeft" : "hidden animate__fadeOutLeft"} transition-all duration-300`}>
             <div className="w-full px-5 grid grid-cols-2 gap-x-10">
               {Object.keys(cardInfo.exp).map(cardKey => {
                 const info = (cardInfo.exp as any)[Number(cardKey)];
                 if (!info) return null;
+                // support `top` as a number or an array of numbers per breakpoint
+                const topSource = info.top;
+                const topVal = Array.isArray(topSource) ? (topSource[bpIndex] ?? topSource[0]) : topSource;
                 return (
                   <ExpCard
                     id={`exp${cardKey}`}
@@ -241,7 +274,7 @@ export default function Experience() {
                     logo={info.logo}
                     dates={info.dates}
                     jobTitle={info.jobTitle}
-                    top={info.top}
+                    top={topVal}
                   />
                 );
               })}
@@ -252,6 +285,8 @@ export default function Experience() {
               {Object.keys(cardInfo.edu).map(cardKey => {
                 const info = (cardInfo.edu as any)[Number(cardKey)];
                 if (!info) return null;
+                const topSource = info.top;
+                const topVal = Array.isArray(topSource) ? (topSource[bpIndex] ?? topSource[0]) : topSource;
                 return (
                   <ExpCard
                     id={`edu${cardKey}`}
@@ -260,7 +295,7 @@ export default function Experience() {
                     logo={info.logo}
                     jobTitle={info.jobTitle}
                     height={info.height}
-                    top={info.top}
+                    top={topVal}
                   />
                 );
               })}

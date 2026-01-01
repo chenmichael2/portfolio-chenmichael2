@@ -23,15 +23,6 @@ button, a, input, [role="button"] {
     cursor: none;
 }
 
-/* Hide custom cursor visually on touch/coarse devices */
-@media (hover: none), (pointer: coarse) {
-  .cursor {
-    opacity: 0 !important;
-    pointer-events: none !important;
-    /* keep in DOM for positioning if needed but make it invisible */
-  }
-}
-
 a {
   font-family: var(--font-roboto);
 }
