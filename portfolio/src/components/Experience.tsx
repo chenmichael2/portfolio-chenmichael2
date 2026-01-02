@@ -85,6 +85,7 @@ export default function Experience() {
   ]
 
   const [bpIndex, setBpIndex] = useState<number>(2);
+  console.log(bpIndex)
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -239,7 +240,7 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-16.5 w-28" : "translate-x-17 w-26"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className={`pt-7 h-${expHeight + 50} w-full`}>
+      <div className={`pt-7 h-${timeHeight + 50} w-full`}>
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />

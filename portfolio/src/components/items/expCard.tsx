@@ -23,7 +23,7 @@ export default function ExpCard({ id, title, jobTitle, top, logo, height }: ExpC
             md:mb-0"/>
             <div>
                 <h2 className="text-xl/6 font-medium
-                md:text-2xl/9">{title}</h2>
+                md:text-2xl/7 md:mb-1">{title}</h2>
                 <h3 className="text-gray-700 leading-4.5">{jobTitle}</h3>
             </div>
         </div>
