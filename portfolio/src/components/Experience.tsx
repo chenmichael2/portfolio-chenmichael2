@@ -134,7 +134,6 @@ export default function Experience() {
             end: "70% 25%",
             scrub: 0.5,
             toggleActions: "play none none reverse",
-            markers: true,
           },
           y: 0,
           opacity: 1,
