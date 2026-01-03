@@ -4,17 +4,23 @@ import ExpCard from "./items/expCard";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
-  const expHeight = 59;
-  const eduHeight = 43;
+  const expHeightList = [59, 54, 46, 41, 31, 27];
+  const eduHeightList = [39, 38, 36, 34, 27, 24];
 
+  const [expHeight, setExpHeight] = useState<number>(expHeightList[2] ?? expHeightList[0]);
+  const [eduHeight, setEduHeight] = useState<number>(eduHeightList[2] ?? eduHeightList[0]);
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(expHeight);
   const [dotIndex, setDotIndex] = useState(0);
   
   const handleClick = () => {
-    setExpState(exp => (exp === true ? false : true));
-    setLineHeight(height => (height === expHeight ? eduHeight : expHeight));
-    setDotIndex(exp => (exp === 0 ? 1 : 0));
+    setExpState(prev => {
+      const next = !prev;
+      // use resolved per-breakpoint heights (expHeight / eduHeight)
+      setLineHeight(next ? expHeight : eduHeight);
+      setDotIndex(d => (d === 0 ? 1 : 0));
+      return next;
+    });
   };
 
   const cardInfo = {
@@ -85,7 +91,6 @@ export default function Experience() {
   ]
 
   const [bpIndex, setBpIndex] = useState<number>(2);
-  console.log(bpIndex)
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -103,8 +108,15 @@ export default function Experience() {
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
   }, []);
+    useEffect(() => {
+      const nextExp = expHeightList[bpIndex] ?? expHeightList[0];
+      const nextEdu = eduHeightList[bpIndex] ?? eduHeightList[0];
+      setExpHeight(nextExp);
+      setEduHeight(nextEdu);
+      // also ensure timeline uses appropriate height for current tab
+      setLineHeight(expButton ? nextExp : nextEdu);
+    }, [bpIndex, expButton]);
 
-  // refresh scroll triggers when breakpoint index changes so positions update
   useEffect(() => {
     if (typeof window === 'undefined') return;
     ScrollTrigger.refresh();
@@ -112,7 +124,7 @@ export default function Experience() {
 
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "(min-width: 768px)": () => { // For larger screens, apply the initial animation
+      "(min-width: 768px)": () => { 
         gsap.fromTo("#experience", 
           {
             y: 100, 
@@ -181,7 +193,6 @@ export default function Experience() {
     
   }, []);
 
-  // Per-card scroll animations. Rebuild when the visible tab (`expButton`) changes
   useEffect(() => {
     const ctx = gsap.context(() => {
       ScrollTrigger.matchMedia({
@@ -221,7 +232,6 @@ export default function Experience() {
       });
     }, "#experience");
 
-    // Ensure ScrollTrigger calculates positions for any newly revealed elements
     ScrollTrigger.refresh();
 
     return () => ctx.revert();
@@ -240,12 +250,12 @@ export default function Experience() {
         <div id="buttonSlider" className={`absolute h-6 ${expButton ? "-translate-x-16.5 w-28" : "translate-x-17 w-26"} -translate-x-15 rounded-sm bg-neutral-800/50 text-neutral-200 backdrop-blur-[2px] border-2 border-neutral-200/20 hover:bg-neutral-400/30 transition-all duration-150`}></div>
         <div className="px-5 py-0.3 z-99 text-gray-50">Education</div>
       </button>
-      <div className={`pt-7 h-${timeHeight + 50} w-full`}>
+      <div className="pt-7 w-full" style={{ height: `${timeHeight + 50}rem` }}>
         <div id="timeline" className="flex justify-center">
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
           {dates.map((obj, index) => {
-            const source = dotIndex ? obj.posEdu : obj.posExp;
+            const source = (dotIndex === 1 && obj.posEdu != null) ? obj.posEdu : obj.posExp;
             const topVal = Array.isArray(source) ? (source[bpIndex] ?? source[0]) : source;
             return (
               <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${topVal}rem`, marginTop: '8rem'}} >
