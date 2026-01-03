@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Experience() {
   const expHeightList = [59, 54, 46, 41, 31, 27];
-  const eduHeightList = [39, 38, 36, 34, 27, 24];
+  const eduHeightList = [38, 34, 33, 32, 20, 20];
 
   const [expHeight, setExpHeight] = useState<number>(expHeightList[2] ?? expHeightList[0]);
   const [eduHeight, setEduHeight] = useState<number>(eduHeightList[2] ?? eduHeightList[0]);
@@ -67,14 +67,14 @@ export default function Experience() {
         logo: "/university_of_california_irvine_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "BS, Biological Sciences",
-        top: [13.5]
+        top: [13, 10.5, 10.5, 10.5, 7, 7]
       },
       {
         title: "General Assembly",
         logo: "/generalassembly_logo.jpeg", 
         dates: "2025 - 2027",
         jobTitle: "Certificate, Software Engineering",
-        top: [1]
+        top: [0.5]
       },
       
     ]
@@ -82,9 +82,9 @@ export default function Experience() {
 
   const dates: Array<any> = [
     // posExp / posEdu can be arrays of values per breakpoint [mobile, tablet, desktop]
-    {posExp: [7, 7, 5.5, 5, 4, 4],  expYear: cardInfo.exp[0].dates, posEdu: [7, 9, 7], eduYear: cardInfo.edu[0].dates, right: true}, 
-    {posExp: [22, 20, 17.5, 16, 12, 10],  expYear: cardInfo.exp[1].dates, posEdu: [17, 19, 19], eduYear: cardInfo.edu[1].dates, right: false}, 
-    {posExp: [37, 32, 29.5, 27, 19.5, 17],  expYear: cardInfo.exp[2].dates, posEdu: [32, 34, 32], eduYear: cardInfo.edu[2].dates, right: true},
+    {posExp: [7, 7, 5.5, 5, 4, 4],  expYear: cardInfo.exp[0].dates, posEdu: [7, 5.5, 5, 5, 3.5, 3.5], eduYear: cardInfo.edu[0].dates, right: true}, 
+    {posExp: [22, 20, 17.5, 16, 12, 10],  expYear: cardInfo.exp[1].dates, posEdu: [17, 16, 15.5, 15.5, 10, 10], eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: [37, 32, 29.5, 27, 19.5, 17],  expYear: cardInfo.exp[2].dates, posEdu: [32, 28, 27, 26, 17, 16.5], eduYear: cardInfo.edu[2].dates, right: true},
     {posExp: [51.5, 44, 41, 37, 27, 23],  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
   ]
 
@@ -255,7 +255,6 @@ export default function Experience() {
           {dates.map((obj, index) => {
             const source = (!expButton) ? obj.posEdu : obj.posExp;
             const topVal = Array.isArray(source) ? (source[bpIndex] ?? source[0]) : source;
-            console.log(source)
             return (
               <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${topVal}rem`, marginTop: '8rem'}} >
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
