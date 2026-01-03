@@ -11,14 +11,12 @@ export default function Experience() {
   const [eduHeight, setEduHeight] = useState<number>(eduHeightList[2] ?? eduHeightList[0]);
   const [expButton, setExpState] = useState(true);
   const [timeHeight, setLineHeight] = useState(expHeight);
-  const [dotIndex, setDotIndex] = useState(0);
   
   const handleClick = () => {
     setExpState(prev => {
       const next = !prev;
       // use resolved per-breakpoint heights (expHeight / eduHeight)
       setLineHeight(next ? expHeight : eduHeight);
-      setDotIndex(d => (d === 0 ? 1 : 0));
       return next;
     });
   };
@@ -85,7 +83,7 @@ export default function Experience() {
   const dates: Array<any> = [
     // posExp / posEdu can be arrays of values per breakpoint [mobile, tablet, desktop]
     {posExp: [7, 7, 5.5, 5, 4, 4],  expYear: cardInfo.exp[0].dates, posEdu: [7, 9, 7], eduYear: cardInfo.edu[0].dates, right: true}, 
-    {posExp: [22, 20, 17.5, 16, 12, 10],  expYear: cardInfo.exp[1].dates, posEdu: [19, 19, 19], eduYear: cardInfo.edu[1].dates, right: false}, 
+    {posExp: [22, 20, 17.5, 16, 12, 10],  expYear: cardInfo.exp[1].dates, posEdu: [17, 19, 19], eduYear: cardInfo.edu[1].dates, right: false}, 
     {posExp: [37, 32, 29.5, 27, 19.5, 17],  expYear: cardInfo.exp[2].dates, posEdu: [32, 34, 32], eduYear: cardInfo.edu[2].dates, right: true},
     {posExp: [51.5, 44, 41, 37, 27, 23],  expYear: cardInfo.exp[3].dates, posEdu: null, eduYear: null, right: false},
   ]
@@ -108,14 +106,14 @@ export default function Experience() {
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
   }, []);
-    useEffect(() => {
-      const nextExp = expHeightList[bpIndex] ?? expHeightList[0];
-      const nextEdu = eduHeightList[bpIndex] ?? eduHeightList[0];
-      setExpHeight(nextExp);
-      setEduHeight(nextEdu);
-      // also ensure timeline uses appropriate height for current tab
-      setLineHeight(expButton ? nextExp : nextEdu);
-    }, [bpIndex, expButton]);
+
+  useEffect(() => {
+    const nextExp = expHeightList[bpIndex] ?? expHeightList[0];
+    const nextEdu = eduHeightList[bpIndex] ?? eduHeightList[0];
+    setExpHeight(nextExp);
+    setEduHeight(nextEdu);
+    setLineHeight(expButton ? nextExp : nextEdu);
+  }, [bpIndex, expButton]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -255,8 +253,9 @@ export default function Experience() {
           <div className={`absolute z-40 w-2 rounded-xl bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300`}
           style={{ height: `${timeHeight}rem` }} />
           {dates.map((obj, index) => {
-            const source = (dotIndex === 1 && obj.posEdu != null) ? obj.posEdu : obj.posExp;
+            const source = (!expButton) ? obj.posEdu : obj.posExp;
             const topVal = Array.isArray(source) ? (source[bpIndex] ?? source[0]) : source;
+            console.log(source)
             return (
               <div key={index} className="z-50 absolute transition-all duration-300" style={{top: `${topVal}rem`, marginTop: '8rem'}} >
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
