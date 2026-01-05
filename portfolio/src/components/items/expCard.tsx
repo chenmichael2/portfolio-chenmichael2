@@ -1,4 +1,3 @@
-
 interface ExpCardProp {
     id?: any;
     title?: string;

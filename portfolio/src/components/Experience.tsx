@@ -235,7 +235,7 @@ export default function Experience() {
   }, [expButton]);
 
   return (
-    <section id="experience" className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0 px-3 pb-5
+    <section id="experience" style={{ height: `${timeHeight + 8 }rem` }} className="flex flex-col items-center justify-start w-full h-screen bg-transparent -mt-0 px-3 pb-5
       sm:-mt-0
       md:-mt-0">
       <div className="flex flex-col justify-center items-center gap-3 mb-5">
