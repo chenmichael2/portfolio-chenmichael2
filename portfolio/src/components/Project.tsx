@@ -3,6 +3,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
+import ProjCard from "./items/projCard";
+
 export default function Project() {
   
   useEffect(() => {
@@ -51,6 +53,10 @@ export default function Project() {
         <div className="flex flex-col justify-center items-center gap-3 mb-5">
             <h1 className="text-gray-700 text-4xl">Projects</h1>
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
+        </div>
+        <div className="flex">
+            <ProjCard />
+            <ProjCard />
         </div>
     </section>
   );
