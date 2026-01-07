@@ -11,30 +11,31 @@ export default function Project() {
 
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
-        gsap.fromTo(".hero-section", 
+        gsap.fromTo("#project", 
           {
-            y: 0, 
-            opacity: 1 
+            y: 50, 
+            opacity: 0 
           }, {
           scrollTrigger: {
-            trigger: ".hero-section",
+            trigger: "#experience",
             start: "30% 20%",
-            end: "bottom 20%",
+            end: "70% 20%",
             scrub: 1, 
             toggleActions: "play none none reverse",
+            markers: true, 
           },
-          y: -50,
-          opacity: 0,
+          y: 0,
+          opacity: 1,
         });
       },
       "(max-width: 769px)": () => { // For larger screens, apply a different animation
-        gsap.fromTo(".hero-section", 
+        gsap.fromTo("#project", 
           {
             y: 0, 
             opacity: 1
           }, {
           scrollTrigger: {
-            trigger: ".hero-section",
+            trigger: "#project",
             start: "50% 25%",
             end: "bottom 25%",
             scrub: 0.5,
@@ -49,12 +50,12 @@ export default function Project() {
   }, []);
 
   return (
-    <section className="project-section w-full min-h-240 h-screen max-h-300 bg-transparent pt-15">
+    <section id="project" className="w-full min-h-240 h-screen max-h-300 bg-transparent pt-15">
         <div className="flex flex-col justify-center items-center gap-3 mb-5">
             <h1 className="text-gray-700 text-4xl">Projects</h1>
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
-        <div className="flex">
+        <div className="flex justify-center gap-5">
             <ProjCard />
             <ProjCard />
         </div>
