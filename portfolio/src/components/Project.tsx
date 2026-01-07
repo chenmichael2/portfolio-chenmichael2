@@ -22,7 +22,6 @@ export default function Project() {
             end: "70% 20%",
             scrub: 1, 
             toggleActions: "play none none reverse",
-            markers: true, 
           },
           y: 0,
           opacity: 1,
@@ -32,17 +31,17 @@ export default function Project() {
         gsap.fromTo("#project", 
           {
             y: 0, 
-            opacity: 1
+            opacity: 0
           }, {
           scrollTrigger: {
-            trigger: "#project",
-            start: "50% 25%",
+            trigger: "#experience",
+            start: "60% 25%",
             end: "bottom 25%",
             scrub: 0.5,
             toggleActions: "play none none reverse",
           },
           y: -10,
-          opacity: 0,
+          opacity: 1,
         });
       }
     });
