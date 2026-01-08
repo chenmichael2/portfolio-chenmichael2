@@ -6,8 +6,13 @@ import { useEffect } from "react";
 import ProjCard from "./items/projCard";
 
 export default function Project() {
+
+    const projects = {
+        image: "",
+        title: "", 
+    };
   
-  useEffect(() => {
+    useEffect(() => {
 
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": () => { // For smaller screens, apply the initial animation
