@@ -9,7 +9,11 @@ export default function Project() {
 
     const projects = {
         image: "",
-        title: "", 
+        title: "",
+        description: "", 
+        links: {
+            
+        }
     };
   
     useEffect(() => {
