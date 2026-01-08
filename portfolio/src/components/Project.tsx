@@ -12,7 +12,7 @@ export default function Project() {
         title: "",
         description: "", 
         links: {
-            
+            "github": "",
         }
     };
   
