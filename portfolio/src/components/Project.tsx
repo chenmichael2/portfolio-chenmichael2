@@ -9,8 +9,8 @@ export default function Project() {
 
     const projects = {
         image: "",
-        title: "",
-        description: "", 
+        title: "Title",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum maxime sunt labore architecto facere, alias soluta optio non a.", 
         links: {
             "github": "",
         }
