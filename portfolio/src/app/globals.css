@@ -57,6 +57,14 @@ a {
 
 .text-shadow { text-shadow: 0 2px 6px rgba(0,0,0,0.18); }
 
+/* Hide custom cursor on touch screens / coarse pointer devices */
+@media (hover: none), (pointer: coarse) {
+  .cursor {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;

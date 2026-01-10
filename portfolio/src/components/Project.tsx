@@ -12,7 +12,9 @@ export default function Project() {
         title: "Title",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum maxime sunt labore architecto facere, alias soluta optio non a.", 
         links: {
-            "github": "",
+            link: "facebook.com",
+            github: "https://github.com",
+            
         }
     };
   
