@@ -66,7 +66,7 @@ export default function Project() {
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
         <div className="flex justify-center gap-5">
-            <ProjCard />
+            <ProjCard image={projects.image}/>
             <ProjCard />
         </div>
     </section>

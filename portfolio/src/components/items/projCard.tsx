@@ -1,5 +1,6 @@
 interface ProjCardProp {
-
+    image?: string,
+    
 }
 
 export default function ProjCard({ }: ProjCardProp) {
