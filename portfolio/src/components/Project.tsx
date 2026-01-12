@@ -14,7 +14,6 @@ export default function Project() {
         links: {
             link: "facebook.com",
             github: "https://github.com",
-            
         }
     };
   
