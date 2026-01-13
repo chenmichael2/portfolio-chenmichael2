@@ -7,7 +7,8 @@ import ProjCard from "./items/projCard";
 
 export default function Project() {
 
-    const projects = {
+    const projects = [
+      {
         image: "",
         title: "Title",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum maxime sunt labore architecto facere, alias soluta optio non a.", 
@@ -15,7 +16,9 @@ export default function Project() {
             link: "facebook.com",
             github: "https://github.com",
         }
-    };
+      }, 
+      {}
+    ];
   
     useEffect(() => {
 
@@ -65,7 +68,7 @@ export default function Project() {
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
         <div className="flex justify-center gap-5">
-            <ProjCard image={projects.image}/>
+            <ProjCard image={projects[0].image}/>
             <ProjCard />
         </div>
     </section>
