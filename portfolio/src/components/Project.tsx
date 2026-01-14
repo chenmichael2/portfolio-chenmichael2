@@ -17,7 +17,9 @@ export default function Project() {
             github: "https://github.com",
         }
       }, 
-      {}
+      {
+        image: ""
+      }
     ];
   
     useEffect(() => {
