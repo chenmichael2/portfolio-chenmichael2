@@ -18,7 +18,8 @@ export default function Project() {
         }
       }, 
       {
-        image: ""
+        image: "",
+        title: "Title",
       }
     ];
   
