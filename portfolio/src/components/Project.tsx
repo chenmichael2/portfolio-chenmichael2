@@ -74,18 +74,20 @@ export default function Project() {
             <h1 className="text-gray-700 text-4xl">Projects</h1>
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
-        <div className="flex justify-center gap-5">
-          {projects.map((obj, index) => {
-            return (
-              <ProjCard key={index} 
-                image={obj.image}
-                title={obj.title}
-                description={obj.description}
-                links={obj.links}
-                />
-            )
-            
-          })}
+        <div className="mx-10">
+          <div className="flex flex-col gap-4 justify-center">
+            {projects.map((obj, index) => {
+              return (
+                <ProjCard key={index} 
+                  image={obj.image}
+                  title={obj.title}
+                  description={obj.description}
+                  links={obj.links}
+                  />
+              )
+              
+            })}
+          </div>
         </div>
     </section>
   );

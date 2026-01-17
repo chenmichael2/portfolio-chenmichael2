@@ -8,7 +8,7 @@ interface ProjCardProp {
 export default function ProjCard({ image, title, description, links}: ProjCardProp) {
 
     return (
-        <div className="border-1 w-100 h-content">
+        <div className="border-1 border-[#ccc] w-[100%] p-6 rounded-xl">
             <p>{image}</p>
             <p>{title}</p>
             <p>{description}</p>
