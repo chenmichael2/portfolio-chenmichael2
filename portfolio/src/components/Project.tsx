@@ -74,7 +74,7 @@ export default function Project() {
             <h1 className="text-gray-700 text-4xl">Projects</h1>
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
         </div>
-        <div className="mx-10">
+        <div className="mx-15">
           <div className="flex flex-col gap-4 justify-center">
             {projects.map((obj, index) => {
               return (
