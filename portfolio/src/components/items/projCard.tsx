@@ -6,7 +6,6 @@ interface ProjCardProp {
 }
 
 export default function ProjCard({ image, title, description, links}: ProjCardProp) {
-
     return (
         <div className="border-1 border-[#ccc] w-[100%] p-4 h-100 rounded-xl shadow-xl flex flex-col justify-between">
             <div>
@@ -18,6 +17,7 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
             </div>
             <div>
                 {links && Object.entries(links).map(([key, value], index) => {
+
                     return(
                         <div key={index}>{key}:{value}</div>
                     )
