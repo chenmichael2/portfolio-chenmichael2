@@ -22,8 +22,8 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                 {links && Object.entries(links).map(([key, value], index) => {
                     if (key === "link") {
                         return (
-                            <button key={index}>hello
-                            
+                            <button key={index}>
+
                                 <LinkIcon />
                             </button>
                         )
