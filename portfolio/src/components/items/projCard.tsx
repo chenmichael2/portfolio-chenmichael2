@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import LinkIcon from '../../../public/icons/link';
+
 interface ProjCardProp {
     image?: string,
     title?: string, 
@@ -17,10 +20,18 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
             </div>
             <div>
                 {links && Object.entries(links).map(([key, value], index) => {
-
-                    return(
-                        <div key={index}>{key}:{value}</div>
-                    )
+                    if (key === "link") {
+                        return (
+                            <button key={index}>hello
+                            
+                                <LinkIcon />
+                            </button>
+                        )
+                    } else {
+                        return(
+                            <button key={index}>{key}:{value}</button>
+                        )
+                    }
                 })}
             </div>
         </div>
