@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import LinkIcon from '../../../public/icons/link';
-import GithubIcon from '../../../public/icons/github';
+import GitIcon from '../../../public/icons/github-icon';
 
 interface ProjCardProp {
     image?: string,
@@ -23,16 +22,11 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                 {links && Object.entries(links).map(([key, value], index) => {
                     const renderContent = () => {
                         if (key === "link") return <LinkIcon />;
-                        if (key === "github") return <GithubIcon icon={{
-                            name: '',
-                            color: '',
-                            href: 'github.com',
-                            import: GithubIcon
-                        }} />;
+                        if (key === "github") return <GitIcon />;
                         
                     }
                         return(
-                            <button key={index} className='w-[20px] '>
+                            <button key={index} className=' border-1 p-0.5'>
                                 {renderContent()}
                             </button>
                         )
