@@ -18,7 +18,7 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                     <p>{description}</p>
                 </div>
             </div>
-            <div>
+            <div className='gap-2'>
                 {links && Object.entries(links).map(([key, value], index) => {
                     const renderContent = () => {
                         if (key === "link") return <LinkIcon />;
