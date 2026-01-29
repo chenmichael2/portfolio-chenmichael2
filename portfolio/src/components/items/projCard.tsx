@@ -18,7 +18,7 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                     <p>{description}</p>
                 </div>
             </div>
-            <div className='gap-2'>
+            <div className='flex gap-3'>
                 {links && Object.entries(links).map(([key, value], index) => {
                     const renderContent = () => {
                         if (key === "link") return <LinkIcon />;
@@ -26,7 +26,7 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                         
                     }
                         return(
-                            <button key={index} className=' border-1 p-0.5'>
+                            <button key={index} className='p-0.5 scale-125'>
                                 {renderContent()}
                             </button>
                         )
