@@ -26,7 +26,7 @@ export default function ProjCard({ image, title, description, links}: ProjCardPr
                         
                     }
                         return(
-                            <button key={index} className='p-0.5 scale-125'>
+                            <button key={index} className='p-0.5 scale-125 hover:scale-150 transition-all duration-300'>
                                 {renderContent()}
                             </button>
                         )
