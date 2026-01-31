@@ -69,7 +69,7 @@ export default function Project() {
   }, []);
 
   return (
-    <section id="project" className="hidden w-full min-h-240 h-screen max-h-300 bg-transparent pt-15">
+    <section id="project" className="w-full min-h-240 h-screen max-h-300 bg-transparent pt-15">
         <div className="flex flex-col justify-center items-center gap-3 mb-5">
             <h1 className="text-gray-700 text-4xl">Projects</h1>
             <div className="h-1 w-44 bg-gradient-to-r to-primary from-tertiary"></div>
