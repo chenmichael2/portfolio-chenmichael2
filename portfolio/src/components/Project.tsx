@@ -9,9 +9,9 @@ export default function Project() {
 
     const projects = [
       {
-        image: "/project-example.png",
-        title: "Title",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum maxime sunt labore architecto facere, alias soluta optio non a.", 
+        image: "/spaceship-racer.png",
+        title: "Spaceship Racer",
+        description: "Two-player spaceship race: dodge asteroids, cross dimensions through five timelines, uncover the real path to save Earth.", 
         links: {
             link: "facebook.com",
             github: "https://github.com",
