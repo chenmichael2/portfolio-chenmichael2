@@ -13,8 +13,8 @@ export default function Project() {
         title: "Spaceship Racer",
         description: "Two-player spaceship race: dodge asteroids, cross dimensions through five timelines, uncover the real path to save Earth.", 
         links: {
-            link: "facebook.com",
-            github: "https://github.com",
+            link: "https://chenmichael2.github.io/Spaceship-Racer/",
+            github: "https://github.com/chenmichael2/Spaceship-Racer",
         }
       }, 
       {
