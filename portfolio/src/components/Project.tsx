@@ -19,7 +19,7 @@ export default function Project() {
       }, 
       {
         image: "/project-example.png",
-        title: "Title",
+        title: "Title 2",
         description: "thlpe",
         links: {
           link: "instagram.com"
