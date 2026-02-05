@@ -76,7 +76,7 @@ export default function Project() {
         </div>
         <div className="mx-15">
           <div className="flex flex-col gap-4 justify-center items-center
-          md:flex-row">
+          md:flex-row md:gap-10">
             {projects.map((obj, index) => {
               return (
                 <ProjCard key={index} 
