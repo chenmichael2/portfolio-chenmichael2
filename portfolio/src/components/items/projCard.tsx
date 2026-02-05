@@ -10,7 +10,7 @@ interface ProjCardProp {
 
 export default function ProjCard({ image, title, description, links}: ProjCardProp) {
     return (
-        <div className="border-1 border-[#ccc] w-[100%] max-w-sm p-4 h-100 rounded-xl shadow-xl flex flex-col justify-between">
+        <div className="border-1 border-[#ccc] w-[100%] max-w-xs p-4 h-100 rounded-xl shadow-xl flex flex-col justify-between">
             <div>
                 <img src={`/images/projects/` + image} className="rounded-lg w-[100%]"/>
                 <div className="mt-4">
