@@ -86,7 +86,6 @@ export default function Project() {
                   links={obj.links}
                   />
               )
-              
             })}
           </div>
         </div>
