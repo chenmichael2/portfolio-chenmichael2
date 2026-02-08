@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Project from "@/components/Project";
+import Contact from "@/components/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Project />
+      <Contact />
     </>
   );
 }
