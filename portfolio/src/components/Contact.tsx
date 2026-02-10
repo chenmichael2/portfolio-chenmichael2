@@ -3,7 +3,7 @@ export default function Contact() {
         <section className="">
             <div>
                 <div>
-                    
+                    Contact
                 </div>
             </div>
         </section>
