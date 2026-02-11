@@ -4,6 +4,7 @@ export default function Contact() {
             <div>
                 <div>
                     Contact
+                    <form></form>
                 </div>
             </div>
         </section>
