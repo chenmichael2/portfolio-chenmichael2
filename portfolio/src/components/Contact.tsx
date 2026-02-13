@@ -4,7 +4,9 @@ export default function Contact() {
             <div>
                 <div>
                     Contact
-                    <form></form>
+                    <form>
+                        <input>Name</input>
+                    </form>
                 </div>
             </div>
         </section>
