@@ -6,7 +6,7 @@ export default function Contact() {
                     Contact
                     <form>
                         <input type="text" placeholder="Name"/>
-                        <input type="text"/>
+                        <input type="text" placeholder=""/>
                     </form>
                 </div>
             </div>
