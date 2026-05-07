@@ -19,7 +19,7 @@ export default function ExpCard({ id, title, jobTitle, top, logo, height }: ExpC
             md:flex md:gap-4 md:items-center"
         >
             <img src={`images/experience/${logo}`} alt={`${title} logo`} className="w-15 mb-4 shadow-lg rounded-md
-            md:mb-0"/>
+            md:mb-0 "/>
             <div>
                 <h2 className="text-xl/6 font-medium
                 md:text-2xl/7 md:mb-1">{title}</h2>
